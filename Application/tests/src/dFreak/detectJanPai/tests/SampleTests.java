@@ -13,14 +13,14 @@
 * See the License for the specific language governing permissions and
 * limitations under the License.
 */
-package com.example.android.camera2basic.tests;
+package dFreak.detectJanPai.tests;
 
-import com.example.android.camera2basic.*;
+import dFreak.detectJanPai.*;
 
 import android.test.ActivityInstrumentationTestCase2;
 
 /**
-* Tests for Camera2Basic sample.
+* Tests for DetectJanPai.
 */
 public class SampleTests extends ActivityInstrumentationTestCase2<CameraActivity> {
 
