@@ -86,6 +86,7 @@ public class CameraFragment extends Fragment
         ORIENTATIONS.append(Surface.ROTATION_90, 0);
         ORIENTATIONS.append(Surface.ROTATION_180, 270);
         ORIENTATIONS.append(Surface.ROTATION_270, 180);
+        System.loadLibrary("opencv_java3");
     }
 
     /**
