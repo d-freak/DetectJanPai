@@ -59,6 +59,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import org.opencv.core.CvType;
+import org.opencv.core.Mat;
+import org.opencv.core.MatOfInt;
+import org.opencv.core.MatOfPoint;
+import org.opencv.core.MatOfPoint2f;
+import org.opencv.core.Rect;
+import org.opencv.imgcodecs.Imgcodecs;
+import org.opencv.imgproc.Imgproc;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -67,9 +76,17 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
+
+import static org.opencv.imgcodecs.Imgcodecs.IMREAD_GRAYSCALE;
+import static org.opencv.imgproc.Imgproc.adaptiveThreshold;
+import static org.opencv.imgproc.Imgproc.approxPolyDP;
+import static org.opencv.imgproc.Imgproc.arcLength;
+import static org.opencv.imgproc.Imgproc.findContours;
+import static org.opencv.imgproc.Imgproc.medianBlur;
 
 public class CameraFragment extends Fragment
         implements View.OnClickListener, FragmentCompat.OnRequestPermissionsResultCallback {
@@ -244,10 +261,56 @@ public class CameraFragment extends Fragment
 
         @Override
         public void onImageAvailable(ImageReader reader) {
-            mBackgroundHandler.post(new ImageSaver(reader.acquireNextImage(), mFile));
+            final Image image = reader.acquireNextImage();
+            mBackgroundHandler.post(new ImageSaver(image, mFile));
+            detectJanPai(image);
         }
 
     };
+
+    private void detectJanPai(final Image image) {
+        final Mat buf = new Mat(image.getHeight(), image.getWidth(), CvType.CV_8UC1);
+
+        final ByteBuffer buffer = image.getPlanes()[0].getBuffer();
+        final byte[] bytes = new byte[buffer.remaining()];
+        buffer.get(bytes);
+        buf.put(0, 0, bytes);
+
+        final Mat source = Imgcodecs.imdecode(buf, IMREAD_GRAYSCALE);
+        final int TRIM_X = 200;
+        final int TRIM_Y = 200;
+        final int TRIM_WIDTH = 200;
+        final int TRIM_HEIGHT = 200;
+        final Mat trimmedSource = new Mat(source, new Rect(TRIM_X, TRIM_Y, TRIM_WIDTH, TRIM_HEIGHT));
+        final Mat blurredSource = new Mat(TRIM_WIDTH, TRIM_HEIGHT, CvType.CV_8UC1);
+        final Mat threshold = new Mat(TRIM_WIDTH, TRIM_HEIGHT, CvType.CV_8UC1);
+        medianBlur(trimmedSource, blurredSource, 5);
+        adaptiveThreshold(blurredSource, threshold, 255, Imgproc.ADAPTIVE_THRESH_GAUSSIAN_C, Imgproc.THRESH_BINARY, 11, 2);
+        final List<MatOfPoint> contours = new ArrayList<>();
+        final Mat hierarchy = new Mat(TRIM_WIDTH, TRIM_HEIGHT, CvType.CV_8UC1);
+        findContours(threshold, contours, hierarchy, Imgproc.RETR_TREE, Imgproc.CHAIN_APPROX_SIMPLE);
+        final int area = TRIM_HEIGHT * TRIM_WIDTH / 50;
+        final LinkedList<Integer> miniAreaIndexes = new LinkedList<>();
+
+        for (int count = 0; count < contours.size(); count++) {
+            final MatOfPoint point = contours.get(count);
+
+            if (point.rows() < area) {
+                miniAreaIndexes.add(count);
+            }
+        }
+
+        while (!miniAreaIndexes.isEmpty()) {
+            contours.remove(miniAreaIndexes.pop());
+        }
+        final MatOfPoint2f contour = new MatOfPoint2f((contours.get(contours.size() - 1)).toArray());
+        final MatOfPoint2f approx2f = new MatOfPoint2f();
+        final double epsilon = arcLength(contour, true);
+        approxPolyDP(contour, approx2f, epsilon, true);
+        final MatOfPoint approx = new MatOfPoint(approx2f.toArray());
+        MatOfInt hull = new MatOfInt();
+        Imgproc.convexHull(approx, hull);
+    }
 
     /**
      * {@link CaptureRequest.Builder} for the camera preview
