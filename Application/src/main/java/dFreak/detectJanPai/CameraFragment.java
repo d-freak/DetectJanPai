@@ -49,6 +49,7 @@ import android.os.HandlerThread;
 import android.support.annotation.NonNull;
 import android.support.v13.app.FragmentCompat;
 import android.support.v4.content.ContextCompat;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.Size;
 import android.util.SparseIntArray;
@@ -276,11 +277,14 @@ public class CameraFragment extends Fragment
         buffer.get(bytes);
         buf.put(0, 0, bytes);
 
+        final DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
+        final int TRIM_WIDTH = displayMetrics.widthPixels;
+        final float TRIM_HEIGHT_DP = getResources().getDimensionPixelOffset(R.dimen.dp56);
+        final float density = displayMetrics.density;
+        final int TRIM_HEIGHT = (int) (TRIM_HEIGHT_DP * density + 0.5f);
         final Mat source = Imgcodecs.imdecode(buf, IMREAD_GRAYSCALE);
-        final int TRIM_X = 200;
-        final int TRIM_Y = 200;
-        final int TRIM_WIDTH = 200;
-        final int TRIM_HEIGHT = 200;
+        final int TRIM_X = 0;
+        final int TRIM_Y = 0;
         final Mat trimmedSource = new Mat(source, new Rect(TRIM_X, TRIM_Y, TRIM_WIDTH, TRIM_HEIGHT));
         final Mat blurredSource = new Mat(TRIM_WIDTH, TRIM_HEIGHT, CvType.CV_8UC1);
         final Mat threshold = new Mat(TRIM_WIDTH, TRIM_HEIGHT, CvType.CV_8UC1);

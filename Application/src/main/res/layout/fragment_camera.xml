@@ -27,7 +27,7 @@
     <FrameLayout
         android:id="@+id/detectArea"
         android:layout_width="match_parent"
-        android:layout_height="112dp"
+        android:layout_height="@dimen/dp56"
         android:layout_alignParentStart="true"
         android:background="@drawable/frame">
 
@@ -36,7 +36,7 @@
     <FrameLayout
         android:id="@+id/control"
         android:layout_width="match_parent"
-        android:layout_height="112dp"
+        android:layout_height="@dimen/dp112"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:background="@color/control_background">
