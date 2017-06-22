@@ -25,6 +25,15 @@
         android:layout_alignParentTop="true" />
 
     <FrameLayout
+        android:id="@+id/detectArea"
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/frame">
+
+    </FrameLayout>
+
+    <FrameLayout
         android:id="@+id/control"
         android:layout_width="match_parent"
         android:layout_height="112dp"
