@@ -66,6 +66,7 @@ import org.opencv.core.MatOfInt;
 import org.opencv.core.MatOfPoint;
 import org.opencv.core.MatOfPoint2f;
 import org.opencv.core.Rect;
+import org.opencv.core.Scalar;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 
@@ -83,11 +84,20 @@ import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
 import static org.opencv.imgcodecs.Imgcodecs.IMREAD_GRAYSCALE;
+import static org.opencv.imgcodecs.Imgcodecs.IMREAD_UNCHANGED;
+import static org.opencv.imgcodecs.Imgcodecs.imread;
+import static org.opencv.imgcodecs.Imgcodecs.imwrite;
 import static org.opencv.imgproc.Imgproc.adaptiveThreshold;
 import static org.opencv.imgproc.Imgproc.approxPolyDP;
 import static org.opencv.imgproc.Imgproc.arcLength;
+import static org.opencv.imgproc.Imgproc.contourArea;
+import static org.opencv.imgproc.Imgproc.convexHull;
+import static org.opencv.imgproc.Imgproc.drawContours;
 import static org.opencv.imgproc.Imgproc.findContours;
+import static org.opencv.imgproc.Imgproc.getPerspectiveTransform;
+import static org.opencv.imgproc.Imgproc.line;
 import static org.opencv.imgproc.Imgproc.medianBlur;
+import static org.opencv.imgproc.Imgproc.warpPerspective;
 
 public class CameraFragment extends Fragment
         implements View.OnClickListener, FragmentCompat.OnRequestPermissionsResultCallback {
@@ -263,7 +273,7 @@ public class CameraFragment extends Fragment
         @Override
         public void onImageAvailable(ImageReader reader) {
             final Image image = reader.acquireNextImage();
-            mBackgroundHandler.post(new ImageSaver(image, mFile));
+            //mBackgroundHandler.post(new ImageSaver(image, mFile));
             detectJanPai(image);
         }
 
@@ -277,43 +287,144 @@ public class CameraFragment extends Fragment
         buffer.get(bytes);
         buf.put(0, 0, bytes);
 
+        //final Mat source = Imgcodecs.imdecode(buf, IMREAD_GRAYSCALE);
+        //start
+        final String sourceName = getActivity().getExternalFilesDir(null) + "/pic.jpg";
+        final Mat source = imread(sourceName, IMREAD_GRAYSCALE);
+        //end
+        //final int TRIM_WIDTH = source.width();
+        final int TRIM_WIDTH = 2100;
         final DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
-        final int TRIM_WIDTH = displayMetrics.widthPixels;
         final float TRIM_HEIGHT_DP = getResources().getDimensionPixelOffset(R.dimen.dp56);
         final float density = displayMetrics.density;
-        final int TRIM_HEIGHT = (int) (TRIM_HEIGHT_DP * density + 0.5f);
-        final Mat source = Imgcodecs.imdecode(buf, IMREAD_GRAYSCALE);
+        //final int TRIM_HEIGHT = (int) (TRIM_HEIGHT_DP * density + 0.5f);
+        final int TRIM_HEIGHT = 270;
         final int TRIM_X = 0;
         final int TRIM_Y = 0;
-        final Mat trimmedSource = new Mat(source, new Rect(TRIM_X, TRIM_Y, TRIM_WIDTH, TRIM_HEIGHT));
+        //final Mat trimmedSource = new Mat(source, new Rect(TRIM_X, TRIM_Y, TRIM_WIDTH, TRIM_HEIGHT));
+        //start
+        final String trimmedSourceName = getActivity().getExternalFilesDir(null) + "/trimmed.jpg";
+        final Mat trimmedSource = imread(trimmedSourceName, IMREAD_GRAYSCALE);
+        //end
         final Mat blurredSource = new Mat(TRIM_WIDTH, TRIM_HEIGHT, CvType.CV_8UC1);
         final Mat threshold = new Mat(TRIM_WIDTH, TRIM_HEIGHT, CvType.CV_8UC1);
         medianBlur(trimmedSource, blurredSource, 5);
         adaptiveThreshold(blurredSource, threshold, 255, Imgproc.ADAPTIVE_THRESH_GAUSSIAN_C, Imgproc.THRESH_BINARY, 11, 2);
+        //start
+        final String imageName = getActivity().getExternalFilesDir(null) + "/threshold.jpg";
+        imwrite(imageName, threshold);
+        //end
         final List<MatOfPoint> contours = new ArrayList<>();
         final Mat hierarchy = new Mat(TRIM_WIDTH, TRIM_HEIGHT, CvType.CV_8UC1);
         findContours(threshold, contours, hierarchy, Imgproc.RETR_TREE, Imgproc.CHAIN_APPROX_SIMPLE);
-        final int area = TRIM_HEIGHT * TRIM_WIDTH / 50;
-        final LinkedList<Integer> miniAreaIndexes = new LinkedList<>();
+        final double minArea = TRIM_HEIGHT * TRIM_WIDTH / 50;
+        final List<MatOfPoint> overMinAreaContours = new ArrayList<>();
 
         for (int count = 0; count < contours.size(); count++) {
-            final MatOfPoint point = contours.get(count);
+            final double area = contourArea(contours.get(count));
 
-            if (point.rows() < area) {
-                miniAreaIndexes.add(count);
+            if (area > minArea) {
+                overMinAreaContours.add(contours.get(count));
             }
         }
-
-        while (!miniAreaIndexes.isEmpty()) {
-            contours.remove(miniAreaIndexes.pop());
-        }
-        final MatOfPoint2f contour = new MatOfPoint2f((contours.get(contours.size() - 1)).toArray());
+        final MatOfPoint2f contour = new MatOfPoint2f((overMinAreaContours.get(overMinAreaContours.size() - 1)).toArray());
         final MatOfPoint2f approx2f = new MatOfPoint2f();
-        final double epsilon = arcLength(contour, true);
+        final double epsilon = 0.0005 * arcLength(contour, true);
         approxPolyDP(contour, approx2f, epsilon, true);
-        final MatOfPoint approx = new MatOfPoint(approx2f.toArray());
-        MatOfInt hull = new MatOfInt();
-        Imgproc.convexHull(approx, hull);
+        final org.opencv.core.Point[] points = approx2f.toArray();
+        org.opencv.core.Point leftTop = new org.opencv.core.Point(TRIM_WIDTH, 0);
+        org.opencv.core.Point rightTop = new org.opencv.core.Point(0, 0);
+
+        for (final org.opencv.core.Point point: points) {
+            final double x = point.x;
+
+            if (x <= leftTop.x) {
+                leftTop = point;
+            }
+
+            if (x >= rightTop.x) {
+                rightTop = point;
+            }
+        }
+        final int PAI_MAX_NUMBER = 14;
+        final org.opencv.core.Point[] tops = new org.opencv.core.Point[PAI_MAX_NUMBER + 1];
+
+        for (int count = 0; count < PAI_MAX_NUMBER + 1; count++) {
+            final double x = leftTop.x + (rightTop.x - leftTop.x) * count / PAI_MAX_NUMBER;
+            final double y = leftTop.y + (rightTop.y - leftTop.y) * count / PAI_MAX_NUMBER;
+            tops[count] = new org.opencv.core.Point(x, y);
+        }
+        double leftBottomDistance = 0;
+        double rightBottomDistance = 0;
+        org.opencv.core.Point leftBottom = new org.opencv.core.Point(0, 0);
+        org.opencv.core.Point rightBottom = new org.opencv.core.Point(0, 0);
+        final org.opencv.core.Point leftmost = tops[1];
+        final org.opencv.core.Point rightmost = tops[PAI_MAX_NUMBER - 1 - 1];
+
+        for (final org.opencv.core.Point point: points) {
+            final double x = point.x;
+            final double y = point.y;
+
+            if (x <= leftmost.x && y > leftmost.y) {
+                final double distance = Math.sqrt(Math.pow((leftmost.x - x), 2) + Math.pow((y - leftmost.y), 2));
+
+                if (distance > leftBottomDistance) {
+                    leftBottomDistance = distance;
+                    leftBottom = point;
+                }
+            }
+
+            if (x > rightmost.x && y > rightmost.y) {
+                final double distance = Math.sqrt(Math.pow((x - rightmost.x), 2) + Math.pow((y - rightmost.y), 2));
+
+                if (distance > rightBottomDistance) {
+                    rightBottomDistance = distance;
+                    rightBottom = point;
+                }
+            }
+        }
+        final org.opencv.core.Point[] bottoms = new org.opencv.core.Point[PAI_MAX_NUMBER + 1];
+
+        for (int count = 0; count < PAI_MAX_NUMBER + 1; count++) {
+            final double x = leftBottom.x + (rightBottom.x - leftBottom.x) * count / PAI_MAX_NUMBER;
+            final double y = leftBottom.y + (rightBottom.y - leftBottom.y) * count / PAI_MAX_NUMBER;
+            bottoms[count] = new org.opencv.core.Point(x, y);
+        }
+        final int PAI_WIDTH = 28;
+        //変換先座標設定
+        final double destinationPoint[] = new double[]{0, 0, PAI_WIDTH, 0, 0, PAI_WIDTH, PAI_WIDTH, PAI_WIDTH};
+        final Mat destinationPointMat = new Mat(4, 2, CvType.CV_32F);
+        destinationPointMat.put(0, 0, destinationPoint);
+
+        for (int count = 0; count < PAI_MAX_NUMBER; count++) {
+            //変換元座標設定
+            final double sourcePoint[] = new double[]{tops[count].x, tops[count].y,
+                                                      tops[count + 1].x, tops[count + 1].y,
+                                                      bottoms[count].x, bottoms[count].y,
+                                                      bottoms[count + 1].x, bottoms[count + 1].y};
+            final Mat sourcePointMat = new Mat(4, 2, CvType.CV_32F);
+            sourcePointMat.put(0, 0, sourcePoint);
+            //変換行列作成
+            final Mat r_mat = getPerspectiveTransform(sourcePointMat, destinationPointMat);
+            //図形変換処理
+            final Mat destination = new Mat(PAI_WIDTH, PAI_WIDTH, CvType.CV_8UC1);
+            warpPerspective(threshold, destination, r_mat, destination.size());
+            final String destinationName = getActivity().getExternalFilesDir(null) + "/" + count + ".jpg";
+            imwrite(destinationName, destination);
+        }
+
+        //start
+        final Mat colorSource = imread(trimmedSourceName, IMREAD_UNCHANGED);
+        final List<MatOfPoint> contourList = new ArrayList<>();
+        MatOfPoint approxf1 = new MatOfPoint();
+        approx2f.convertTo(approxf1, CvType.CV_32S);
+        contourList.add(approxf1);
+        drawContours(colorSource, contourList, -1, new Scalar(255, 0, 0), 3);
+        line(colorSource, leftTop, rightTop, new Scalar(0, 0, 255), 1);
+        line(colorSource, leftBottom, rightBottom, new Scalar(0, 0, 255), 1);
+        final String rangeName = getActivity().getExternalFilesDir(null) + "/range.jpg";
+        imwrite(rangeName, colorSource);
+        //end
     }
 
     /**
