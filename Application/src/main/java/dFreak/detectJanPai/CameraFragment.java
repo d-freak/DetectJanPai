@@ -26,6 +26,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.ImageFormat;
 import android.graphics.Matrix;
 import android.graphics.Point;
@@ -44,6 +46,7 @@ import android.hardware.camera2.params.StreamConfigurationMap;
 import android.media.Image;
 import android.media.ImageReader;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.support.annotation.NonNull;
@@ -60,25 +63,25 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import org.opencv.android.Utils;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
-import org.opencv.core.MatOfInt;
 import org.opencv.core.MatOfPoint;
 import org.opencv.core.MatOfPoint2f;
-import org.opencv.core.Rect;
 import org.opencv.core.Scalar;
-import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.LinkedList;
+import java.util.Date;
 import java.util.List;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
@@ -264,6 +267,11 @@ public class CameraFragment extends Fragment
     private File mFile;
 
     /**
+     * This is the output file for our picture.
+     */
+    private JanPaiDetector mJanPaiDetector = new JanPaiDetector();
+
+    /**
      * This a callback object for the {@link ImageReader}. "onImageAvailable" will be called when a
      * still image is ready to be saved.
      */
@@ -395,6 +403,7 @@ public class CameraFragment extends Fragment
         final double destinationPoint[] = new double[]{0, 0, PAI_WIDTH, 0, 0, PAI_WIDTH, PAI_WIDTH, PAI_WIDTH};
         final Mat destinationPointMat = new Mat(4, 2, CvType.CV_32F);
         destinationPointMat.put(0, 0, destinationPoint);
+        String result = "";
 
         for (int count = 0; count < PAI_MAX_NUMBER; count++) {
             //変換元座標設定
@@ -411,8 +420,75 @@ public class CameraFragment extends Fragment
             warpPerspective(threshold, destination, r_mat, destination.size());
             final String destinationName = getActivity().getExternalFilesDir(null) + "/" + count + ".jpg";
             imwrite(destinationName, destination);
-        }
+            final int[] pixels = new int[784];
 
+            for (int rowCount = 0; rowCount < destination.rows(); rowCount++) {
+                for (int colCount = 0; colCount < destination.cols(); colCount++) {
+                    final int index = rowCount * destination.rows() + colCount;
+                    final int pixel = (int) destination.get(rowCount, colCount)[0];
+                    pixels[index] = pixel;
+                }
+            }
+            final Integer pai = mJanPaiDetector.detectJanPai(pixels);
+
+            switch (pai) {
+                case 0: result += "1m, "; break;
+                case 1: result += "1mr, "; break;
+                case 2: result += "1p, "; break;
+                case 3: result += "1s, "; break;
+                case 4: result += "1sr, "; break;
+                case 5: result += "2m, "; break;
+                case 6: result += "2mr, "; break;
+                case 7: result += "2p, "; break;
+                case 8: result += "2s, "; break;
+                case 9: result += "3m, "; break;
+                case 10: result += "3mr, "; break;
+                case 11: result += "3p, "; break;
+                case 12: result += "3s, "; break;
+                case 13: result += "3sr, "; break;
+                case 14: result += "4m, "; break;
+                case 15: result += "4mr, "; break;
+                case 16: result += "4p, "; break;
+                case 17: result += "4s, "; break;
+                case 18: result += "5m, "; break;
+                case 19: result += "5mr, "; break;
+                case 20: result += "5p, "; break;
+                case 21: result += "5s, "; break;
+                case 22: result += "6m, "; break;
+                case 23: result += "6mr, "; break;
+                case 24: result += "6p, "; break;
+                case 25: result += "6pr, "; break;
+                case 26: result += "6s, "; break;
+                case 27: result += "7m, "; break;
+                case 28: result += "7mr, "; break;
+                case 29: result += "7p, "; break;
+                case 30: result += "7pr, "; break;
+                case 31: result += "7s, "; break;
+                case 32: result += "7sr, "; break;
+                case 33: result += "8m, "; break;
+                case 34: result += "8mr, "; break;
+                case 35: result += "8p, "; break;
+                case 36: result += "4s, "; break;
+                case 37: result += "9m, "; break;
+                case 38: result += "9mr, "; break;
+                case 39: result += "9p, "; break;
+                case 40: result += "9s, "; break;
+                case 41: result += "ch, "; break;
+                case 42: result += "chr, "; break;
+                case 43: result += "hk, "; break;
+                case 44: result += "ht, "; break;
+                case 45: result += "htr, "; break;
+                case 46: result += "na, "; break;
+                case 47: result += "nar, "; break;
+                case 48: result += "pe, "; break;
+                case 49: result += "per, "; break;
+                case 50: result += "sh, "; break;
+                case 51: result += "shr, "; break;
+                case 52: result += "to, "; break;
+                case 53: result += "tor, "; break;
+            }
+        }
+        showToast(result);
         //start
         final Mat colorSource = imread(trimmedSourceName, IMREAD_UNCHANGED);
         final List<MatOfPoint> contourList = new ArrayList<>();
@@ -425,6 +501,41 @@ public class CameraFragment extends Fragment
         final String rangeName = getActivity().getExternalFilesDir(null) + "/range.jpg";
         imwrite(rangeName, colorSource);
         //end
+    }
+
+    private String listToString(int[] ints) {
+        String result = "";
+
+        for (int i = 0; i < ints.length; i++) {
+            Integer integer = ints[i];
+            result += integer.toString() + ", ";
+        }
+        return result;
+    }
+
+    /**
+     * Get 28x28 pixel data for tensorflow input.
+     */
+    public int[] getPixelData(final Bitmap bitmap) {
+        if (bitmap == null) {
+            return null;
+        }
+
+        int width = bitmap.getWidth();
+        int height = bitmap.getHeight();
+
+        // Get 28x28 pixel data from bitmap
+        int[] pixels = new int[width * height];
+        bitmap.getPixels(pixels, 0, width, 0, 0, width, height);
+
+        int[] retPixels = new int[pixels.length];
+        for (int i = 0; i < pixels.length; ++i) {
+            // Set 0 for white and 255 for black pixel
+            int pix = pixels[i];
+            int b = pix & 0xff;
+            retPixels[i] = 0xff - b;
+        }
+        return retPixels;
     }
 
     /**
@@ -628,6 +739,12 @@ public class CameraFragment extends Fragment
             openCamera(mTextureView.getWidth(), mTextureView.getHeight());
         } else {
             mTextureView.setSurfaceTextureListener(mSurfaceTextureListener);
+        }
+        boolean ret = mJanPaiDetector.setup(getActivity());
+
+        if( !ret ) {
+            Log.i(TAG, "Detector setup failed");
+            return;
         }
     }
 
@@ -1013,8 +1130,8 @@ public class CameraFragment extends Fragment
                 public void onCaptureCompleted(@NonNull CameraCaptureSession session,
                                                @NonNull CaptureRequest request,
                                                @NonNull TotalCaptureResult result) {
-                    showToast("Saved: " + mFile);
-                    Log.d(TAG, mFile.toString());
+                    //showToast("Saved: " + mFile);
+                    //Log.d(TAG, mFile.toString());
                     unlockFocus();
                 }
             };
