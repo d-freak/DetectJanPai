@@ -46,7 +46,6 @@ import android.hardware.camera2.params.StreamConfigurationMap;
 import android.media.Image;
 import android.media.ImageReader;
 import android.os.Bundle;
-import android.os.Environment;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.support.annotation.NonNull;
@@ -61,9 +60,12 @@ import android.view.Surface;
 import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import org.opencv.android.Utils;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfPoint;
@@ -72,20 +74,20 @@ import org.opencv.core.Scalar;
 import org.opencv.imgproc.Imgproc;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.Date;
 import java.util.List;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
+import wiz.project.jan.JanPai;
+
+import static org.opencv.android.Utils.matToBitmap;
 import static org.opencv.imgcodecs.Imgcodecs.IMREAD_GRAYSCALE;
 import static org.opencv.imgcodecs.Imgcodecs.IMREAD_UNCHANGED;
 import static org.opencv.imgcodecs.Imgcodecs.imread;
@@ -94,7 +96,6 @@ import static org.opencv.imgproc.Imgproc.adaptiveThreshold;
 import static org.opencv.imgproc.Imgproc.approxPolyDP;
 import static org.opencv.imgproc.Imgproc.arcLength;
 import static org.opencv.imgproc.Imgproc.contourArea;
-import static org.opencv.imgproc.Imgproc.convexHull;
 import static org.opencv.imgproc.Imgproc.drawContours;
 import static org.opencv.imgproc.Imgproc.findContours;
 import static org.opencv.imgproc.Imgproc.getPerspectiveTransform;
@@ -282,12 +283,171 @@ public class CameraFragment extends Fragment
         public void onImageAvailable(ImageReader reader) {
             final Image image = reader.acquireNextImage();
             //mBackgroundHandler.post(new ImageSaver(image, mFile));
-            detectJanPai(image);
+            final List<DetectedJanPai> detectedJanPaiList = detectJanPai(image);
+
+            getActivity().runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    final String detectPath = getActivity().getExternalFilesDir(null) + "/trimmed.jpg";
+                    final ImageView detectArea = (ImageView) getActivity().findViewById(R.id.detectArea);
+
+                    showJpeg(detectPath, detectArea);
+
+                    final TextView detect = (TextView) getActivity().findViewById(R.id.detect);
+                    detect.setText("撮影画像");
+
+                    final TextView threshold = (TextView) getActivity().findViewById(R.id.threshold);
+                    threshold.setText("2値画像");
+
+                    final String thresholdPath = getActivity().getExternalFilesDir(null) + "/threshold.jpg";
+                    final ImageView thresholdArea = (ImageView) getActivity().findViewById(R.id.thresholdArea);
+
+                    showJpeg(thresholdPath, thresholdArea);
+
+                    final TextView range = (TextView) getActivity().findViewById(R.id.range);
+                    range.setText("牌検出範囲");
+
+                    final String rangePath = getActivity().getExternalFilesDir(null) + "/range.jpg";
+                    final ImageView rangeArea = (ImageView) getActivity().findViewById(R.id.rangeArea);
+
+                    showJpeg(rangePath, rangeArea);
+
+                    final TextView paiImage = (TextView) getActivity().findViewById(R.id.paiImage);
+                    paiImage.setText("検出した牌");
+
+                    final FrameLayout paiImageArea = (FrameLayout) getActivity().findViewById(R.id.paiImageArea);
+                    final RelativeLayout paiImages = (RelativeLayout) getActivity().getLayoutInflater().inflate(R.layout.pai_image_area, null);
+
+                    paiImageArea.addView(paiImages);
+
+                    for (int count = 0; count < 14; count++) {
+                        final String fileName = "/" + count + ".jpg";
+                        final String paiPath = getActivity().getExternalFilesDir(null) + fileName;
+                        final ImageView paiView = (ImageView) paiImages.findViewById(R.id.pai_00 + count);
+
+                        showJpeg(paiPath, paiView);
+                    }
+                    final TextView result = (TextView) getActivity().findViewById(R.id.result);
+                    result.setText("認識結果");
+
+                    final FrameLayout resultArea = (FrameLayout) getActivity().findViewById(R.id.resultArea);
+                    final RelativeLayout results = (RelativeLayout) getActivity().getLayoutInflater().inflate(R.layout.pai_image_area, null);
+
+                    resultArea.addView(results);
+
+                    int count = 0;
+
+                    for (final DetectedJanPai detectedJanPai : detectedJanPaiList) {
+                        final ImageView paiView = (ImageView) results.findViewById(R.id.pai_00 + count);
+                        final int resourceId = getResources().getIdentifier(detectedJanPaiToPng(detectedJanPai), "drawable", getActivity().getPackageName());
+
+                        if (detectedJanPai.isReverse()) {
+                            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), resourceId);
+
+                            final Matrix matrix = new Matrix();
+
+                            matrix.preScale(1, -1);
+
+                            bitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, false);
+
+                            paiView.setImageBitmap(bitmap);
+                        }
+                        else {
+                            paiView.setImageResource(resourceId);
+                        }
+                        count++;
+                    }
+                }
+            });
         }
 
     };
 
-    private void detectJanPai(final Image image) {
+    private String detectedJanPaiToPng(final DetectedJanPai detectedJanPai) {
+        final JanPai pai = detectedJanPai.toJanPai();
+
+        switch (pai) {
+            case MAN_1:
+                return "m1";
+            case MAN_2:
+                return "m2";
+            case MAN_3:
+                return "m3";
+            case MAN_4:
+                return "m4";
+            case MAN_5:
+                return "m5";
+            case MAN_6:
+                return "m6";
+            case MAN_7:
+                return "m7";
+            case MAN_8:
+                return "m8";
+            case MAN_9:
+                return "m9";
+            case PIN_1:
+                return "p1";
+            case PIN_2:
+                return "p2";
+            case PIN_3:
+                return "p3";
+            case PIN_4:
+                return "p4";
+            case PIN_5:
+                return "p5";
+            case PIN_6:
+                return "p6";
+            case PIN_7:
+                return "p7";
+            case PIN_8:
+                return "p8";
+            case PIN_9:
+                return "p9";
+            case SOU_1:
+                return "s1";
+            case SOU_2:
+                return "s2";
+            case SOU_3:
+                return "s3";
+            case SOU_4:
+                return "s4";
+            case SOU_5:
+                return "s5";
+            case SOU_6:
+                return "s6";
+            case SOU_7:
+                return "s7";
+            case SOU_8:
+                return "s8";
+            case SOU_9:
+                return "s9";
+            case TON:
+                return "j1";
+            case NAN:
+                return "j2";
+            case SHA:
+                return "j3";
+            case PEI:
+                return "j4";
+            case CHUN:
+                return "j5";
+            case HAKU:
+                return "j6";
+            case HATU:
+                return "j7";
+        }
+        return "";
+    }
+
+    private void showJpeg(final String path, final ImageView imageView) {
+        final Mat jpeg = imread(path, IMREAD_UNCHANGED);
+        final Bitmap bitmap = Bitmap.createBitmap(jpeg.width(), jpeg.height(), Bitmap.Config.ARGB_8888);
+
+        matToBitmap(jpeg, bitmap);
+        imageView.setImageBitmap(bitmap);
+    }
+
+    private List<DetectedJanPai> detectJanPai(final Image image) {
         final Mat buf = new Mat(image.getHeight(), image.getWidth(), CvType.CV_8UC1);
 
         final ByteBuffer buffer = image.getPlanes()[0].getBuffer();
@@ -403,7 +563,7 @@ public class CameraFragment extends Fragment
         final double destinationPoint[] = new double[]{0, 0, PAI_WIDTH, 0, 0, PAI_WIDTH, PAI_WIDTH, PAI_WIDTH};
         final Mat destinationPointMat = new Mat(4, 2, CvType.CV_32F);
         destinationPointMat.put(0, 0, destinationPoint);
-        String result = "";
+        final List<DetectedJanPai> detectedJanPaiList = new ArrayList<>();
 
         for (int count = 0; count < PAI_MAX_NUMBER; count++) {
             //変換元座標設定
@@ -429,66 +589,10 @@ public class CameraFragment extends Fragment
                     pixels[index] = pixel;
                 }
             }
-            final Integer pai = mJanPaiDetector.detectJanPai(pixels);
-
-            switch (pai) {
-                case 0: result += "1m, "; break;
-                case 1: result += "1mr, "; break;
-                case 2: result += "1p, "; break;
-                case 3: result += "1s, "; break;
-                case 4: result += "1sr, "; break;
-                case 5: result += "2m, "; break;
-                case 6: result += "2mr, "; break;
-                case 7: result += "2p, "; break;
-                case 8: result += "2s, "; break;
-                case 9: result += "3m, "; break;
-                case 10: result += "3mr, "; break;
-                case 11: result += "3p, "; break;
-                case 12: result += "3s, "; break;
-                case 13: result += "3sr, "; break;
-                case 14: result += "4m, "; break;
-                case 15: result += "4mr, "; break;
-                case 16: result += "4p, "; break;
-                case 17: result += "4s, "; break;
-                case 18: result += "5m, "; break;
-                case 19: result += "5mr, "; break;
-                case 20: result += "5p, "; break;
-                case 21: result += "5s, "; break;
-                case 22: result += "6m, "; break;
-                case 23: result += "6mr, "; break;
-                case 24: result += "6p, "; break;
-                case 25: result += "6pr, "; break;
-                case 26: result += "6s, "; break;
-                case 27: result += "7m, "; break;
-                case 28: result += "7mr, "; break;
-                case 29: result += "7p, "; break;
-                case 30: result += "7pr, "; break;
-                case 31: result += "7s, "; break;
-                case 32: result += "7sr, "; break;
-                case 33: result += "8m, "; break;
-                case 34: result += "8mr, "; break;
-                case 35: result += "8p, "; break;
-                case 36: result += "4s, "; break;
-                case 37: result += "9m, "; break;
-                case 38: result += "9mr, "; break;
-                case 39: result += "9p, "; break;
-                case 40: result += "9s, "; break;
-                case 41: result += "ch, "; break;
-                case 42: result += "chr, "; break;
-                case 43: result += "hk, "; break;
-                case 44: result += "ht, "; break;
-                case 45: result += "htr, "; break;
-                case 46: result += "na, "; break;
-                case 47: result += "nar, "; break;
-                case 48: result += "pe, "; break;
-                case 49: result += "per, "; break;
-                case 50: result += "sh, "; break;
-                case 51: result += "shr, "; break;
-                case 52: result += "to, "; break;
-                case 53: result += "tor, "; break;
-            }
+            final int pai = mJanPaiDetector.detectJanPai(pixels);
+            final DetectedJanPai detectedJanPai = DetectedJanPai.getDetectedJanPai(pai);
+            detectedJanPaiList.add(detectedJanPai);
         }
-        showToast(result);
         //start
         final Mat colorSource = imread(trimmedSourceName, IMREAD_UNCHANGED);
         final List<MatOfPoint> contourList = new ArrayList<>();
@@ -501,6 +605,7 @@ public class CameraFragment extends Fragment
         final String rangeName = getActivity().getExternalFilesDir(null) + "/range.jpg";
         imwrite(rangeName, colorSource);
         //end
+        return detectedJanPaiList;
     }
 
     private String listToString(int[] ints) {

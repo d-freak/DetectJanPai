@@ -8,8 +8,6 @@ public class JanPaiDetector {
 		System.loadLibrary("tensorflow_mnist");
 	}
 
-	private native int init(AssetManager assetManager, String model);
-
 	public native int detectJanPai(int[] pixels);
 
 	public boolean setup(Context context) {
@@ -19,4 +17,8 @@ public class JanPaiDetector {
 
 		return ret >= 0;
 	}
+
+
+
+	private native int init(AssetManager assetManager, String model);
 }

@@ -24,12 +24,106 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true" />
 
-    <FrameLayout
+    <TextView
+        android:id="@+id/detect"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_alignParentStart="true">
+
+    </TextView>
+
+    <ImageView
         android:id="@+id/detectArea"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp56"
         android:layout_alignParentStart="true"
-        android:background="@drawable/frame">
+        android:background="@drawable/frame"
+        android:layout_below="@+id/detect">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/threshold"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/detectArea">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/thresholdArea"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp56"
+        android:layout_below="@+id/threshold">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/range"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/thresholdArea">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/rangeArea"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp56"
+        android:layout_below="@+id/range">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/paiImage"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/rangeArea">
+
+    </TextView>
+
+    <FrameLayout
+        android:id="@+id/paiImageArea"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp56"
+        android:layout_below="@+id/paiImage">
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/paiImageArea">
+
+    </TextView>
+
+    <FrameLayout
+        android:id="@+id/resultArea"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp56"
+        android:layout_below="@+id/result">
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/sort"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/resultArea">
+
+    </TextView>
+
+    <FrameLayout
+        android:id="@+id/sortArea"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp56"
+        android:layout_below="@+id/sort">
 
     </FrameLayout>
 
