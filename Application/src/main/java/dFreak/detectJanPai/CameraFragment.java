@@ -24,6 +24,7 @@ import android.app.DialogFragment;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
@@ -51,6 +52,8 @@ import android.os.HandlerThread;
 import android.support.annotation.NonNull;
 import android.support.v13.app.FragmentCompat;
 import android.support.v4.content.ContextCompat;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.Size;
@@ -60,6 +63,7 @@ import android.view.Surface;
 import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -70,6 +74,7 @@ import org.opencv.core.CvType;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfPoint;
 import org.opencv.core.MatOfPoint2f;
+import org.opencv.core.Rect;
 import org.opencv.core.Scalar;
 import org.opencv.imgproc.Imgproc;
 
@@ -87,20 +92,25 @@ import java.util.concurrent.TimeUnit;
 
 import wiz.project.jan.JanPai;
 
+import static android.content.Context.MODE_PRIVATE;
+import static org.opencv.android.Utils.bitmapToMat;
 import static org.opencv.android.Utils.matToBitmap;
-import static org.opencv.imgcodecs.Imgcodecs.IMREAD_GRAYSCALE;
 import static org.opencv.imgcodecs.Imgcodecs.IMREAD_UNCHANGED;
+import static org.opencv.imgcodecs.Imgcodecs.imdecode;
 import static org.opencv.imgcodecs.Imgcodecs.imread;
 import static org.opencv.imgcodecs.Imgcodecs.imwrite;
+import static org.opencv.imgproc.Imgproc.COLOR_RGB2GRAY;
 import static org.opencv.imgproc.Imgproc.adaptiveThreshold;
 import static org.opencv.imgproc.Imgproc.approxPolyDP;
 import static org.opencv.imgproc.Imgproc.arcLength;
 import static org.opencv.imgproc.Imgproc.contourArea;
+import static org.opencv.imgproc.Imgproc.cvtColor;
 import static org.opencv.imgproc.Imgproc.drawContours;
 import static org.opencv.imgproc.Imgproc.findContours;
 import static org.opencv.imgproc.Imgproc.getPerspectiveTransform;
 import static org.opencv.imgproc.Imgproc.line;
 import static org.opencv.imgproc.Imgproc.medianBlur;
+import static org.opencv.imgproc.Imgproc.rectangle;
 import static org.opencv.imgproc.Imgproc.warpPerspective;
 
 public class CameraFragment extends Fragment
@@ -273,6 +283,11 @@ public class CameraFragment extends Fragment
     private JanPaiDetector mJanPaiDetector = new JanPaiDetector();
 
     /**
+     * This is the output file for our picture.
+     */
+    private Integer mBlockSize = 11;
+
+    /**
      * This a callback object for the {@link ImageReader}. "onImageAvailable" will be called when a
      * still image is ready to be saved.
      */
@@ -288,75 +303,70 @@ public class CameraFragment extends Fragment
             getActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    final String detectPath = getActivity().getExternalFilesDir(null) + "/trimmed.jpg";
-                    final ImageView detectArea = (ImageView) getActivity().findViewById(R.id.detectArea);
+                final TextView detect = (TextView) getActivity().findViewById(R.id.detect);
+                detect.setText("撮影画像");
 
-                    showJpeg(detectPath, detectArea);
+                final TextView threshold = (TextView) getActivity().findViewById(R.id.threshold);
+                threshold.setText("2値画像");
 
-                    final TextView detect = (TextView) getActivity().findViewById(R.id.detect);
-                    detect.setText("撮影画像");
+                final String thresholdPath = getActivity().getExternalFilesDir(null) + "/threshold.jpg";
+                final ImageView thresholdArea = (ImageView) getActivity().findViewById(R.id.thresholdArea);
 
-                    final TextView threshold = (TextView) getActivity().findViewById(R.id.threshold);
-                    threshold.setText("2値画像");
+                showJpeg(thresholdPath, thresholdArea);
 
-                    final String thresholdPath = getActivity().getExternalFilesDir(null) + "/threshold.jpg";
-                    final ImageView thresholdArea = (ImageView) getActivity().findViewById(R.id.thresholdArea);
+                final TextView range = (TextView) getActivity().findViewById(R.id.range);
+                range.setText("牌検出範囲");
 
-                    showJpeg(thresholdPath, thresholdArea);
+                final String rangePath = getActivity().getExternalFilesDir(null) + "/range.jpg";
+                final ImageView rangeArea = (ImageView) getActivity().findViewById(R.id.rangeArea);
 
-                    final TextView range = (TextView) getActivity().findViewById(R.id.range);
-                    range.setText("牌検出範囲");
+                showJpeg(rangePath, rangeArea);
 
-                    final String rangePath = getActivity().getExternalFilesDir(null) + "/range.jpg";
-                    final ImageView rangeArea = (ImageView) getActivity().findViewById(R.id.rangeArea);
+                final TextView paiImage = (TextView) getActivity().findViewById(R.id.paiImage);
+                paiImage.setText("検出した牌");
 
-                    showJpeg(rangePath, rangeArea);
+                final FrameLayout paiImageArea = (FrameLayout) getActivity().findViewById(R.id.paiImageArea);
+                final RelativeLayout paiImages = (RelativeLayout) getActivity().getLayoutInflater().inflate(R.layout.pai_image_area, null);
 
-                    final TextView paiImage = (TextView) getActivity().findViewById(R.id.paiImage);
-                    paiImage.setText("検出した牌");
+                paiImageArea.addView(paiImages);
 
-                    final FrameLayout paiImageArea = (FrameLayout) getActivity().findViewById(R.id.paiImageArea);
-                    final RelativeLayout paiImages = (RelativeLayout) getActivity().getLayoutInflater().inflate(R.layout.pai_image_area, null);
+                for (int count = 0; count < 14; count++) {
+                    final String fileName = "/" + count + ".jpg";
+                    final String paiPath = getActivity().getExternalFilesDir(null) + fileName;
+                    final ImageView paiView = (ImageView) paiImages.findViewById(R.id.pai_00 + count);
 
-                    paiImageArea.addView(paiImages);
+                    showJpeg(paiPath, paiView);
+                }
+                final TextView result = (TextView) getActivity().findViewById(R.id.result);
+                result.setText("認識結果");
 
-                    for (int count = 0; count < 14; count++) {
-                        final String fileName = "/" + count + ".jpg";
-                        final String paiPath = getActivity().getExternalFilesDir(null) + fileName;
-                        final ImageView paiView = (ImageView) paiImages.findViewById(R.id.pai_00 + count);
+                final FrameLayout resultArea = (FrameLayout) getActivity().findViewById(R.id.resultArea);
+                final RelativeLayout results = (RelativeLayout) getActivity().getLayoutInflater().inflate(R.layout.pai_image_area, null);
 
-                        showJpeg(paiPath, paiView);
+                resultArea.addView(results);
+
+                int count = 0;
+
+                for (final DetectedJanPai detectedJanPai : detectedJanPaiList) {
+                    final ImageView paiView = (ImageView) results.findViewById(R.id.pai_00 + count);
+                    final int resourceId = getResources().getIdentifier(detectedJanPaiToPng(detectedJanPai), "drawable", getActivity().getPackageName());
+
+                    if (detectedJanPai.isReverse()) {
+                        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), resourceId);
+
+                        final Matrix matrix = new Matrix();
+
+                        matrix.preScale(-1, -1);
+
+                        bitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, false);
+
+                        paiView.setImageBitmap(bitmap);
                     }
-                    final TextView result = (TextView) getActivity().findViewById(R.id.result);
-                    result.setText("認識結果");
-
-                    final FrameLayout resultArea = (FrameLayout) getActivity().findViewById(R.id.resultArea);
-                    final RelativeLayout results = (RelativeLayout) getActivity().getLayoutInflater().inflate(R.layout.pai_image_area, null);
-
-                    resultArea.addView(results);
-
-                    int count = 0;
-
-                    for (final DetectedJanPai detectedJanPai : detectedJanPaiList) {
-                        final ImageView paiView = (ImageView) results.findViewById(R.id.pai_00 + count);
-                        final int resourceId = getResources().getIdentifier(detectedJanPaiToPng(detectedJanPai), "drawable", getActivity().getPackageName());
-
-                        if (detectedJanPai.isReverse()) {
-                            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), resourceId);
-
-                            final Matrix matrix = new Matrix();
-
-                            matrix.preScale(1, -1);
-
-                            bitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, false);
-
-                            paiView.setImageBitmap(bitmap);
-                        }
-                        else {
-                            paiView.setImageResource(resourceId);
-                        }
-                        count++;
+                    else {
+                        paiView.setImageResource(resourceId);
                     }
+                    count++;
+                }
                 }
             });
         }
@@ -429,14 +439,14 @@ public class CameraFragment extends Fragment
                 return "j3";
             case PEI:
                 return "j4";
-            case CHUN:
-                return "j5";
             case HAKU:
-                return "j6";
+                return "j5";
             case HATU:
+                return "j6";
+            case CHUN:
                 return "j7";
         }
-        return "";
+        return "ura";
     }
 
     private void showJpeg(final String path, final ImageView imageView) {
@@ -455,29 +465,43 @@ public class CameraFragment extends Fragment
         buffer.get(bytes);
         buf.put(0, 0, bytes);
 
-        //final Mat source = Imgcodecs.imdecode(buf, IMREAD_GRAYSCALE);
+        final Mat source = imdecode(buf, IMREAD_UNCHANGED);
         //start
-        final String sourceName = getActivity().getExternalFilesDir(null) + "/pic.jpg";
-        final Mat source = imread(sourceName, IMREAD_GRAYSCALE);
+        //final String sourceName = getActivity().getExternalFilesDir(null) + "/pic.jpg";
+        //final Mat source = imread(sourceName, IMREAD_GRAYSCALE);
         //end
-        //final int TRIM_WIDTH = source.width();
-        final int TRIM_WIDTH = 2100;
+        int TRIM_WIDTH = source.width();
         final DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
         final float TRIM_HEIGHT_DP = getResources().getDimensionPixelOffset(R.dimen.dp56);
         final float density = displayMetrics.density;
-        //final int TRIM_HEIGHT = (int) (TRIM_HEIGHT_DP * density + 0.5f);
-        final int TRIM_HEIGHT = 270;
+        int TRIM_HEIGHT = (int) (TRIM_HEIGHT_DP * density + 0.5f);
+        final float TRIM_Y_DP = getResources().getDimensionPixelOffset(R.dimen.dp28);
         final int TRIM_X = 0;
-        final int TRIM_Y = 0;
-        //final Mat trimmedSource = new Mat(source, new Rect(TRIM_X, TRIM_Y, TRIM_WIDTH, TRIM_HEIGHT));
+        final int TRIM_Y = (int) (TRIM_Y_DP * density + 0.5f);
+        Mat trimmedSource = new Mat(source, new Rect(TRIM_X, TRIM_Y, TRIM_WIDTH, TRIM_HEIGHT));
+        final boolean debug = false;
+
+        if (debug) {
+            TRIM_WIDTH = 2100;
+            TRIM_HEIGHT = 270;
+
+            final Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.debug);
+            final Mat mat = new Mat(TRIM_WIDTH, TRIM_HEIGHT, CvType.CV_8UC4);
+            bitmapToMat(bitmap, mat);
+            trimmedSource = mat;
+        }
         //start
-        final String trimmedSourceName = getActivity().getExternalFilesDir(null) + "/trimmed.jpg";
-        final Mat trimmedSource = imread(trimmedSourceName, IMREAD_GRAYSCALE);
+        final String trimmedName = getActivity().getExternalFilesDir(null) + "/trimmed.jpg";
+        imwrite(trimmedName, trimmedSource);
         //end
+        final Mat graySource = new Mat(TRIM_WIDTH, TRIM_HEIGHT, CvType.CV_8UC1);
+        cvtColor(trimmedSource, graySource, COLOR_RGB2GRAY);
         final Mat blurredSource = new Mat(TRIM_WIDTH, TRIM_HEIGHT, CvType.CV_8UC1);
+        medianBlur(graySource, blurredSource, 5);
         final Mat threshold = new Mat(TRIM_WIDTH, TRIM_HEIGHT, CvType.CV_8UC1);
-        medianBlur(trimmedSource, blurredSource, 5);
-        adaptiveThreshold(blurredSource, threshold, 255, Imgproc.ADAPTIVE_THRESH_GAUSSIAN_C, Imgproc.THRESH_BINARY, 11, 2);
+        final EditText editText = (EditText) getActivity().findViewById(R.id.blockSize);
+        final int blockSize = Integer.parseInt(editText.getText().toString());
+        adaptiveThreshold(blurredSource, threshold, 255, Imgproc.ADAPTIVE_THRESH_GAUSSIAN_C, Imgproc.THRESH_BINARY, blockSize, 2);
         //start
         final String imageName = getActivity().getExternalFilesDir(null) + "/threshold.jpg";
         imwrite(imageName, threshold);
@@ -527,7 +551,7 @@ public class CameraFragment extends Fragment
         org.opencv.core.Point leftBottom = new org.opencv.core.Point(0, 0);
         org.opencv.core.Point rightBottom = new org.opencv.core.Point(0, 0);
         final org.opencv.core.Point leftmost = tops[1];
-        final org.opencv.core.Point rightmost = tops[PAI_MAX_NUMBER - 1 - 1];
+        final org.opencv.core.Point rightmost = tops[PAI_MAX_NUMBER - 1];
 
         for (final org.opencv.core.Point point: points) {
             final double x = point.x;
@@ -594,16 +618,19 @@ public class CameraFragment extends Fragment
             detectedJanPaiList.add(detectedJanPai);
         }
         //start
-        final Mat colorSource = imread(trimmedSourceName, IMREAD_UNCHANGED);
         final List<MatOfPoint> contourList = new ArrayList<>();
         MatOfPoint approxf1 = new MatOfPoint();
         approx2f.convertTo(approxf1, CvType.CV_32S);
         contourList.add(approxf1);
-        drawContours(colorSource, contourList, -1, new Scalar(255, 0, 0), 3);
-        line(colorSource, leftTop, rightTop, new Scalar(0, 0, 255), 1);
-        line(colorSource, leftBottom, rightBottom, new Scalar(0, 0, 255), 1);
+        drawContours(trimmedSource, contourList, -1, new Scalar(255, 0, 0), 3);
+        line(trimmedSource, leftTop, rightTop, new Scalar(0, 0, 255), 10);
+        line(trimmedSource, leftBottom, rightBottom, new Scalar(0, 0, 255), 10);
+
+        for (final org.opencv.core.Point point: points) {
+            rectangle(trimmedSource, point, point, new Scalar(255, 255, 0), 10);
+        }
         final String rangeName = getActivity().getExternalFilesDir(null) + "/range.jpg";
-        imwrite(rangeName, colorSource);
+        imwrite(rangeName, trimmedSource);
         //end
         return detectedJanPaiList;
     }
@@ -823,6 +850,33 @@ public class CameraFragment extends Fragment
     public void onViewCreated(final View view, Bundle savedInstanceState) {
         view.findViewById(R.id.picture).setOnClickListener(this);
         mTextureView = (AutoFitTextureView) view.findViewById(R.id.texture);
+
+        final EditText editText = (EditText) getActivity().findViewById(R.id.blockSize);
+        final SharedPreferences preferences = getActivity().getSharedPreferences("DetectJanPai", MODE_PRIVATE);
+        final Integer blockSize = preferences.getInt("blockSize", 11);
+        editText.setText(blockSize.toString());
+        editText.addTextChangedListener(new onBlockSizeChange());
+    }
+
+    private class onBlockSizeChange implements TextWatcher {
+        public void afterTextChanged(final Editable editable) {
+            final String string = editable.toString();
+
+            if (string.equals("")) {
+                return;
+            }
+            final int blockSize = Integer.parseInt(editable.toString());
+
+            final SharedPreferences.Editor editor = getActivity().getSharedPreferences("DetectJanPai", MODE_PRIVATE).edit();
+            editor.putInt("blockSize", blockSize);
+            editor.commit();
+        }
+
+        public void beforeTextChanged(final CharSequence sequence, final int arg1, final int arg2, final int arg3) {
+        }
+
+        public void onTextChanged(final CharSequence sequence, final int start, final int before, final int count) {
+        }
     }
 
     @Override
@@ -1087,6 +1141,8 @@ public class CameraFragment extends Fragment
             mPreviewRequestBuilder
                     = mCameraDevice.createCaptureRequest(CameraDevice.TEMPLATE_PREVIEW);
             mPreviewRequestBuilder.addTarget(surface);
+            mPreviewRequestBuilder.set(CaptureRequest.CONTROL_SCENE_MODE,
+                    CameraMetadata.CONTROL_SCENE_MODE_HDR);
 
             // Here, we create a CameraCaptureSession for camera preview.
             mCameraDevice.createCaptureSession(Arrays.asList(surface, mImageReader.getSurface()),
