@@ -18,97 +18,120 @@
 // @@protoc_insertion_point(includes)
 
 namespace tensorflow {
+class NamedTensorProtoDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<NamedTensorProto>
+     _instance;
+} _NamedTensorProto_default_instance_;
+
+namespace protobuf_tensorflow_2fcore_2fprotobuf_2fnamed_5ftensor_2eproto {
+
 
 namespace {
 
-const ::google::protobuf::Descriptor* NamedTensorProto_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  NamedTensorProto_reflection_ = NULL;
+::google::protobuf::Metadata file_level_metadata[1];
 
 }  // namespace
 
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTableField
+    const TableStruct::entries[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  {0, 0, 0, ::google::protobuf::internal::kInvalidMask, 0, 0},
+};
 
-void protobuf_AssignDesc_tensorflow_2fcore_2fprotobuf_2fnamed_5ftensor_2eproto() {
-  protobuf_AddDesc_tensorflow_2fcore_2fprotobuf_2fnamed_5ftensor_2eproto();
-  const ::google::protobuf::FileDescriptor* file =
-    ::google::protobuf::DescriptorPool::generated_pool()->FindFileByName(
-      "tensorflow/core/protobuf/named_tensor.proto");
-  GOOGLE_CHECK(file != NULL);
-  NamedTensorProto_descriptor_ = file->message_type(0);
-  static const int NamedTensorProto_offsets_[2] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(NamedTensorProto, name_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(NamedTensorProto, tensor_),
-  };
-  NamedTensorProto_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      NamedTensorProto_descriptor_,
-      NamedTensorProto::default_instance_,
-      NamedTensorProto_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(NamedTensorProto),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(NamedTensorProto, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(NamedTensorProto, _is_default_instance_));
-}
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
+    const TableStruct::aux[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  ::google::protobuf::internal::AuxillaryParseTableField(),
+};
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
+    TableStruct::schema[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+};
+
+const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(NamedTensorProto, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(NamedTensorProto, name_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(NamedTensorProto, tensor_),
+};
+static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, sizeof(NamedTensorProto)},
+};
+
+static ::google::protobuf::Message const * const file_default_instances[] = {
+  reinterpret_cast<const ::google::protobuf::Message*>(&_NamedTensorProto_default_instance_),
+};
 
 namespace {
 
-GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_AssignDescriptors_once_);
-inline void protobuf_AssignDescriptorsOnce() {
-  ::google::protobuf::GoogleOnceInit(&protobuf_AssignDescriptors_once_,
-                 &protobuf_AssignDesc_tensorflow_2fcore_2fprotobuf_2fnamed_5ftensor_2eproto);
+void protobuf_AssignDescriptors() {
+  AddDescriptors();
+  ::google::protobuf::MessageFactory* factory = NULL;
+  AssignDescriptors(
+      "tensorflow/core/protobuf/named_tensor.proto", schemas, file_default_instances, TableStruct::offsets, factory,
+      file_level_metadata, NULL, NULL);
 }
 
+GOOGLE_ATTRIBUTE_NOINLINE void protobuf_AssignDescriptorsOnce() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &protobuf_AssignDescriptors);
+}
+
+void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      NamedTensorProto_descriptor_, &NamedTensorProto::default_instance());
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 1);
 }
 
 }  // namespace
-
-void protobuf_ShutdownFile_tensorflow_2fcore_2fprotobuf_2fnamed_5ftensor_2eproto() {
-  delete NamedTensorProto::default_instance_;
-  delete NamedTensorProto_reflection_;
-}
-
-void protobuf_AddDesc_tensorflow_2fcore_2fprotobuf_2fnamed_5ftensor_2eproto() {
-  static bool already_here = false;
-  if (already_here) return;
-  already_here = true;
+void TableStruct::InitDefaultsImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-  ::tensorflow::protobuf_AddDesc_tensorflow_2fcore_2fframework_2ftensor_2eproto();
+  ::google::protobuf::internal::InitProtobufDefaults();
+  ::tensorflow::protobuf_tensorflow_2fcore_2fframework_2ftensor_2eproto::InitDefaults();
+  _NamedTensorProto_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_NamedTensorProto_default_instance_);_NamedTensorProto_default_instance_._instance.get_mutable()->tensor_ = const_cast< ::tensorflow::TensorProto*>(
+      ::tensorflow::TensorProto::internal_default_instance());
+}
+
+GOOGLE_ATTRIBUTE_NOINLINE void InitDefaults() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &TableStruct::InitDefaultsImpl);
+}
+namespace {
+void AddDescriptorsImpl() {
+  InitDefaults();
+  static const char descriptor[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+      "\n+tensorflow/core/protobuf/named_tensor."
+      "proto\022\ntensorflow\032&tensorflow/core/frame"
+      "work/tensor.proto\"I\n\020NamedTensorProto\022\014\n"
+      "\004name\030\001 \001(\t\022\'\n\006tensor\030\002 \001(\0132\027.tensorflow"
+      ".TensorProtoB2\n\030org.tensorflow.framework"
+      "B\021NamedTensorProtosP\001\370\001\001b\006proto3"
+  };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-    "\n+tensorflow/core/protobuf/named_tensor."
-    "proto\022\ntensorflow\032&tensorflow/core/frame"
-    "work/tensor.proto\"I\n\020NamedTensorProto\022\014\n"
-    "\004name\030\001 \001(\t\022\'\n\006tensor\030\002 \001(\0132\027.tensorflow"
-    ".TensorProtoB2\n\030org.tensorflow.framework"
-    "B\021NamedTensorProtosP\001\370\001\001b\006proto3", 232);
+      descriptor, 232);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "tensorflow/core/protobuf/named_tensor.proto", &protobuf_RegisterTypes);
-  NamedTensorProto::default_instance_ = new NamedTensorProto();
-  NamedTensorProto::default_instance_->InitAsDefaultInstance();
-  ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_tensorflow_2fcore_2fprotobuf_2fnamed_5ftensor_2eproto);
+  ::tensorflow::protobuf_tensorflow_2fcore_2fframework_2ftensor_2eproto::AddDescriptors();
 }
+} // anonymous namespace
 
-// Force AddDescriptors() to be called at static initialization time.
-struct StaticDescriptorInitializer_tensorflow_2fcore_2fprotobuf_2fnamed_5ftensor_2eproto {
-  StaticDescriptorInitializer_tensorflow_2fcore_2fprotobuf_2fnamed_5ftensor_2eproto() {
-    protobuf_AddDesc_tensorflow_2fcore_2fprotobuf_2fnamed_5ftensor_2eproto();
+GOOGLE_ATTRIBUTE_NOINLINE void AddDescriptors() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &AddDescriptorsImpl);
+}
+// Force AddDescriptors() to be called at dynamic initialization time.
+struct StaticDescriptorInitializer {
+  StaticDescriptorInitializer() {
+    AddDescriptors();
   }
-} static_descriptor_initializer_tensorflow_2fcore_2fprotobuf_2fnamed_5ftensor_2eproto_;
+} static_descriptor_initializer;
 
-namespace {
-
-static void MergeFromFail(int line) GOOGLE_ATTRIBUTE_COLD;
-static void MergeFromFail(int line) {
-  GOOGLE_CHECK(false) << __FILE__ << ":" << line;
-}
-
-}  // namespace
+}  // namespace protobuf_tensorflow_2fcore_2fprotobuf_2fnamed_5ftensor_2eproto
 
 
 // ===================================================================
@@ -121,8 +144,7 @@ void NamedTensorProto::_slow_mutable_tensor() {
   if (tensor_ == NULL) {
     return NULL;
   } else {
-    ::tensorflow::TensorProto* temp = new ::tensorflow::TensorProto;
-    temp->MergeFrom(*tensor_);
+    ::tensorflow::TensorProto* temp = new ::tensorflow::TensorProto(*tensor_);
     tensor_ = NULL;
     return temp;
   }
@@ -168,37 +190,42 @@ const int NamedTensorProto::kTensorFieldNumber;
 
 NamedTensorProto::NamedTensorProto()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_tensorflow_2fcore_2fprotobuf_2fnamed_5ftensor_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:tensorflow.NamedTensorProto)
 }
-
 NamedTensorProto::NamedTensorProto(::google::protobuf::Arena* arena)
   : ::google::protobuf::Message(),
   _internal_metadata_(arena) {
+  protobuf_tensorflow_2fcore_2fprotobuf_2fnamed_5ftensor_2eproto::InitDefaults();
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:tensorflow.NamedTensorProto)
 }
-
-void NamedTensorProto::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  tensor_ = const_cast< ::tensorflow::TensorProto*>(&::tensorflow::TensorProto::default_instance());
-}
-
 NamedTensorProto::NamedTensorProto(const NamedTensorProto& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  MergeFrom(from);
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.name().size() > 0) {
+    name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name(),
+      GetArenaNoVirtual());
+  }
+  if (from.has_tensor()) {
+    tensor_ = new ::tensorflow::TensorProto(*from.tensor_);
+  } else {
+    tensor_ = NULL;
+  }
   // @@protoc_insertion_point(copy_constructor:tensorflow.NamedTensorProto)
 }
 
 void NamedTensorProto::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
   name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   tensor_ = NULL;
+  _cached_size_ = 0;
 }
 
 NamedTensorProto::~NamedTensorProto() {
@@ -207,14 +234,14 @@ NamedTensorProto::~NamedTensorProto() {
 }
 
 void NamedTensorProto::SharedDtor() {
-  if (GetArenaNoVirtual() != NULL) {
+  ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  GOOGLE_DCHECK(arena == NULL);
+  if (arena != NULL) {
     return;
   }
 
-  name_.Destroy(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
-  if (this != default_instance_) {
-    delete tensor_;
-  }
+  name_.Destroy(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), arena);
+  if (this != internal_default_instance()) delete tensor_;
 }
 
 void NamedTensorProto::ArenaDtor(void* object) {
@@ -229,16 +256,14 @@ void NamedTensorProto::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* NamedTensorProto::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return NamedTensorProto_descriptor_;
+  protobuf_tensorflow_2fcore_2fprotobuf_2fnamed_5ftensor_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_tensorflow_2fcore_2fprotobuf_2fnamed_5ftensor_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const NamedTensorProto& NamedTensorProto::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_tensorflow_2fcore_2fprotobuf_2fnamed_5ftensor_2eproto();
-  return *default_instance_;
+  protobuf_tensorflow_2fcore_2fprotobuf_2fnamed_5ftensor_2eproto::InitDefaults();
+  return *internal_default_instance();
 }
-
-NamedTensorProto* NamedTensorProto::default_instance_ = NULL;
 
 NamedTensorProto* NamedTensorProto::New(::google::protobuf::Arena* arena) const {
   return ::google::protobuf::Arena::CreateMessage<NamedTensorProto>(arena);
@@ -246,9 +271,16 @@ NamedTensorProto* NamedTensorProto::New(::google::protobuf::Arena* arena) const 
 
 void NamedTensorProto::Clear() {
 // @@protoc_insertion_point(message_clear_start:tensorflow.NamedTensorProto)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   name_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
-  if (GetArenaNoVirtual() == NULL && tensor_ != NULL) delete tensor_;
+  if (GetArenaNoVirtual() == NULL && tensor_ != NULL) {
+    delete tensor_;
+  }
   tensor_ = NULL;
+  _internal_metadata_.Clear();
 }
 
 bool NamedTensorProto::MergePartialFromCodedStream(
@@ -257,47 +289,45 @@ bool NamedTensorProto::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:tensorflow.NamedTensorProto)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional string name = 1;
+      // string name = 1;
       case 1: {
-        if (tag == 10) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_name()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->name().data(), this->name().length(),
+            this->name().data(), static_cast<int>(this->name().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
             "tensorflow.NamedTensorProto.name"));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(18)) goto parse_tensor;
         break;
       }
 
-      // optional .tensorflow.TensorProto tensor = 2;
+      // .tensorflow.TensorProto tensor = 2;
       case 2: {
-        if (tag == 18) {
-         parse_tensor:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_tensor()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -314,32 +344,43 @@ failure:
 void NamedTensorProto::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:tensorflow.NamedTensorProto)
-  // optional string name = 1;
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string name = 1;
   if (this->name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->name().data(), this->name().length(),
+      this->name().data(), static_cast<int>(this->name().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "tensorflow.NamedTensorProto.name");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       1, this->name(), output);
   }
 
-  // optional .tensorflow.TensorProto tensor = 2;
+  // .tensorflow.TensorProto tensor = 2;
   if (this->has_tensor()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       2, *this->tensor_, output);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
   // @@protoc_insertion_point(serialize_end:tensorflow.NamedTensorProto)
 }
 
-::google::protobuf::uint8* NamedTensorProto::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::google::protobuf::uint8* NamedTensorProto::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:tensorflow.NamedTensorProto)
-  // optional string name = 1;
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string name = 1;
   if (this->name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->name().data(), this->name().length(),
+      this->name().data(), static_cast<int>(this->name().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "tensorflow.NamedTensorProto.name");
     target =
@@ -347,45 +388,55 @@ void NamedTensorProto::SerializeWithCachedSizes(
         1, this->name(), target);
   }
 
-  // optional .tensorflow.TensorProto tensor = 2;
+  // .tensorflow.TensorProto tensor = 2;
   if (this->has_tensor()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      WriteMessageNoVirtualToArray(
-        2, *this->tensor_, target);
+      InternalWriteMessageNoVirtualToArray(
+        2, *this->tensor_, deterministic, target);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
   // @@protoc_insertion_point(serialize_to_array_end:tensorflow.NamedTensorProto)
   return target;
 }
 
-int NamedTensorProto::ByteSize() const {
+size_t NamedTensorProto::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:tensorflow.NamedTensorProto)
-  int total_size = 0;
+  size_t total_size = 0;
 
-  // optional string name = 1;
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
+  // string name = 1;
   if (this->name().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->name());
   }
 
-  // optional .tensorflow.TensorProto tensor = 2;
+  // .tensorflow.TensorProto tensor = 2;
   if (this->has_tensor()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->tensor_);
   }
 
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = total_size;
+  _cached_size_ = cached_size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
 void NamedTensorProto::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:tensorflow.NamedTensorProto)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
-  const NamedTensorProto* source = 
+  GOOGLE_DCHECK_NE(&from, this);
+  const NamedTensorProto* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const NamedTensorProto>(
           &from);
   if (source == NULL) {
@@ -399,7 +450,11 @@ void NamedTensorProto::MergeFrom(const ::google::protobuf::Message& from) {
 
 void NamedTensorProto::MergeFrom(const NamedTensorProto& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:tensorflow.NamedTensorProto)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   if (from.name().size() > 0) {
     set_name(from.name());
   }
@@ -423,7 +478,6 @@ void NamedTensorProto::CopyFrom(const NamedTensorProto& from) {
 }
 
 bool NamedTensorProto::IsInitialized() const {
-
   return true;
 }
 
@@ -432,10 +486,13 @@ void NamedTensorProto::Swap(NamedTensorProto* other) {
   if (GetArenaNoVirtual() == other->GetArenaNoVirtual()) {
     InternalSwap(other);
   } else {
-    NamedTensorProto temp;
-    temp.MergeFrom(*this);
-    CopyFrom(*other);
-    other->CopyFrom(temp);
+    NamedTensorProto* temp = New(GetArenaNoVirtual());
+    temp->MergeFrom(*other);
+    other->CopyFrom(*this);
+    InternalSwap(temp);
+    if (GetArenaNoVirtual() == NULL) {
+      delete temp;
+    }
   }
 }
 void NamedTensorProto::UnsafeArenaSwap(NamedTensorProto* other) {
@@ -444,67 +501,74 @@ void NamedTensorProto::UnsafeArenaSwap(NamedTensorProto* other) {
   InternalSwap(other);
 }
 void NamedTensorProto::InternalSwap(NamedTensorProto* other) {
+  using std::swap;
   name_.Swap(&other->name_);
-  std::swap(tensor_, other->tensor_);
+  swap(tensor_, other->tensor_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  std::swap(_cached_size_, other->_cached_size_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata NamedTensorProto::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = NamedTensorProto_descriptor_;
-  metadata.reflection = NamedTensorProto_reflection_;
-  return metadata;
+  protobuf_tensorflow_2fcore_2fprotobuf_2fnamed_5ftensor_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_tensorflow_2fcore_2fprotobuf_2fnamed_5ftensor_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // NamedTensorProto
 
-// optional string name = 1;
+// string name = 1;
 void NamedTensorProto::clear_name() {
   name_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
- const ::std::string& NamedTensorProto::name() const {
+const ::std::string& NamedTensorProto::name() const {
   // @@protoc_insertion_point(field_get:tensorflow.NamedTensorProto.name)
-  return name_.Get(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return name_.Get();
 }
- void NamedTensorProto::set_name(const ::std::string& value) {
+void NamedTensorProto::set_name(const ::std::string& value) {
   
   name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set:tensorflow.NamedTensorProto.name)
 }
- void NamedTensorProto::set_name(const char* value) {
+#if LANG_CXX11
+void NamedTensorProto::set_name(::std::string&& value) {
+  
+  name_.Set(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_set_rvalue:tensorflow.NamedTensorProto.name)
+}
+#endif
+void NamedTensorProto::set_name(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_char:tensorflow.NamedTensorProto.name)
 }
- void NamedTensorProto::set_name(const char* value,
+void NamedTensorProto::set_name(const char* value,
     size_t size) {
   
   name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_pointer:tensorflow.NamedTensorProto.name)
 }
- ::std::string* NamedTensorProto::mutable_name() {
+::std::string* NamedTensorProto::mutable_name() {
   
   // @@protoc_insertion_point(field_mutable:tensorflow.NamedTensorProto.name)
   return name_.Mutable(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
- ::std::string* NamedTensorProto::release_name() {
+::std::string* NamedTensorProto::release_name() {
   // @@protoc_insertion_point(field_release:tensorflow.NamedTensorProto.name)
   
   return name_.Release(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
- ::std::string* NamedTensorProto::unsafe_arena_release_name() {
+::std::string* NamedTensorProto::unsafe_arena_release_name() {
   // @@protoc_insertion_point(field_unsafe_arena_release:tensorflow.NamedTensorProto.name)
   GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
   
   return name_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       GetArenaNoVirtual());
 }
- void NamedTensorProto::set_allocated_name(::std::string* name) {
+void NamedTensorProto::set_allocated_name(::std::string* name) {
   if (name != NULL) {
     
   } else {
@@ -514,7 +578,7 @@ void NamedTensorProto::clear_name() {
       GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_allocated:tensorflow.NamedTensorProto.name)
 }
- void NamedTensorProto::unsafe_arena_set_allocated_name(
+void NamedTensorProto::unsafe_arena_set_allocated_name(
     ::std::string* name) {
   GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
   if (name != NULL) {
@@ -527,17 +591,19 @@ void NamedTensorProto::clear_name() {
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:tensorflow.NamedTensorProto.name)
 }
 
-// optional .tensorflow.TensorProto tensor = 2;
+// .tensorflow.TensorProto tensor = 2;
 bool NamedTensorProto::has_tensor() const {
-  return !_is_default_instance_ && tensor_ != NULL;
+  return this != internal_default_instance() && tensor_ != NULL;
 }
 void NamedTensorProto::clear_tensor() {
   if (GetArenaNoVirtual() == NULL && tensor_ != NULL) delete tensor_;
   tensor_ = NULL;
 }
 const ::tensorflow::TensorProto& NamedTensorProto::tensor() const {
+  const ::tensorflow::TensorProto* p = tensor_;
   // @@protoc_insertion_point(field_get:tensorflow.NamedTensorProto.tensor)
-  return tensor_ != NULL ? *tensor_ : *default_instance_->tensor_;
+  return p != NULL ? *p : *reinterpret_cast<const ::tensorflow::TensorProto*>(
+      &::tensorflow::_TensorProto_default_instance_);
 }
 ::tensorflow::TensorProto* NamedTensorProto::mutable_tensor() {
   

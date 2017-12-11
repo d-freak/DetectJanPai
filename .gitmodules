@@ -1,0 +1,12 @@
+[submodule "jni-build/jni/include/tensorflow"]
+	path = jni-build/jni/include/tensorflow
+	url = https://github.com/tensorflow/tensorflow.git
+[submodule "jni-build/jni/include/external/nsync"]
+	path = jni-build/jni/include/external/nsync
+	url = https://github.com/google/nsync
+[submodule "jni-build/jni/include/external/protobuf"]
+	path = jni-build/jni/include/external/protobuf
+	url = https://github.com/google/protobuf.git
+[submodule "jni-build/jni/include/external/bazel"]
+	path = jni-build/jni/include/external/bazel
+	url = https://github.com/bazelbuild/bazel.git

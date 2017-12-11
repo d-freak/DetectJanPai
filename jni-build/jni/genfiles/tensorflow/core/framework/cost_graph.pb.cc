@@ -18,184 +18,204 @@
 // @@protoc_insertion_point(includes)
 
 namespace tensorflow {
+class CostGraphDef_Node_InputInfoDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<CostGraphDef_Node_InputInfo>
+     _instance;
+} _CostGraphDef_Node_InputInfo_default_instance_;
+class CostGraphDef_Node_OutputInfoDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<CostGraphDef_Node_OutputInfo>
+     _instance;
+} _CostGraphDef_Node_OutputInfo_default_instance_;
+class CostGraphDef_NodeDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<CostGraphDef_Node>
+     _instance;
+} _CostGraphDef_Node_default_instance_;
+class CostGraphDefDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<CostGraphDef>
+     _instance;
+} _CostGraphDef_default_instance_;
+
+namespace protobuf_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto {
+
 
 namespace {
 
-const ::google::protobuf::Descriptor* CostGraphDef_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  CostGraphDef_reflection_ = NULL;
-const ::google::protobuf::Descriptor* CostGraphDef_Node_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  CostGraphDef_Node_reflection_ = NULL;
-const ::google::protobuf::Descriptor* CostGraphDef_Node_InputInfo_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  CostGraphDef_Node_InputInfo_reflection_ = NULL;
-const ::google::protobuf::Descriptor* CostGraphDef_Node_OutputInfo_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  CostGraphDef_Node_OutputInfo_reflection_ = NULL;
+::google::protobuf::Metadata file_level_metadata[4];
 
 }  // namespace
 
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTableField
+    const TableStruct::entries[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  {0, 0, 0, ::google::protobuf::internal::kInvalidMask, 0, 0},
+};
 
-void protobuf_AssignDesc_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto() {
-  protobuf_AddDesc_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto();
-  const ::google::protobuf::FileDescriptor* file =
-    ::google::protobuf::DescriptorPool::generated_pool()->FindFileByName(
-      "tensorflow/core/framework/cost_graph.proto");
-  GOOGLE_CHECK(file != NULL);
-  CostGraphDef_descriptor_ = file->message_type(0);
-  static const int CostGraphDef_offsets_[1] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef, node_),
-  };
-  CostGraphDef_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      CostGraphDef_descriptor_,
-      CostGraphDef::default_instance_,
-      CostGraphDef_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(CostGraphDef),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef, _is_default_instance_));
-  CostGraphDef_Node_descriptor_ = CostGraphDef_descriptor_->nested_type(0);
-  static const int CostGraphDef_Node_offsets_[8] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node, name_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node, device_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node, id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node, input_info_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node, output_info_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node, temporary_memory_size_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node, is_final_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node, control_input_),
-  };
-  CostGraphDef_Node_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      CostGraphDef_Node_descriptor_,
-      CostGraphDef_Node::default_instance_,
-      CostGraphDef_Node_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(CostGraphDef_Node),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node, _is_default_instance_));
-  CostGraphDef_Node_InputInfo_descriptor_ = CostGraphDef_Node_descriptor_->nested_type(0);
-  static const int CostGraphDef_Node_InputInfo_offsets_[2] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node_InputInfo, preceding_node_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node_InputInfo, preceding_port_),
-  };
-  CostGraphDef_Node_InputInfo_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      CostGraphDef_Node_InputInfo_descriptor_,
-      CostGraphDef_Node_InputInfo::default_instance_,
-      CostGraphDef_Node_InputInfo_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(CostGraphDef_Node_InputInfo),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node_InputInfo, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node_InputInfo, _is_default_instance_));
-  CostGraphDef_Node_OutputInfo_descriptor_ = CostGraphDef_Node_descriptor_->nested_type(1);
-  static const int CostGraphDef_Node_OutputInfo_offsets_[2] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node_OutputInfo, size_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node_OutputInfo, alias_input_port_),
-  };
-  CostGraphDef_Node_OutputInfo_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      CostGraphDef_Node_OutputInfo_descriptor_,
-      CostGraphDef_Node_OutputInfo::default_instance_,
-      CostGraphDef_Node_OutputInfo_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(CostGraphDef_Node_OutputInfo),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node_OutputInfo, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node_OutputInfo, _is_default_instance_));
-}
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
+    const TableStruct::aux[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  ::google::protobuf::internal::AuxillaryParseTableField(),
+};
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
+    TableStruct::schema[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+};
+
+const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node_InputInfo, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node_InputInfo, preceding_node_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node_InputInfo, preceding_port_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node_OutputInfo, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node_OutputInfo, size_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node_OutputInfo, alias_input_port_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node_OutputInfo, shape_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node_OutputInfo, dtype_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node, name_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node, device_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node, id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node, input_info_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node, output_info_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node, temporary_memory_size_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node, host_temp_memory_size_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node, device_temp_memory_size_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node, host_persistent_memory_size_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node, device_persistent_memory_size_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node, compute_cost_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node, compute_time_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node, memory_time_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node, is_final_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef_Node, control_input_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(CostGraphDef, node_),
+};
+static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, sizeof(CostGraphDef_Node_InputInfo)},
+  { 7, -1, sizeof(CostGraphDef_Node_OutputInfo)},
+  { 16, -1, sizeof(CostGraphDef_Node)},
+  { 36, -1, sizeof(CostGraphDef)},
+};
+
+static ::google::protobuf::Message const * const file_default_instances[] = {
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CostGraphDef_Node_InputInfo_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CostGraphDef_Node_OutputInfo_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CostGraphDef_Node_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_CostGraphDef_default_instance_),
+};
 
 namespace {
 
-GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_AssignDescriptors_once_);
-inline void protobuf_AssignDescriptorsOnce() {
-  ::google::protobuf::GoogleOnceInit(&protobuf_AssignDescriptors_once_,
-                 &protobuf_AssignDesc_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto);
+void protobuf_AssignDescriptors() {
+  AddDescriptors();
+  ::google::protobuf::MessageFactory* factory = NULL;
+  AssignDescriptors(
+      "tensorflow/core/framework/cost_graph.proto", schemas, file_default_instances, TableStruct::offsets, factory,
+      file_level_metadata, NULL, NULL);
 }
 
+GOOGLE_ATTRIBUTE_NOINLINE void protobuf_AssignDescriptorsOnce() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &protobuf_AssignDescriptors);
+}
+
+void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      CostGraphDef_descriptor_, &CostGraphDef::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      CostGraphDef_Node_descriptor_, &CostGraphDef_Node::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      CostGraphDef_Node_InputInfo_descriptor_, &CostGraphDef_Node_InputInfo::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      CostGraphDef_Node_OutputInfo_descriptor_, &CostGraphDef_Node_OutputInfo::default_instance());
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 4);
 }
 
 }  // namespace
-
-void protobuf_ShutdownFile_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto() {
-  delete CostGraphDef::default_instance_;
-  delete CostGraphDef_reflection_;
-  delete CostGraphDef_Node::default_instance_;
-  delete CostGraphDef_Node_reflection_;
-  delete CostGraphDef_Node_InputInfo::default_instance_;
-  delete CostGraphDef_Node_InputInfo_reflection_;
-  delete CostGraphDef_Node_OutputInfo::default_instance_;
-  delete CostGraphDef_Node_OutputInfo_reflection_;
-}
-
-void protobuf_AddDesc_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto() {
-  static bool already_here = false;
-  if (already_here) return;
-  already_here = true;
+void TableStruct::InitDefaultsImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
+  ::google::protobuf::internal::InitProtobufDefaults();
+  ::tensorflow::protobuf_tensorflow_2fcore_2fframework_2ftensor_5fshape_2eproto::InitDefaults();
+  ::tensorflow::protobuf_tensorflow_2fcore_2fframework_2ftypes_2eproto::InitDefaults();
+  _CostGraphDef_Node_InputInfo_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_CostGraphDef_Node_InputInfo_default_instance_);_CostGraphDef_Node_OutputInfo_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_CostGraphDef_Node_OutputInfo_default_instance_);_CostGraphDef_Node_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_CostGraphDef_Node_default_instance_);_CostGraphDef_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_CostGraphDef_default_instance_);_CostGraphDef_Node_OutputInfo_default_instance_._instance.get_mutable()->shape_ = const_cast< ::tensorflow::TensorShapeProto*>(
+      ::tensorflow::TensorShapeProto::internal_default_instance());
+}
+
+GOOGLE_ATTRIBUTE_NOINLINE void InitDefaults() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &TableStruct::InitDefaultsImpl);
+}
+namespace {
+void AddDescriptorsImpl() {
+  InitDefaults();
+  static const char descriptor[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+      "\n*tensorflow/core/framework/cost_graph.p"
+      "roto\022\ntensorflow\032,tensorflow/core/framew"
+      "ork/tensor_shape.proto\032%tensorflow/core/"
+      "framework/types.proto\"\305\005\n\014CostGraphDef\022+"
+      "\n\004node\030\001 \003(\0132\035.tensorflow.CostGraphDef.N"
+      "ode\032\207\005\n\004Node\022\014\n\004name\030\001 \001(\t\022\016\n\006device\030\002 \001"
+      "(\t\022\n\n\002id\030\003 \001(\005\022;\n\ninput_info\030\004 \003(\0132\'.ten"
+      "sorflow.CostGraphDef.Node.InputInfo\022=\n\013o"
+      "utput_info\030\005 \003(\0132(.tensorflow.CostGraphD"
+      "ef.Node.OutputInfo\022\035\n\025temporary_memory_s"
+      "ize\030\006 \001(\003\022\035\n\025host_temp_memory_size\030\n \001(\003"
+      "\022\037\n\027device_temp_memory_size\030\013 \001(\003\022#\n\033hos"
+      "t_persistent_memory_size\030\014 \001(\003\022%\n\035device"
+      "_persistent_memory_size\030\020 \001(\003\022\024\n\014compute"
+      "_cost\030\t \001(\003\022\024\n\014compute_time\030\016 \001(\003\022\023\n\013mem"
+      "ory_time\030\017 \001(\003\022\020\n\010is_final\030\007 \001(\010\022\025\n\rcont"
+      "rol_input\030\010 \003(\005\032;\n\tInputInfo\022\026\n\016precedin"
+      "g_node\030\001 \001(\005\022\026\n\016preceding_port\030\002 \001(\005\032\206\001\n"
+      "\nOutputInfo\022\014\n\004size\030\001 \001(\003\022\030\n\020alias_input"
+      "_port\030\002 \001(\003\022+\n\005shape\030\003 \001(\0132\034.tensorflow."
+      "TensorShapeProto\022#\n\005dtype\030\004 \001(\0162\024.tensor"
+      "flow.DataTypeB0\n\030org.tensorflow.framewor"
+      "kB\017CostGraphProtosP\001\370\001\001b\006proto3"
+  };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-    "\n*tensorflow/core/framework/cost_graph.p"
-    "roto\022\ntensorflow\"\245\003\n\014CostGraphDef\022+\n\004nod"
-    "e\030\001 \003(\0132\035.tensorflow.CostGraphDef.Node\032\347"
-    "\002\n\004Node\022\014\n\004name\030\001 \001(\t\022\016\n\006device\030\002 \001(\t\022\n\n"
-    "\002id\030\003 \001(\005\022;\n\ninput_info\030\004 \003(\0132\'.tensorfl"
-    "ow.CostGraphDef.Node.InputInfo\022=\n\013output"
-    "_info\030\005 \003(\0132(.tensorflow.CostGraphDef.No"
-    "de.OutputInfo\022\035\n\025temporary_memory_size\030\006"
-    " \001(\003\022\020\n\010is_final\030\007 \001(\010\022\025\n\rcontrol_input\030"
-    "\010 \003(\005\032;\n\tInputInfo\022\026\n\016preceding_node\030\001 \001"
-    "(\005\022\026\n\016preceding_port\030\002 \001(\005\0324\n\nOutputInfo"
-    "\022\014\n\004size\030\001 \001(\003\022\030\n\020alias_input_port\030\002 \001(\003"
-    "B0\n\030org.tensorflow.frameworkB\017CostGraphP"
-    "rotosP\001\370\001\001b\006proto3", 538);
+      descriptor, 911);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "tensorflow/core/framework/cost_graph.proto", &protobuf_RegisterTypes);
-  CostGraphDef::default_instance_ = new CostGraphDef();
-  CostGraphDef_Node::default_instance_ = new CostGraphDef_Node();
-  CostGraphDef_Node_InputInfo::default_instance_ = new CostGraphDef_Node_InputInfo();
-  CostGraphDef_Node_OutputInfo::default_instance_ = new CostGraphDef_Node_OutputInfo();
-  CostGraphDef::default_instance_->InitAsDefaultInstance();
-  CostGraphDef_Node::default_instance_->InitAsDefaultInstance();
-  CostGraphDef_Node_InputInfo::default_instance_->InitAsDefaultInstance();
-  CostGraphDef_Node_OutputInfo::default_instance_->InitAsDefaultInstance();
-  ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto);
+  ::tensorflow::protobuf_tensorflow_2fcore_2fframework_2ftensor_5fshape_2eproto::AddDescriptors();
+  ::tensorflow::protobuf_tensorflow_2fcore_2fframework_2ftypes_2eproto::AddDescriptors();
 }
+} // anonymous namespace
 
-// Force AddDescriptors() to be called at static initialization time.
-struct StaticDescriptorInitializer_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto {
-  StaticDescriptorInitializer_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto() {
-    protobuf_AddDesc_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto();
+GOOGLE_ATTRIBUTE_NOINLINE void AddDescriptors() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &AddDescriptorsImpl);
+}
+// Force AddDescriptors() to be called at dynamic initialization time.
+struct StaticDescriptorInitializer {
+  StaticDescriptorInitializer() {
+    AddDescriptors();
   }
-} static_descriptor_initializer_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto_;
+} static_descriptor_initializer;
 
-namespace {
-
-static void MergeFromFail(int line) GOOGLE_ATTRIBUTE_COLD;
-static void MergeFromFail(int line) {
-  GOOGLE_CHECK(false) << __FILE__ << ":" << line;
-}
-
-}  // namespace
+}  // namespace protobuf_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto
 
 
 // ===================================================================
@@ -207,35 +227,36 @@ const int CostGraphDef_Node_InputInfo::kPrecedingPortFieldNumber;
 
 CostGraphDef_Node_InputInfo::CostGraphDef_Node_InputInfo()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:tensorflow.CostGraphDef.Node.InputInfo)
 }
-
 CostGraphDef_Node_InputInfo::CostGraphDef_Node_InputInfo(::google::protobuf::Arena* arena)
   : ::google::protobuf::Message(),
   _internal_metadata_(arena) {
+  protobuf_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto::InitDefaults();
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:tensorflow.CostGraphDef.Node.InputInfo)
 }
-
-void CostGraphDef_Node_InputInfo::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-}
-
 CostGraphDef_Node_InputInfo::CostGraphDef_Node_InputInfo(const CostGraphDef_Node_InputInfo& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  MergeFrom(from);
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::memcpy(&preceding_node_, &from.preceding_node_,
+    static_cast<size_t>(reinterpret_cast<char*>(&preceding_port_) -
+    reinterpret_cast<char*>(&preceding_node_)) + sizeof(preceding_port_));
   // @@protoc_insertion_point(copy_constructor:tensorflow.CostGraphDef.Node.InputInfo)
 }
 
 void CostGraphDef_Node_InputInfo::SharedCtor() {
-    _is_default_instance_ = false;
+  ::memset(&preceding_node_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&preceding_port_) -
+      reinterpret_cast<char*>(&preceding_node_)) + sizeof(preceding_port_));
   _cached_size_ = 0;
-  preceding_node_ = 0;
-  preceding_port_ = 0;
 }
 
 CostGraphDef_Node_InputInfo::~CostGraphDef_Node_InputInfo() {
@@ -244,12 +265,12 @@ CostGraphDef_Node_InputInfo::~CostGraphDef_Node_InputInfo() {
 }
 
 void CostGraphDef_Node_InputInfo::SharedDtor() {
-  if (GetArenaNoVirtual() != NULL) {
+  ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  GOOGLE_DCHECK(arena == NULL);
+  if (arena != NULL) {
     return;
   }
 
-  if (this != default_instance_) {
-  }
 }
 
 void CostGraphDef_Node_InputInfo::ArenaDtor(void* object) {
@@ -264,16 +285,14 @@ void CostGraphDef_Node_InputInfo::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* CostGraphDef_Node_InputInfo::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return CostGraphDef_Node_InputInfo_descriptor_;
+  protobuf_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const CostGraphDef_Node_InputInfo& CostGraphDef_Node_InputInfo::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto();
-  return *default_instance_;
+  protobuf_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto::InitDefaults();
+  return *internal_default_instance();
 }
-
-CostGraphDef_Node_InputInfo* CostGraphDef_Node_InputInfo::default_instance_ = NULL;
 
 CostGraphDef_Node_InputInfo* CostGraphDef_Node_InputInfo::New(::google::protobuf::Arena* arena) const {
   return ::google::protobuf::Arena::CreateMessage<CostGraphDef_Node_InputInfo>(arena);
@@ -281,27 +300,14 @@ CostGraphDef_Node_InputInfo* CostGraphDef_Node_InputInfo::New(::google::protobuf
 
 void CostGraphDef_Node_InputInfo::Clear() {
 // @@protoc_insertion_point(message_clear_start:tensorflow.CostGraphDef.Node.InputInfo)
-#if defined(__clang__)
-#define ZR_HELPER_(f) \
-  _Pragma("clang diagnostic push") \
-  _Pragma("clang diagnostic ignored \"-Winvalid-offsetof\"") \
-  __builtin_offsetof(CostGraphDef_Node_InputInfo, f) \
-  _Pragma("clang diagnostic pop")
-#else
-#define ZR_HELPER_(f) reinterpret_cast<char*>(\
-  &reinterpret_cast<CostGraphDef_Node_InputInfo*>(16)->f)
-#endif
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
-#define ZR_(first, last) do {\
-  ::memset(&first, 0,\
-           ZR_HELPER_(last) - ZR_HELPER_(first) + sizeof(last));\
-} while (0)
-
-  ZR_(preceding_node_, preceding_port_);
-
-#undef ZR_HELPER_
-#undef ZR_
-
+  ::memset(&preceding_node_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&preceding_port_) -
+      reinterpret_cast<char*>(&preceding_node_)) + sizeof(preceding_port_));
+  _internal_metadata_.Clear();
 }
 
 bool CostGraphDef_Node_InputInfo::MergePartialFromCodedStream(
@@ -310,47 +316,45 @@ bool CostGraphDef_Node_InputInfo::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:tensorflow.CostGraphDef.Node.InputInfo)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional int32 preceding_node = 1;
+      // int32 preceding_node = 1;
       case 1: {
-        if (tag == 8) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &preceding_node_)));
-
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(16)) goto parse_preceding_port;
         break;
       }
 
-      // optional int32 preceding_port = 2;
+      // int32 preceding_port = 2;
       case 2: {
-        if (tag == 16) {
-         parse_preceding_port:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
+
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &preceding_port_)));
-
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -367,64 +371,85 @@ failure:
 void CostGraphDef_Node_InputInfo::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:tensorflow.CostGraphDef.Node.InputInfo)
-  // optional int32 preceding_node = 1;
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 preceding_node = 1;
   if (this->preceding_node() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->preceding_node(), output);
   }
 
-  // optional int32 preceding_port = 2;
+  // int32 preceding_port = 2;
   if (this->preceding_port() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(2, this->preceding_port(), output);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
   // @@protoc_insertion_point(serialize_end:tensorflow.CostGraphDef.Node.InputInfo)
 }
 
-::google::protobuf::uint8* CostGraphDef_Node_InputInfo::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::google::protobuf::uint8* CostGraphDef_Node_InputInfo::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:tensorflow.CostGraphDef.Node.InputInfo)
-  // optional int32 preceding_node = 1;
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int32 preceding_node = 1;
   if (this->preceding_node() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->preceding_node(), target);
   }
 
-  // optional int32 preceding_port = 2;
+  // int32 preceding_port = 2;
   if (this->preceding_port() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(2, this->preceding_port(), target);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
   // @@protoc_insertion_point(serialize_to_array_end:tensorflow.CostGraphDef.Node.InputInfo)
   return target;
 }
 
-int CostGraphDef_Node_InputInfo::ByteSize() const {
+size_t CostGraphDef_Node_InputInfo::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:tensorflow.CostGraphDef.Node.InputInfo)
-  int total_size = 0;
+  size_t total_size = 0;
 
-  // optional int32 preceding_node = 1;
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
+  // int32 preceding_node = 1;
   if (this->preceding_node() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
         this->preceding_node());
   }
 
-  // optional int32 preceding_port = 2;
+  // int32 preceding_port = 2;
   if (this->preceding_port() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
         this->preceding_port());
   }
 
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = total_size;
+  _cached_size_ = cached_size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
 void CostGraphDef_Node_InputInfo::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:tensorflow.CostGraphDef.Node.InputInfo)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
-  const CostGraphDef_Node_InputInfo* source = 
+  GOOGLE_DCHECK_NE(&from, this);
+  const CostGraphDef_Node_InputInfo* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const CostGraphDef_Node_InputInfo>(
           &from);
   if (source == NULL) {
@@ -438,7 +463,11 @@ void CostGraphDef_Node_InputInfo::MergeFrom(const ::google::protobuf::Message& f
 
 void CostGraphDef_Node_InputInfo::MergeFrom(const CostGraphDef_Node_InputInfo& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:tensorflow.CostGraphDef.Node.InputInfo)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   if (from.preceding_node() != 0) {
     set_preceding_node(from.preceding_node());
   }
@@ -462,7 +491,6 @@ void CostGraphDef_Node_InputInfo::CopyFrom(const CostGraphDef_Node_InputInfo& fr
 }
 
 bool CostGraphDef_Node_InputInfo::IsInitialized() const {
-
   return true;
 }
 
@@ -471,10 +499,13 @@ void CostGraphDef_Node_InputInfo::Swap(CostGraphDef_Node_InputInfo* other) {
   if (GetArenaNoVirtual() == other->GetArenaNoVirtual()) {
     InternalSwap(other);
   } else {
-    CostGraphDef_Node_InputInfo temp;
-    temp.MergeFrom(*this);
-    CopyFrom(*other);
-    other->CopyFrom(temp);
+    CostGraphDef_Node_InputInfo* temp = New(GetArenaNoVirtual());
+    temp->MergeFrom(*other);
+    other->CopyFrom(*this);
+    InternalSwap(temp);
+    if (GetArenaNoVirtual() == NULL) {
+      delete temp;
+    }
   }
 }
 void CostGraphDef_Node_InputInfo::UnsafeArenaSwap(CostGraphDef_Node_InputInfo* other) {
@@ -483,59 +514,144 @@ void CostGraphDef_Node_InputInfo::UnsafeArenaSwap(CostGraphDef_Node_InputInfo* o
   InternalSwap(other);
 }
 void CostGraphDef_Node_InputInfo::InternalSwap(CostGraphDef_Node_InputInfo* other) {
-  std::swap(preceding_node_, other->preceding_node_);
-  std::swap(preceding_port_, other->preceding_port_);
+  using std::swap;
+  swap(preceding_node_, other->preceding_node_);
+  swap(preceding_port_, other->preceding_port_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  std::swap(_cached_size_, other->_cached_size_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata CostGraphDef_Node_InputInfo::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = CostGraphDef_Node_InputInfo_descriptor_;
-  metadata.reflection = CostGraphDef_Node_InputInfo_reflection_;
-  return metadata;
+  protobuf_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// CostGraphDef_Node_InputInfo
 
-// -------------------------------------------------------------------
+// int32 preceding_node = 1;
+void CostGraphDef_Node_InputInfo::clear_preceding_node() {
+  preceding_node_ = 0;
+}
+::google::protobuf::int32 CostGraphDef_Node_InputInfo::preceding_node() const {
+  // @@protoc_insertion_point(field_get:tensorflow.CostGraphDef.Node.InputInfo.preceding_node)
+  return preceding_node_;
+}
+void CostGraphDef_Node_InputInfo::set_preceding_node(::google::protobuf::int32 value) {
+  
+  preceding_node_ = value;
+  // @@protoc_insertion_point(field_set:tensorflow.CostGraphDef.Node.InputInfo.preceding_node)
+}
 
+// int32 preceding_port = 2;
+void CostGraphDef_Node_InputInfo::clear_preceding_port() {
+  preceding_port_ = 0;
+}
+::google::protobuf::int32 CostGraphDef_Node_InputInfo::preceding_port() const {
+  // @@protoc_insertion_point(field_get:tensorflow.CostGraphDef.Node.InputInfo.preceding_port)
+  return preceding_port_;
+}
+void CostGraphDef_Node_InputInfo::set_preceding_port(::google::protobuf::int32 value) {
+  
+  preceding_port_ = value;
+  // @@protoc_insertion_point(field_set:tensorflow.CostGraphDef.Node.InputInfo.preceding_port)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+void CostGraphDef_Node_OutputInfo::_slow_mutable_shape() {
+  shape_ = ::google::protobuf::Arena::CreateMessage< ::tensorflow::TensorShapeProto >(
+      GetArenaNoVirtual());
+}
+::tensorflow::TensorShapeProto* CostGraphDef_Node_OutputInfo::_slow_release_shape() {
+  if (shape_ == NULL) {
+    return NULL;
+  } else {
+    ::tensorflow::TensorShapeProto* temp = new ::tensorflow::TensorShapeProto(*shape_);
+    shape_ = NULL;
+    return temp;
+  }
+}
+::tensorflow::TensorShapeProto* CostGraphDef_Node_OutputInfo::unsafe_arena_release_shape() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:tensorflow.CostGraphDef.Node.OutputInfo.shape)
+  
+  ::tensorflow::TensorShapeProto* temp = shape_;
+  shape_ = NULL;
+  return temp;
+}
+void CostGraphDef_Node_OutputInfo::_slow_set_allocated_shape(
+    ::google::protobuf::Arena* message_arena, ::tensorflow::TensorShapeProto** shape) {
+    if (message_arena != NULL && 
+        ::google::protobuf::Arena::GetArena(*shape) == NULL) {
+      message_arena->Own(*shape);
+    } else if (message_arena !=
+               ::google::protobuf::Arena::GetArena(*shape)) {
+      ::tensorflow::TensorShapeProto* new_shape = 
+            ::google::protobuf::Arena::CreateMessage< ::tensorflow::TensorShapeProto >(
+            message_arena);
+      new_shape->CopyFrom(**shape);
+      *shape = new_shape;
+    }
+}
+void CostGraphDef_Node_OutputInfo::unsafe_arena_set_allocated_shape(
+    ::tensorflow::TensorShapeProto* shape) {
+  if (GetArenaNoVirtual() == NULL) {
+    delete shape_;
+  }
+  shape_ = shape;
+  if (shape) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:tensorflow.CostGraphDef.Node.OutputInfo.shape)
+}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int CostGraphDef_Node_OutputInfo::kSizeFieldNumber;
 const int CostGraphDef_Node_OutputInfo::kAliasInputPortFieldNumber;
+const int CostGraphDef_Node_OutputInfo::kShapeFieldNumber;
+const int CostGraphDef_Node_OutputInfo::kDtypeFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 CostGraphDef_Node_OutputInfo::CostGraphDef_Node_OutputInfo()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:tensorflow.CostGraphDef.Node.OutputInfo)
 }
-
 CostGraphDef_Node_OutputInfo::CostGraphDef_Node_OutputInfo(::google::protobuf::Arena* arena)
   : ::google::protobuf::Message(),
   _internal_metadata_(arena) {
+  protobuf_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto::InitDefaults();
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:tensorflow.CostGraphDef.Node.OutputInfo)
 }
-
-void CostGraphDef_Node_OutputInfo::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-}
-
 CostGraphDef_Node_OutputInfo::CostGraphDef_Node_OutputInfo(const CostGraphDef_Node_OutputInfo& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  MergeFrom(from);
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_shape()) {
+    shape_ = new ::tensorflow::TensorShapeProto(*from.shape_);
+  } else {
+    shape_ = NULL;
+  }
+  ::memcpy(&size_, &from.size_,
+    static_cast<size_t>(reinterpret_cast<char*>(&dtype_) -
+    reinterpret_cast<char*>(&size_)) + sizeof(dtype_));
   // @@protoc_insertion_point(copy_constructor:tensorflow.CostGraphDef.Node.OutputInfo)
 }
 
 void CostGraphDef_Node_OutputInfo::SharedCtor() {
-    _is_default_instance_ = false;
+  ::memset(&shape_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&dtype_) -
+      reinterpret_cast<char*>(&shape_)) + sizeof(dtype_));
   _cached_size_ = 0;
-  size_ = GOOGLE_LONGLONG(0);
-  alias_input_port_ = GOOGLE_LONGLONG(0);
 }
 
 CostGraphDef_Node_OutputInfo::~CostGraphDef_Node_OutputInfo() {
@@ -544,12 +660,13 @@ CostGraphDef_Node_OutputInfo::~CostGraphDef_Node_OutputInfo() {
 }
 
 void CostGraphDef_Node_OutputInfo::SharedDtor() {
-  if (GetArenaNoVirtual() != NULL) {
+  ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  GOOGLE_DCHECK(arena == NULL);
+  if (arena != NULL) {
     return;
   }
 
-  if (this != default_instance_) {
-  }
+  if (this != internal_default_instance()) delete shape_;
 }
 
 void CostGraphDef_Node_OutputInfo::ArenaDtor(void* object) {
@@ -564,16 +681,14 @@ void CostGraphDef_Node_OutputInfo::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* CostGraphDef_Node_OutputInfo::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return CostGraphDef_Node_OutputInfo_descriptor_;
+  protobuf_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const CostGraphDef_Node_OutputInfo& CostGraphDef_Node_OutputInfo::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto();
-  return *default_instance_;
+  protobuf_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto::InitDefaults();
+  return *internal_default_instance();
 }
-
-CostGraphDef_Node_OutputInfo* CostGraphDef_Node_OutputInfo::default_instance_ = NULL;
 
 CostGraphDef_Node_OutputInfo* CostGraphDef_Node_OutputInfo::New(::google::protobuf::Arena* arena) const {
   return ::google::protobuf::Arena::CreateMessage<CostGraphDef_Node_OutputInfo>(arena);
@@ -581,27 +696,18 @@ CostGraphDef_Node_OutputInfo* CostGraphDef_Node_OutputInfo::New(::google::protob
 
 void CostGraphDef_Node_OutputInfo::Clear() {
 // @@protoc_insertion_point(message_clear_start:tensorflow.CostGraphDef.Node.OutputInfo)
-#if defined(__clang__)
-#define ZR_HELPER_(f) \
-  _Pragma("clang diagnostic push") \
-  _Pragma("clang diagnostic ignored \"-Winvalid-offsetof\"") \
-  __builtin_offsetof(CostGraphDef_Node_OutputInfo, f) \
-  _Pragma("clang diagnostic pop")
-#else
-#define ZR_HELPER_(f) reinterpret_cast<char*>(\
-  &reinterpret_cast<CostGraphDef_Node_OutputInfo*>(16)->f)
-#endif
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
-#define ZR_(first, last) do {\
-  ::memset(&first, 0,\
-           ZR_HELPER_(last) - ZR_HELPER_(first) + sizeof(last));\
-} while (0)
-
-  ZR_(size_, alias_input_port_);
-
-#undef ZR_HELPER_
-#undef ZR_
-
+  if (GetArenaNoVirtual() == NULL && shape_ != NULL) {
+    delete shape_;
+  }
+  shape_ = NULL;
+  ::memset(&size_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&dtype_) -
+      reinterpret_cast<char*>(&size_)) + sizeof(dtype_));
+  _internal_metadata_.Clear();
 }
 
 bool CostGraphDef_Node_OutputInfo::MergePartialFromCodedStream(
@@ -610,47 +716,72 @@ bool CostGraphDef_Node_OutputInfo::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:tensorflow.CostGraphDef.Node.OutputInfo)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional int64 size = 1;
+      // int64 size = 1;
       case 1: {
-        if (tag == 8) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
                  input, &size_)));
-
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(16)) goto parse_alias_input_port;
         break;
       }
 
-      // optional int64 alias_input_port = 2;
+      // int64 alias_input_port = 2;
       case 2: {
-        if (tag == 16) {
-         parse_alias_input_port:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
+
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
                  input, &alias_input_port_)));
-
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
+
+      // .tensorflow.TensorShapeProto shape = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_shape()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .tensorflow.DataType dtype = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(32u /* 32 & 0xFF */)) {
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          set_dtype(static_cast< ::tensorflow::DataType >(value));
+        } else {
+          goto handle_unusual;
+        }
         break;
       }
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -667,64 +798,123 @@ failure:
 void CostGraphDef_Node_OutputInfo::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:tensorflow.CostGraphDef.Node.OutputInfo)
-  // optional int64 size = 1;
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int64 size = 1;
   if (this->size() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->size(), output);
   }
 
-  // optional int64 alias_input_port = 2;
+  // int64 alias_input_port = 2;
   if (this->alias_input_port() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(2, this->alias_input_port(), output);
   }
 
+  // .tensorflow.TensorShapeProto shape = 3;
+  if (this->has_shape()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      3, *this->shape_, output);
+  }
+
+  // .tensorflow.DataType dtype = 4;
+  if (this->dtype() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      4, this->dtype(), output);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
   // @@protoc_insertion_point(serialize_end:tensorflow.CostGraphDef.Node.OutputInfo)
 }
 
-::google::protobuf::uint8* CostGraphDef_Node_OutputInfo::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::google::protobuf::uint8* CostGraphDef_Node_OutputInfo::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:tensorflow.CostGraphDef.Node.OutputInfo)
-  // optional int64 size = 1;
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int64 size = 1;
   if (this->size() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->size(), target);
   }
 
-  // optional int64 alias_input_port = 2;
+  // int64 alias_input_port = 2;
   if (this->alias_input_port() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(2, this->alias_input_port(), target);
   }
 
+  // .tensorflow.TensorShapeProto shape = 3;
+  if (this->has_shape()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageNoVirtualToArray(
+        3, *this->shape_, deterministic, target);
+  }
+
+  // .tensorflow.DataType dtype = 4;
+  if (this->dtype() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      4, this->dtype(), target);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
   // @@protoc_insertion_point(serialize_to_array_end:tensorflow.CostGraphDef.Node.OutputInfo)
   return target;
 }
 
-int CostGraphDef_Node_OutputInfo::ByteSize() const {
+size_t CostGraphDef_Node_OutputInfo::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:tensorflow.CostGraphDef.Node.OutputInfo)
-  int total_size = 0;
+  size_t total_size = 0;
 
-  // optional int64 size = 1;
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
+  // .tensorflow.TensorShapeProto shape = 3;
+  if (this->has_shape()) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->shape_);
+  }
+
+  // int64 size = 1;
   if (this->size() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int64Size(
         this->size());
   }
 
-  // optional int64 alias_input_port = 2;
+  // int64 alias_input_port = 2;
   if (this->alias_input_port() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int64Size(
         this->alias_input_port());
   }
 
+  // .tensorflow.DataType dtype = 4;
+  if (this->dtype() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::EnumSize(this->dtype());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = total_size;
+  _cached_size_ = cached_size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
 void CostGraphDef_Node_OutputInfo::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:tensorflow.CostGraphDef.Node.OutputInfo)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
-  const CostGraphDef_Node_OutputInfo* source = 
+  GOOGLE_DCHECK_NE(&from, this);
+  const CostGraphDef_Node_OutputInfo* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const CostGraphDef_Node_OutputInfo>(
           &from);
   if (source == NULL) {
@@ -738,12 +928,22 @@ void CostGraphDef_Node_OutputInfo::MergeFrom(const ::google::protobuf::Message& 
 
 void CostGraphDef_Node_OutputInfo::MergeFrom(const CostGraphDef_Node_OutputInfo& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:tensorflow.CostGraphDef.Node.OutputInfo)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_shape()) {
+    mutable_shape()->::tensorflow::TensorShapeProto::MergeFrom(from.shape());
+  }
   if (from.size() != 0) {
     set_size(from.size());
   }
   if (from.alias_input_port() != 0) {
     set_alias_input_port(from.alias_input_port());
+  }
+  if (from.dtype() != 0) {
+    set_dtype(from.dtype());
   }
 }
 
@@ -762,7 +962,6 @@ void CostGraphDef_Node_OutputInfo::CopyFrom(const CostGraphDef_Node_OutputInfo& 
 }
 
 bool CostGraphDef_Node_OutputInfo::IsInitialized() const {
-
   return true;
 }
 
@@ -771,10 +970,13 @@ void CostGraphDef_Node_OutputInfo::Swap(CostGraphDef_Node_OutputInfo* other) {
   if (GetArenaNoVirtual() == other->GetArenaNoVirtual()) {
     InternalSwap(other);
   } else {
-    CostGraphDef_Node_OutputInfo temp;
-    temp.MergeFrom(*this);
-    CopyFrom(*other);
-    other->CopyFrom(temp);
+    CostGraphDef_Node_OutputInfo* temp = New(GetArenaNoVirtual());
+    temp->MergeFrom(*other);
+    other->CopyFrom(*this);
+    InternalSwap(temp);
+    if (GetArenaNoVirtual() == NULL) {
+      delete temp;
+    }
   }
 }
 void CostGraphDef_Node_OutputInfo::UnsafeArenaSwap(CostGraphDef_Node_OutputInfo* other) {
@@ -783,22 +985,118 @@ void CostGraphDef_Node_OutputInfo::UnsafeArenaSwap(CostGraphDef_Node_OutputInfo*
   InternalSwap(other);
 }
 void CostGraphDef_Node_OutputInfo::InternalSwap(CostGraphDef_Node_OutputInfo* other) {
-  std::swap(size_, other->size_);
-  std::swap(alias_input_port_, other->alias_input_port_);
+  using std::swap;
+  swap(shape_, other->shape_);
+  swap(size_, other->size_);
+  swap(alias_input_port_, other->alias_input_port_);
+  swap(dtype_, other->dtype_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  std::swap(_cached_size_, other->_cached_size_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata CostGraphDef_Node_OutputInfo::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = CostGraphDef_Node_OutputInfo_descriptor_;
-  metadata.reflection = CostGraphDef_Node_OutputInfo_reflection_;
-  return metadata;
+  protobuf_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// CostGraphDef_Node_OutputInfo
 
-// -------------------------------------------------------------------
+// int64 size = 1;
+void CostGraphDef_Node_OutputInfo::clear_size() {
+  size_ = GOOGLE_LONGLONG(0);
+}
+::google::protobuf::int64 CostGraphDef_Node_OutputInfo::size() const {
+  // @@protoc_insertion_point(field_get:tensorflow.CostGraphDef.Node.OutputInfo.size)
+  return size_;
+}
+void CostGraphDef_Node_OutputInfo::set_size(::google::protobuf::int64 value) {
+  
+  size_ = value;
+  // @@protoc_insertion_point(field_set:tensorflow.CostGraphDef.Node.OutputInfo.size)
+}
+
+// int64 alias_input_port = 2;
+void CostGraphDef_Node_OutputInfo::clear_alias_input_port() {
+  alias_input_port_ = GOOGLE_LONGLONG(0);
+}
+::google::protobuf::int64 CostGraphDef_Node_OutputInfo::alias_input_port() const {
+  // @@protoc_insertion_point(field_get:tensorflow.CostGraphDef.Node.OutputInfo.alias_input_port)
+  return alias_input_port_;
+}
+void CostGraphDef_Node_OutputInfo::set_alias_input_port(::google::protobuf::int64 value) {
+  
+  alias_input_port_ = value;
+  // @@protoc_insertion_point(field_set:tensorflow.CostGraphDef.Node.OutputInfo.alias_input_port)
+}
+
+// .tensorflow.TensorShapeProto shape = 3;
+bool CostGraphDef_Node_OutputInfo::has_shape() const {
+  return this != internal_default_instance() && shape_ != NULL;
+}
+void CostGraphDef_Node_OutputInfo::clear_shape() {
+  if (GetArenaNoVirtual() == NULL && shape_ != NULL) delete shape_;
+  shape_ = NULL;
+}
+const ::tensorflow::TensorShapeProto& CostGraphDef_Node_OutputInfo::shape() const {
+  const ::tensorflow::TensorShapeProto* p = shape_;
+  // @@protoc_insertion_point(field_get:tensorflow.CostGraphDef.Node.OutputInfo.shape)
+  return p != NULL ? *p : *reinterpret_cast<const ::tensorflow::TensorShapeProto*>(
+      &::tensorflow::_TensorShapeProto_default_instance_);
+}
+::tensorflow::TensorShapeProto* CostGraphDef_Node_OutputInfo::mutable_shape() {
+  
+  if (shape_ == NULL) {
+    _slow_mutable_shape();
+  }
+  // @@protoc_insertion_point(field_mutable:tensorflow.CostGraphDef.Node.OutputInfo.shape)
+  return shape_;
+}
+::tensorflow::TensorShapeProto* CostGraphDef_Node_OutputInfo::release_shape() {
+  // @@protoc_insertion_point(field_release:tensorflow.CostGraphDef.Node.OutputInfo.shape)
+  
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_shape();
+  } else {
+    ::tensorflow::TensorShapeProto* temp = shape_;
+    shape_ = NULL;
+    return temp;
+  }
+}
+ void CostGraphDef_Node_OutputInfo::set_allocated_shape(::tensorflow::TensorShapeProto* shape) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete shape_;
+  }
+  if (shape != NULL) {
+    _slow_set_allocated_shape(message_arena, &shape);
+  }
+  shape_ = shape;
+  if (shape) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:tensorflow.CostGraphDef.Node.OutputInfo.shape)
+}
+
+// .tensorflow.DataType dtype = 4;
+void CostGraphDef_Node_OutputInfo::clear_dtype() {
+  dtype_ = 0;
+}
+::tensorflow::DataType CostGraphDef_Node_OutputInfo::dtype() const {
+  // @@protoc_insertion_point(field_get:tensorflow.CostGraphDef.Node.OutputInfo.dtype)
+  return static_cast< ::tensorflow::DataType >(dtype_);
+}
+void CostGraphDef_Node_OutputInfo::set_dtype(::tensorflow::DataType value) {
+  
+  dtype_ = value;
+  // @@protoc_insertion_point(field_set:tensorflow.CostGraphDef.Node.OutputInfo.dtype)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int CostGraphDef_Node::kNameFieldNumber;
@@ -807,48 +1105,67 @@ const int CostGraphDef_Node::kIdFieldNumber;
 const int CostGraphDef_Node::kInputInfoFieldNumber;
 const int CostGraphDef_Node::kOutputInfoFieldNumber;
 const int CostGraphDef_Node::kTemporaryMemorySizeFieldNumber;
+const int CostGraphDef_Node::kHostTempMemorySizeFieldNumber;
+const int CostGraphDef_Node::kDeviceTempMemorySizeFieldNumber;
+const int CostGraphDef_Node::kHostPersistentMemorySizeFieldNumber;
+const int CostGraphDef_Node::kDevicePersistentMemorySizeFieldNumber;
+const int CostGraphDef_Node::kComputeCostFieldNumber;
+const int CostGraphDef_Node::kComputeTimeFieldNumber;
+const int CostGraphDef_Node::kMemoryTimeFieldNumber;
 const int CostGraphDef_Node::kIsFinalFieldNumber;
 const int CostGraphDef_Node::kControlInputFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 CostGraphDef_Node::CostGraphDef_Node()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:tensorflow.CostGraphDef.Node)
 }
-
 CostGraphDef_Node::CostGraphDef_Node(::google::protobuf::Arena* arena)
   : ::google::protobuf::Message(),
   _internal_metadata_(arena),
   input_info_(arena),
   output_info_(arena),
   control_input_(arena) {
+  protobuf_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto::InitDefaults();
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:tensorflow.CostGraphDef.Node)
 }
-
-void CostGraphDef_Node::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-}
-
 CostGraphDef_Node::CostGraphDef_Node(const CostGraphDef_Node& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  MergeFrom(from);
+      _internal_metadata_(NULL),
+      input_info_(from.input_info_),
+      output_info_(from.output_info_),
+      control_input_(from.control_input_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.name().size() > 0) {
+    name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name(),
+      GetArenaNoVirtual());
+  }
+  device_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.device().size() > 0) {
+    device_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.device(),
+      GetArenaNoVirtual());
+  }
+  ::memcpy(&id_, &from.id_,
+    static_cast<size_t>(reinterpret_cast<char*>(&device_persistent_memory_size_) -
+    reinterpret_cast<char*>(&id_)) + sizeof(device_persistent_memory_size_));
   // @@protoc_insertion_point(copy_constructor:tensorflow.CostGraphDef.Node)
 }
 
 void CostGraphDef_Node::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
   name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   device_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  id_ = 0;
-  temporary_memory_size_ = GOOGLE_LONGLONG(0);
-  is_final_ = false;
+  ::memset(&id_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&device_persistent_memory_size_) -
+      reinterpret_cast<char*>(&id_)) + sizeof(device_persistent_memory_size_));
+  _cached_size_ = 0;
 }
 
 CostGraphDef_Node::~CostGraphDef_Node() {
@@ -857,14 +1174,14 @@ CostGraphDef_Node::~CostGraphDef_Node() {
 }
 
 void CostGraphDef_Node::SharedDtor() {
-  if (GetArenaNoVirtual() != NULL) {
+  ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  GOOGLE_DCHECK(arena == NULL);
+  if (arena != NULL) {
     return;
   }
 
-  name_.Destroy(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
-  device_.Destroy(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
-  if (this != default_instance_) {
-  }
+  name_.Destroy(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), arena);
+  device_.Destroy(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), arena);
 }
 
 void CostGraphDef_Node::ArenaDtor(void* object) {
@@ -879,16 +1196,14 @@ void CostGraphDef_Node::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* CostGraphDef_Node::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return CostGraphDef_Node_descriptor_;
+  protobuf_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const CostGraphDef_Node& CostGraphDef_Node::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto();
-  return *default_instance_;
+  protobuf_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto::InitDefaults();
+  return *internal_default_instance();
 }
-
-CostGraphDef_Node* CostGraphDef_Node::default_instance_ = NULL;
 
 CostGraphDef_Node* CostGraphDef_Node::New(::google::protobuf::Arena* arena) const {
   return ::google::protobuf::Arena::CreateMessage<CostGraphDef_Node>(arena);
@@ -896,32 +1211,19 @@ CostGraphDef_Node* CostGraphDef_Node::New(::google::protobuf::Arena* arena) cons
 
 void CostGraphDef_Node::Clear() {
 // @@protoc_insertion_point(message_clear_start:tensorflow.CostGraphDef.Node)
-#if defined(__clang__)
-#define ZR_HELPER_(f) \
-  _Pragma("clang diagnostic push") \
-  _Pragma("clang diagnostic ignored \"-Winvalid-offsetof\"") \
-  __builtin_offsetof(CostGraphDef_Node, f) \
-  _Pragma("clang diagnostic pop")
-#else
-#define ZR_HELPER_(f) reinterpret_cast<char*>(\
-  &reinterpret_cast<CostGraphDef_Node*>(16)->f)
-#endif
-
-#define ZR_(first, last) do {\
-  ::memset(&first, 0,\
-           ZR_HELPER_(last) - ZR_HELPER_(first) + sizeof(last));\
-} while (0)
-
-  ZR_(id_, temporary_memory_size_);
-  name_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
-  device_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
-
-#undef ZR_HELPER_
-#undef ZR_
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
   input_info_.Clear();
   output_info_.Clear();
   control_input_.Clear();
+  name_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+  device_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+  ::memset(&id_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&device_persistent_memory_size_) -
+      reinterpret_cast<char*>(&id_)) + sizeof(device_persistent_memory_size_));
+  _internal_metadata_.Clear();
 }
 
 bool CostGraphDef_Node::MergePartialFromCodedStream(
@@ -930,147 +1232,232 @@ bool CostGraphDef_Node::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:tensorflow.CostGraphDef.Node)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(16383u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional string name = 1;
+      // string name = 1;
       case 1: {
-        if (tag == 10) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_name()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->name().data(), this->name().length(),
+            this->name().data(), static_cast<int>(this->name().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
             "tensorflow.CostGraphDef.Node.name"));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(18)) goto parse_device;
         break;
       }
 
-      // optional string device = 2;
+      // string device = 2;
       case 2: {
-        if (tag == 18) {
-         parse_device:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_device()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->device().data(), this->device().length(),
+            this->device().data(), static_cast<int>(this->device().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
             "tensorflow.CostGraphDef.Node.device"));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(24)) goto parse_id;
         break;
       }
 
-      // optional int32 id = 3;
+      // int32 id = 3;
       case 3: {
-        if (tag == 24) {
-         parse_id:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
+
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &id_)));
-
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(34)) goto parse_input_info;
         break;
       }
 
       // repeated .tensorflow.CostGraphDef.Node.InputInfo input_info = 4;
       case 4: {
-        if (tag == 34) {
-         parse_input_info:
-          DO_(input->IncrementRecursionDepth());
-         parse_loop_input_info:
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtualNoRecursionDepth(
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                 input, add_input_info()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(34)) goto parse_loop_input_info;
-        if (input->ExpectTag(42)) goto parse_loop_output_info;
-        input->UnsafeDecrementRecursionDepth();
         break;
       }
 
       // repeated .tensorflow.CostGraphDef.Node.OutputInfo output_info = 5;
       case 5: {
-        if (tag == 42) {
-          DO_(input->IncrementRecursionDepth());
-         parse_loop_output_info:
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtualNoRecursionDepth(
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                 input, add_output_info()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(42)) goto parse_loop_output_info;
-        input->UnsafeDecrementRecursionDepth();
-        if (input->ExpectTag(48)) goto parse_temporary_memory_size;
         break;
       }
 
-      // optional int64 temporary_memory_size = 6;
+      // int64 temporary_memory_size = 6;
       case 6: {
-        if (tag == 48) {
-         parse_temporary_memory_size:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(48u /* 48 & 0xFF */)) {
+
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
                  input, &temporary_memory_size_)));
-
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(56)) goto parse_is_final;
         break;
       }
 
-      // optional bool is_final = 7;
+      // bool is_final = 7;
       case 7: {
-        if (tag == 56) {
-         parse_is_final:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(56u /* 56 & 0xFF */)) {
+
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
                  input, &is_final_)));
-
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(66)) goto parse_control_input;
         break;
       }
 
       // repeated int32 control_input = 8;
       case 8: {
-        if (tag == 66) {
-         parse_control_input:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(66u /* 66 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, this->mutable_control_input())));
-        } else if (tag == 64) {
+        } else if (
+            static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(64u /* 64 & 0xFF */)) {
           DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
-                 1, 66, input, this->mutable_control_input())));
+                 1, 66u, input, this->mutable_control_input())));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) goto success;
+        break;
+      }
+
+      // int64 compute_cost = 9;
+      case 9: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(72u /* 72 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
+                 input, &compute_cost_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int64 host_temp_memory_size = 10;
+      case 10: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(80u /* 80 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
+                 input, &host_temp_memory_size_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int64 device_temp_memory_size = 11;
+      case 11: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(88u /* 88 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
+                 input, &device_temp_memory_size_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int64 host_persistent_memory_size = 12;
+      case 12: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(96u /* 96 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
+                 input, &host_persistent_memory_size_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int64 compute_time = 14;
+      case 14: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(112u /* 112 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
+                 input, &compute_time_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int64 memory_time = 15;
+      case 15: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(120u /* 120 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
+                 input, &memory_time_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // int64 device_persistent_memory_size = 16;
+      case 16: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(128u /* 128 & 0xFF */)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
+                 input, &device_persistent_memory_size_)));
+        } else {
+          goto handle_unusual;
+        }
         break;
       }
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -1087,49 +1474,54 @@ failure:
 void CostGraphDef_Node::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:tensorflow.CostGraphDef.Node)
-  // optional string name = 1;
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string name = 1;
   if (this->name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->name().data(), this->name().length(),
+      this->name().data(), static_cast<int>(this->name().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "tensorflow.CostGraphDef.Node.name");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       1, this->name(), output);
   }
 
-  // optional string device = 2;
+  // string device = 2;
   if (this->device().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->device().data(), this->device().length(),
+      this->device().data(), static_cast<int>(this->device().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "tensorflow.CostGraphDef.Node.device");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->device(), output);
   }
 
-  // optional int32 id = 3;
+  // int32 id = 3;
   if (this->id() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(3, this->id(), output);
   }
 
   // repeated .tensorflow.CostGraphDef.Node.InputInfo input_info = 4;
-  for (unsigned int i = 0, n = this->input_info_size(); i < n; i++) {
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->input_info_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, this->input_info(i), output);
+      4, this->input_info(static_cast<int>(i)), output);
   }
 
   // repeated .tensorflow.CostGraphDef.Node.OutputInfo output_info = 5;
-  for (unsigned int i = 0, n = this->output_info_size(); i < n; i++) {
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->output_info_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      5, this->output_info(i), output);
+      5, this->output_info(static_cast<int>(i)), output);
   }
 
-  // optional int64 temporary_memory_size = 6;
+  // int64 temporary_memory_size = 6;
   if (this->temporary_memory_size() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(6, this->temporary_memory_size(), output);
   }
 
-  // optional bool is_final = 7;
+  // bool is_final = 7;
   if (this->is_final() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(7, this->is_final(), output);
   }
@@ -1137,23 +1529,67 @@ void CostGraphDef_Node::SerializeWithCachedSizes(
   // repeated int32 control_input = 8;
   if (this->control_input_size() > 0) {
     ::google::protobuf::internal::WireFormatLite::WriteTag(8, ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
-    output->WriteVarint32(_control_input_cached_byte_size_);
+    output->WriteVarint32(static_cast< ::google::protobuf::uint32>(
+        _control_input_cached_byte_size_));
   }
-  for (int i = 0; i < this->control_input_size(); i++) {
+  for (int i = 0, n = this->control_input_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32NoTag(
       this->control_input(i), output);
   }
 
+  // int64 compute_cost = 9;
+  if (this->compute_cost() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt64(9, this->compute_cost(), output);
+  }
+
+  // int64 host_temp_memory_size = 10;
+  if (this->host_temp_memory_size() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt64(10, this->host_temp_memory_size(), output);
+  }
+
+  // int64 device_temp_memory_size = 11;
+  if (this->device_temp_memory_size() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt64(11, this->device_temp_memory_size(), output);
+  }
+
+  // int64 host_persistent_memory_size = 12;
+  if (this->host_persistent_memory_size() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt64(12, this->host_persistent_memory_size(), output);
+  }
+
+  // int64 compute_time = 14;
+  if (this->compute_time() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt64(14, this->compute_time(), output);
+  }
+
+  // int64 memory_time = 15;
+  if (this->memory_time() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt64(15, this->memory_time(), output);
+  }
+
+  // int64 device_persistent_memory_size = 16;
+  if (this->device_persistent_memory_size() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt64(16, this->device_persistent_memory_size(), output);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
   // @@protoc_insertion_point(serialize_end:tensorflow.CostGraphDef.Node)
 }
 
-::google::protobuf::uint8* CostGraphDef_Node::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::google::protobuf::uint8* CostGraphDef_Node::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:tensorflow.CostGraphDef.Node)
-  // optional string name = 1;
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string name = 1;
   if (this->name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->name().data(), this->name().length(),
+      this->name().data(), static_cast<int>(this->name().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "tensorflow.CostGraphDef.Node.name");
     target =
@@ -1161,10 +1597,10 @@ void CostGraphDef_Node::SerializeWithCachedSizes(
         1, this->name(), target);
   }
 
-  // optional string device = 2;
+  // string device = 2;
   if (this->device().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->device().data(), this->device().length(),
+      this->device().data(), static_cast<int>(this->device().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "tensorflow.CostGraphDef.Node.device");
     target =
@@ -1172,31 +1608,33 @@ void CostGraphDef_Node::SerializeWithCachedSizes(
         2, this->device(), target);
   }
 
-  // optional int32 id = 3;
+  // int32 id = 3;
   if (this->id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(3, this->id(), target);
   }
 
   // repeated .tensorflow.CostGraphDef.Node.InputInfo input_info = 4;
-  for (unsigned int i = 0, n = this->input_info_size(); i < n; i++) {
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->input_info_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      WriteMessageNoVirtualToArray(
-        4, this->input_info(i), target);
+      InternalWriteMessageNoVirtualToArray(
+        4, this->input_info(static_cast<int>(i)), deterministic, target);
   }
 
   // repeated .tensorflow.CostGraphDef.Node.OutputInfo output_info = 5;
-  for (unsigned int i = 0, n = this->output_info_size(); i < n; i++) {
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->output_info_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
-      WriteMessageNoVirtualToArray(
-        5, this->output_info(i), target);
+      InternalWriteMessageNoVirtualToArray(
+        5, this->output_info(static_cast<int>(i)), deterministic, target);
   }
 
-  // optional int64 temporary_memory_size = 6;
+  // int64 temporary_memory_size = 6;
   if (this->temporary_memory_size() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(6, this->temporary_memory_size(), target);
   }
 
-  // optional bool is_final = 7;
+  // bool is_final = 7;
   if (this->is_final() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(7, this->is_final(), target);
   }
@@ -1208,97 +1646,195 @@ void CostGraphDef_Node::SerializeWithCachedSizes(
       ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
       target);
     target = ::google::protobuf::io::CodedOutputStream::WriteVarint32ToArray(
-      _control_input_cached_byte_size_, target);
-  }
-  for (int i = 0; i < this->control_input_size(); i++) {
+        static_cast< ::google::protobuf::uint32>(
+            _control_input_cached_byte_size_), target);
     target = ::google::protobuf::internal::WireFormatLite::
-      WriteInt32NoTagToArray(this->control_input(i), target);
+      WriteInt32NoTagToArray(this->control_input_, target);
   }
 
+  // int64 compute_cost = 9;
+  if (this->compute_cost() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(9, this->compute_cost(), target);
+  }
+
+  // int64 host_temp_memory_size = 10;
+  if (this->host_temp_memory_size() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(10, this->host_temp_memory_size(), target);
+  }
+
+  // int64 device_temp_memory_size = 11;
+  if (this->device_temp_memory_size() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(11, this->device_temp_memory_size(), target);
+  }
+
+  // int64 host_persistent_memory_size = 12;
+  if (this->host_persistent_memory_size() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(12, this->host_persistent_memory_size(), target);
+  }
+
+  // int64 compute_time = 14;
+  if (this->compute_time() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(14, this->compute_time(), target);
+  }
+
+  // int64 memory_time = 15;
+  if (this->memory_time() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(15, this->memory_time(), target);
+  }
+
+  // int64 device_persistent_memory_size = 16;
+  if (this->device_persistent_memory_size() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(16, this->device_persistent_memory_size(), target);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
   // @@protoc_insertion_point(serialize_to_array_end:tensorflow.CostGraphDef.Node)
   return target;
 }
 
-int CostGraphDef_Node::ByteSize() const {
+size_t CostGraphDef_Node::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:tensorflow.CostGraphDef.Node)
-  int total_size = 0;
+  size_t total_size = 0;
 
-  // optional string name = 1;
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
+  // repeated .tensorflow.CostGraphDef.Node.InputInfo input_info = 4;
+  {
+    unsigned int count = static_cast<unsigned int>(this->input_info_size());
+    total_size += 1UL * count;
+    for (unsigned int i = 0; i < count; i++) {
+      total_size +=
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->input_info(static_cast<int>(i)));
+    }
+  }
+
+  // repeated .tensorflow.CostGraphDef.Node.OutputInfo output_info = 5;
+  {
+    unsigned int count = static_cast<unsigned int>(this->output_info_size());
+    total_size += 1UL * count;
+    for (unsigned int i = 0; i < count; i++) {
+      total_size +=
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->output_info(static_cast<int>(i)));
+    }
+  }
+
+  // repeated int32 control_input = 8;
+  {
+    size_t data_size = ::google::protobuf::internal::WireFormatLite::
+      Int32Size(this->control_input_);
+    if (data_size > 0) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+            static_cast< ::google::protobuf::int32>(data_size));
+    }
+    int cached_size = ::google::protobuf::internal::ToCachedSize(data_size);
+    GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+    _control_input_cached_byte_size_ = cached_size;
+    GOOGLE_SAFE_CONCURRENT_WRITES_END();
+    total_size += data_size;
+  }
+
+  // string name = 1;
   if (this->name().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->name());
   }
 
-  // optional string device = 2;
+  // string device = 2;
   if (this->device().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->device());
   }
 
-  // optional int32 id = 3;
+  // int32 id = 3;
   if (this->id() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int32Size(
         this->id());
   }
 
-  // optional int64 temporary_memory_size = 6;
+  // bool is_final = 7;
+  if (this->is_final() != 0) {
+    total_size += 1 + 1;
+  }
+
+  // int64 temporary_memory_size = 6;
   if (this->temporary_memory_size() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::Int64Size(
         this->temporary_memory_size());
   }
 
-  // optional bool is_final = 7;
-  if (this->is_final() != 0) {
-    total_size += 1 + 1;
+  // int64 compute_cost = 9;
+  if (this->compute_cost() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int64Size(
+        this->compute_cost());
   }
 
-  // repeated .tensorflow.CostGraphDef.Node.InputInfo input_info = 4;
-  total_size += 1 * this->input_info_size();
-  for (int i = 0; i < this->input_info_size(); i++) {
-    total_size +=
-      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        this->input_info(i));
+  // int64 host_temp_memory_size = 10;
+  if (this->host_temp_memory_size() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int64Size(
+        this->host_temp_memory_size());
   }
 
-  // repeated .tensorflow.CostGraphDef.Node.OutputInfo output_info = 5;
-  total_size += 1 * this->output_info_size();
-  for (int i = 0; i < this->output_info_size(); i++) {
-    total_size +=
-      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        this->output_info(i));
+  // int64 device_temp_memory_size = 11;
+  if (this->device_temp_memory_size() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int64Size(
+        this->device_temp_memory_size());
   }
 
-  // repeated int32 control_input = 8;
-  {
-    int data_size = 0;
-    for (int i = 0; i < this->control_input_size(); i++) {
-      data_size += ::google::protobuf::internal::WireFormatLite::
-        Int32Size(this->control_input(i));
-    }
-    if (data_size > 0) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::Int32Size(data_size);
-    }
-    GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-    _control_input_cached_byte_size_ = data_size;
-    GOOGLE_SAFE_CONCURRENT_WRITES_END();
-    total_size += data_size;
+  // int64 host_persistent_memory_size = 12;
+  if (this->host_persistent_memory_size() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int64Size(
+        this->host_persistent_memory_size());
   }
 
+  // int64 compute_time = 14;
+  if (this->compute_time() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int64Size(
+        this->compute_time());
+  }
+
+  // int64 memory_time = 15;
+  if (this->memory_time() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int64Size(
+        this->memory_time());
+  }
+
+  // int64 device_persistent_memory_size = 16;
+  if (this->device_persistent_memory_size() != 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::Int64Size(
+        this->device_persistent_memory_size());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = total_size;
+  _cached_size_ = cached_size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
 void CostGraphDef_Node::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:tensorflow.CostGraphDef.Node)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
-  const CostGraphDef_Node* source = 
+  GOOGLE_DCHECK_NE(&from, this);
+  const CostGraphDef_Node* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const CostGraphDef_Node>(
           &from);
   if (source == NULL) {
@@ -1312,7 +1848,11 @@ void CostGraphDef_Node::MergeFrom(const ::google::protobuf::Message& from) {
 
 void CostGraphDef_Node::MergeFrom(const CostGraphDef_Node& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:tensorflow.CostGraphDef.Node)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   input_info_.MergeFrom(from.input_info_);
   output_info_.MergeFrom(from.output_info_);
   control_input_.MergeFrom(from.control_input_);
@@ -1325,11 +1865,32 @@ void CostGraphDef_Node::MergeFrom(const CostGraphDef_Node& from) {
   if (from.id() != 0) {
     set_id(from.id());
   }
+  if (from.is_final() != 0) {
+    set_is_final(from.is_final());
+  }
   if (from.temporary_memory_size() != 0) {
     set_temporary_memory_size(from.temporary_memory_size());
   }
-  if (from.is_final() != 0) {
-    set_is_final(from.is_final());
+  if (from.compute_cost() != 0) {
+    set_compute_cost(from.compute_cost());
+  }
+  if (from.host_temp_memory_size() != 0) {
+    set_host_temp_memory_size(from.host_temp_memory_size());
+  }
+  if (from.device_temp_memory_size() != 0) {
+    set_device_temp_memory_size(from.device_temp_memory_size());
+  }
+  if (from.host_persistent_memory_size() != 0) {
+    set_host_persistent_memory_size(from.host_persistent_memory_size());
+  }
+  if (from.compute_time() != 0) {
+    set_compute_time(from.compute_time());
+  }
+  if (from.memory_time() != 0) {
+    set_memory_time(from.memory_time());
+  }
+  if (from.device_persistent_memory_size() != 0) {
+    set_device_persistent_memory_size(from.device_persistent_memory_size());
   }
 }
 
@@ -1348,7 +1909,6 @@ void CostGraphDef_Node::CopyFrom(const CostGraphDef_Node& from) {
 }
 
 bool CostGraphDef_Node::IsInitialized() const {
-
   return true;
 }
 
@@ -1357,10 +1917,13 @@ void CostGraphDef_Node::Swap(CostGraphDef_Node* other) {
   if (GetArenaNoVirtual() == other->GetArenaNoVirtual()) {
     InternalSwap(other);
   } else {
-    CostGraphDef_Node temp;
-    temp.MergeFrom(*this);
-    CopyFrom(*other);
-    other->CopyFrom(temp);
+    CostGraphDef_Node* temp = New(GetArenaNoVirtual());
+    temp->MergeFrom(*other);
+    other->CopyFrom(*this);
+    InternalSwap(temp);
+    if (GetArenaNoVirtual() == NULL) {
+      delete temp;
+    }
   }
 }
 void CostGraphDef_Node::UnsafeArenaSwap(CostGraphDef_Node* other) {
@@ -1369,383 +1932,87 @@ void CostGraphDef_Node::UnsafeArenaSwap(CostGraphDef_Node* other) {
   InternalSwap(other);
 }
 void CostGraphDef_Node::InternalSwap(CostGraphDef_Node* other) {
+  using std::swap;
+  input_info_.InternalSwap(&other->input_info_);
+  output_info_.InternalSwap(&other->output_info_);
+  control_input_.InternalSwap(&other->control_input_);
   name_.Swap(&other->name_);
   device_.Swap(&other->device_);
-  std::swap(id_, other->id_);
-  input_info_.UnsafeArenaSwap(&other->input_info_);
-  output_info_.UnsafeArenaSwap(&other->output_info_);
-  std::swap(temporary_memory_size_, other->temporary_memory_size_);
-  std::swap(is_final_, other->is_final_);
-  control_input_.UnsafeArenaSwap(&other->control_input_);
+  swap(id_, other->id_);
+  swap(is_final_, other->is_final_);
+  swap(temporary_memory_size_, other->temporary_memory_size_);
+  swap(compute_cost_, other->compute_cost_);
+  swap(host_temp_memory_size_, other->host_temp_memory_size_);
+  swap(device_temp_memory_size_, other->device_temp_memory_size_);
+  swap(host_persistent_memory_size_, other->host_persistent_memory_size_);
+  swap(compute_time_, other->compute_time_);
+  swap(memory_time_, other->memory_time_);
+  swap(device_persistent_memory_size_, other->device_persistent_memory_size_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  std::swap(_cached_size_, other->_cached_size_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata CostGraphDef_Node::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = CostGraphDef_Node_descriptor_;
-  metadata.reflection = CostGraphDef_Node_reflection_;
-  return metadata;
-}
-
-
-// -------------------------------------------------------------------
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int CostGraphDef::kNodeFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-CostGraphDef::CostGraphDef()
-  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:tensorflow.CostGraphDef)
-}
-
-CostGraphDef::CostGraphDef(::google::protobuf::Arena* arena)
-  : ::google::protobuf::Message(),
-  _internal_metadata_(arena),
-  node_(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:tensorflow.CostGraphDef)
-}
-
-void CostGraphDef::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-}
-
-CostGraphDef::CostGraphDef(const CostGraphDef& from)
-  : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  MergeFrom(from);
-  // @@protoc_insertion_point(copy_constructor:tensorflow.CostGraphDef)
-}
-
-void CostGraphDef::SharedCtor() {
-    _is_default_instance_ = false;
-  _cached_size_ = 0;
-}
-
-CostGraphDef::~CostGraphDef() {
-  // @@protoc_insertion_point(destructor:tensorflow.CostGraphDef)
-  SharedDtor();
-}
-
-void CostGraphDef::SharedDtor() {
-  if (GetArenaNoVirtual() != NULL) {
-    return;
-  }
-
-  if (this != default_instance_) {
-  }
-}
-
-void CostGraphDef::ArenaDtor(void* object) {
-  CostGraphDef* _this = reinterpret_cast< CostGraphDef* >(object);
-  (void)_this;
-}
-void CostGraphDef::RegisterArenaDtor(::google::protobuf::Arena* arena) {
-}
-void CostGraphDef::SetCachedSize(int size) const {
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-}
-const ::google::protobuf::Descriptor* CostGraphDef::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return CostGraphDef_descriptor_;
-}
-
-const CostGraphDef& CostGraphDef::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto();
-  return *default_instance_;
-}
-
-CostGraphDef* CostGraphDef::default_instance_ = NULL;
-
-CostGraphDef* CostGraphDef::New(::google::protobuf::Arena* arena) const {
-  return ::google::protobuf::Arena::CreateMessage<CostGraphDef>(arena);
-}
-
-void CostGraphDef::Clear() {
-// @@protoc_insertion_point(message_clear_start:tensorflow.CostGraphDef)
-  node_.Clear();
-}
-
-bool CostGraphDef::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:tensorflow.CostGraphDef)
-  for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // repeated .tensorflow.CostGraphDef.Node node = 1;
-      case 1: {
-        if (tag == 10) {
-          DO_(input->IncrementRecursionDepth());
-         parse_loop_node:
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtualNoRecursionDepth(
-                input, add_node()));
-        } else {
-          goto handle_unusual;
-        }
-        if (input->ExpectTag(10)) goto parse_loop_node;
-        input->UnsafeDecrementRecursionDepth();
-        if (input->ExpectAtEnd()) goto success;
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
-        break;
-      }
-    }
-  }
-success:
-  // @@protoc_insertion_point(parse_success:tensorflow.CostGraphDef)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:tensorflow.CostGraphDef)
-  return false;
-#undef DO_
-}
-
-void CostGraphDef::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:tensorflow.CostGraphDef)
-  // repeated .tensorflow.CostGraphDef.Node node = 1;
-  for (unsigned int i = 0, n = this->node_size(); i < n; i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, this->node(i), output);
-  }
-
-  // @@protoc_insertion_point(serialize_end:tensorflow.CostGraphDef)
-}
-
-::google::protobuf::uint8* CostGraphDef::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:tensorflow.CostGraphDef)
-  // repeated .tensorflow.CostGraphDef.Node node = 1;
-  for (unsigned int i = 0, n = this->node_size(); i < n; i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      WriteMessageNoVirtualToArray(
-        1, this->node(i), target);
-  }
-
-  // @@protoc_insertion_point(serialize_to_array_end:tensorflow.CostGraphDef)
-  return target;
-}
-
-int CostGraphDef::ByteSize() const {
-// @@protoc_insertion_point(message_byte_size_start:tensorflow.CostGraphDef)
-  int total_size = 0;
-
-  // repeated .tensorflow.CostGraphDef.Node node = 1;
-  total_size += 1 * this->node_size();
-  for (int i = 0; i < this->node_size(); i++) {
-    total_size +=
-      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-        this->node(i));
-  }
-
-  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = total_size;
-  GOOGLE_SAFE_CONCURRENT_WRITES_END();
-  return total_size;
-}
-
-void CostGraphDef::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:tensorflow.CostGraphDef)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
-  const CostGraphDef* source = 
-      ::google::protobuf::internal::DynamicCastToGenerated<const CostGraphDef>(
-          &from);
-  if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:tensorflow.CostGraphDef)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:tensorflow.CostGraphDef)
-    MergeFrom(*source);
-  }
-}
-
-void CostGraphDef::MergeFrom(const CostGraphDef& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:tensorflow.CostGraphDef)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
-  node_.MergeFrom(from.node_);
-}
-
-void CostGraphDef::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:tensorflow.CostGraphDef)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void CostGraphDef::CopyFrom(const CostGraphDef& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:tensorflow.CostGraphDef)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool CostGraphDef::IsInitialized() const {
-
-  return true;
-}
-
-void CostGraphDef::Swap(CostGraphDef* other) {
-  if (other == this) return;
-  if (GetArenaNoVirtual() == other->GetArenaNoVirtual()) {
-    InternalSwap(other);
-  } else {
-    CostGraphDef temp;
-    temp.MergeFrom(*this);
-    CopyFrom(*other);
-    other->CopyFrom(temp);
-  }
-}
-void CostGraphDef::UnsafeArenaSwap(CostGraphDef* other) {
-  if (other == this) return;
-  GOOGLE_DCHECK(GetArenaNoVirtual() == other->GetArenaNoVirtual());
-  InternalSwap(other);
-}
-void CostGraphDef::InternalSwap(CostGraphDef* other) {
-  node_.UnsafeArenaSwap(&other->node_);
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  std::swap(_cached_size_, other->_cached_size_);
-}
-
-::google::protobuf::Metadata CostGraphDef::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = CostGraphDef_descriptor_;
-  metadata.reflection = CostGraphDef_reflection_;
-  return metadata;
+  protobuf_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
-// CostGraphDef_Node_InputInfo
-
-// optional int32 preceding_node = 1;
-void CostGraphDef_Node_InputInfo::clear_preceding_node() {
-  preceding_node_ = 0;
-}
- ::google::protobuf::int32 CostGraphDef_Node_InputInfo::preceding_node() const {
-  // @@protoc_insertion_point(field_get:tensorflow.CostGraphDef.Node.InputInfo.preceding_node)
-  return preceding_node_;
-}
- void CostGraphDef_Node_InputInfo::set_preceding_node(::google::protobuf::int32 value) {
-  
-  preceding_node_ = value;
-  // @@protoc_insertion_point(field_set:tensorflow.CostGraphDef.Node.InputInfo.preceding_node)
-}
-
-// optional int32 preceding_port = 2;
-void CostGraphDef_Node_InputInfo::clear_preceding_port() {
-  preceding_port_ = 0;
-}
- ::google::protobuf::int32 CostGraphDef_Node_InputInfo::preceding_port() const {
-  // @@protoc_insertion_point(field_get:tensorflow.CostGraphDef.Node.InputInfo.preceding_port)
-  return preceding_port_;
-}
- void CostGraphDef_Node_InputInfo::set_preceding_port(::google::protobuf::int32 value) {
-  
-  preceding_port_ = value;
-  // @@protoc_insertion_point(field_set:tensorflow.CostGraphDef.Node.InputInfo.preceding_port)
-}
-
-// -------------------------------------------------------------------
-
-// CostGraphDef_Node_OutputInfo
-
-// optional int64 size = 1;
-void CostGraphDef_Node_OutputInfo::clear_size() {
-  size_ = GOOGLE_LONGLONG(0);
-}
- ::google::protobuf::int64 CostGraphDef_Node_OutputInfo::size() const {
-  // @@protoc_insertion_point(field_get:tensorflow.CostGraphDef.Node.OutputInfo.size)
-  return size_;
-}
- void CostGraphDef_Node_OutputInfo::set_size(::google::protobuf::int64 value) {
-  
-  size_ = value;
-  // @@protoc_insertion_point(field_set:tensorflow.CostGraphDef.Node.OutputInfo.size)
-}
-
-// optional int64 alias_input_port = 2;
-void CostGraphDef_Node_OutputInfo::clear_alias_input_port() {
-  alias_input_port_ = GOOGLE_LONGLONG(0);
-}
- ::google::protobuf::int64 CostGraphDef_Node_OutputInfo::alias_input_port() const {
-  // @@protoc_insertion_point(field_get:tensorflow.CostGraphDef.Node.OutputInfo.alias_input_port)
-  return alias_input_port_;
-}
- void CostGraphDef_Node_OutputInfo::set_alias_input_port(::google::protobuf::int64 value) {
-  
-  alias_input_port_ = value;
-  // @@protoc_insertion_point(field_set:tensorflow.CostGraphDef.Node.OutputInfo.alias_input_port)
-}
-
-// -------------------------------------------------------------------
-
 // CostGraphDef_Node
 
-// optional string name = 1;
+// string name = 1;
 void CostGraphDef_Node::clear_name() {
   name_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
- const ::std::string& CostGraphDef_Node::name() const {
+const ::std::string& CostGraphDef_Node::name() const {
   // @@protoc_insertion_point(field_get:tensorflow.CostGraphDef.Node.name)
-  return name_.Get(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return name_.Get();
 }
- void CostGraphDef_Node::set_name(const ::std::string& value) {
+void CostGraphDef_Node::set_name(const ::std::string& value) {
   
   name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set:tensorflow.CostGraphDef.Node.name)
 }
- void CostGraphDef_Node::set_name(const char* value) {
+#if LANG_CXX11
+void CostGraphDef_Node::set_name(::std::string&& value) {
+  
+  name_.Set(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_set_rvalue:tensorflow.CostGraphDef.Node.name)
+}
+#endif
+void CostGraphDef_Node::set_name(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_char:tensorflow.CostGraphDef.Node.name)
 }
- void CostGraphDef_Node::set_name(const char* value,
+void CostGraphDef_Node::set_name(const char* value,
     size_t size) {
   
   name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_pointer:tensorflow.CostGraphDef.Node.name)
 }
- ::std::string* CostGraphDef_Node::mutable_name() {
+::std::string* CostGraphDef_Node::mutable_name() {
   
   // @@protoc_insertion_point(field_mutable:tensorflow.CostGraphDef.Node.name)
   return name_.Mutable(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
- ::std::string* CostGraphDef_Node::release_name() {
+::std::string* CostGraphDef_Node::release_name() {
   // @@protoc_insertion_point(field_release:tensorflow.CostGraphDef.Node.name)
   
   return name_.Release(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
- ::std::string* CostGraphDef_Node::unsafe_arena_release_name() {
+::std::string* CostGraphDef_Node::unsafe_arena_release_name() {
   // @@protoc_insertion_point(field_unsafe_arena_release:tensorflow.CostGraphDef.Node.name)
   GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
   
   return name_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       GetArenaNoVirtual());
 }
- void CostGraphDef_Node::set_allocated_name(::std::string* name) {
+void CostGraphDef_Node::set_allocated_name(::std::string* name) {
   if (name != NULL) {
     
   } else {
@@ -1755,7 +2022,7 @@ void CostGraphDef_Node::clear_name() {
       GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_allocated:tensorflow.CostGraphDef.Node.name)
 }
- void CostGraphDef_Node::unsafe_arena_set_allocated_name(
+void CostGraphDef_Node::unsafe_arena_set_allocated_name(
     ::std::string* name) {
   GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
   if (name != NULL) {
@@ -1768,50 +2035,59 @@ void CostGraphDef_Node::clear_name() {
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:tensorflow.CostGraphDef.Node.name)
 }
 
-// optional string device = 2;
+// string device = 2;
 void CostGraphDef_Node::clear_device() {
   device_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
- const ::std::string& CostGraphDef_Node::device() const {
+const ::std::string& CostGraphDef_Node::device() const {
   // @@protoc_insertion_point(field_get:tensorflow.CostGraphDef.Node.device)
-  return device_.Get(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return device_.Get();
 }
- void CostGraphDef_Node::set_device(const ::std::string& value) {
+void CostGraphDef_Node::set_device(const ::std::string& value) {
   
   device_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set:tensorflow.CostGraphDef.Node.device)
 }
- void CostGraphDef_Node::set_device(const char* value) {
+#if LANG_CXX11
+void CostGraphDef_Node::set_device(::std::string&& value) {
+  
+  device_.Set(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_set_rvalue:tensorflow.CostGraphDef.Node.device)
+}
+#endif
+void CostGraphDef_Node::set_device(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   device_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_char:tensorflow.CostGraphDef.Node.device)
 }
- void CostGraphDef_Node::set_device(const char* value,
+void CostGraphDef_Node::set_device(const char* value,
     size_t size) {
   
   device_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_pointer:tensorflow.CostGraphDef.Node.device)
 }
- ::std::string* CostGraphDef_Node::mutable_device() {
+::std::string* CostGraphDef_Node::mutable_device() {
   
   // @@protoc_insertion_point(field_mutable:tensorflow.CostGraphDef.Node.device)
   return device_.Mutable(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
- ::std::string* CostGraphDef_Node::release_device() {
+::std::string* CostGraphDef_Node::release_device() {
   // @@protoc_insertion_point(field_release:tensorflow.CostGraphDef.Node.device)
   
   return device_.Release(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
- ::std::string* CostGraphDef_Node::unsafe_arena_release_device() {
+::std::string* CostGraphDef_Node::unsafe_arena_release_device() {
   // @@protoc_insertion_point(field_unsafe_arena_release:tensorflow.CostGraphDef.Node.device)
   GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
   
   return device_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       GetArenaNoVirtual());
 }
- void CostGraphDef_Node::set_allocated_device(::std::string* device) {
+void CostGraphDef_Node::set_allocated_device(::std::string* device) {
   if (device != NULL) {
     
   } else {
@@ -1821,7 +2097,7 @@ void CostGraphDef_Node::clear_device() {
       GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_allocated:tensorflow.CostGraphDef.Node.device)
 }
- void CostGraphDef_Node::unsafe_arena_set_allocated_device(
+void CostGraphDef_Node::unsafe_arena_set_allocated_device(
     ::std::string* device) {
   GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
   if (device != NULL) {
@@ -1834,15 +2110,15 @@ void CostGraphDef_Node::clear_device() {
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:tensorflow.CostGraphDef.Node.device)
 }
 
-// optional int32 id = 3;
+// int32 id = 3;
 void CostGraphDef_Node::clear_id() {
   id_ = 0;
 }
- ::google::protobuf::int32 CostGraphDef_Node::id() const {
+::google::protobuf::int32 CostGraphDef_Node::id() const {
   // @@protoc_insertion_point(field_get:tensorflow.CostGraphDef.Node.id)
   return id_;
 }
- void CostGraphDef_Node::set_id(::google::protobuf::int32 value) {
+void CostGraphDef_Node::set_id(::google::protobuf::int32 value) {
   
   id_ = value;
   // @@protoc_insertion_point(field_set:tensorflow.CostGraphDef.Node.id)
@@ -1908,29 +2184,127 @@ CostGraphDef_Node::output_info() const {
   return output_info_;
 }
 
-// optional int64 temporary_memory_size = 6;
+// int64 temporary_memory_size = 6;
 void CostGraphDef_Node::clear_temporary_memory_size() {
   temporary_memory_size_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 CostGraphDef_Node::temporary_memory_size() const {
+::google::protobuf::int64 CostGraphDef_Node::temporary_memory_size() const {
   // @@protoc_insertion_point(field_get:tensorflow.CostGraphDef.Node.temporary_memory_size)
   return temporary_memory_size_;
 }
- void CostGraphDef_Node::set_temporary_memory_size(::google::protobuf::int64 value) {
+void CostGraphDef_Node::set_temporary_memory_size(::google::protobuf::int64 value) {
   
   temporary_memory_size_ = value;
   // @@protoc_insertion_point(field_set:tensorflow.CostGraphDef.Node.temporary_memory_size)
 }
 
-// optional bool is_final = 7;
+// int64 host_temp_memory_size = 10;
+void CostGraphDef_Node::clear_host_temp_memory_size() {
+  host_temp_memory_size_ = GOOGLE_LONGLONG(0);
+}
+::google::protobuf::int64 CostGraphDef_Node::host_temp_memory_size() const {
+  // @@protoc_insertion_point(field_get:tensorflow.CostGraphDef.Node.host_temp_memory_size)
+  return host_temp_memory_size_;
+}
+void CostGraphDef_Node::set_host_temp_memory_size(::google::protobuf::int64 value) {
+  
+  host_temp_memory_size_ = value;
+  // @@protoc_insertion_point(field_set:tensorflow.CostGraphDef.Node.host_temp_memory_size)
+}
+
+// int64 device_temp_memory_size = 11;
+void CostGraphDef_Node::clear_device_temp_memory_size() {
+  device_temp_memory_size_ = GOOGLE_LONGLONG(0);
+}
+::google::protobuf::int64 CostGraphDef_Node::device_temp_memory_size() const {
+  // @@protoc_insertion_point(field_get:tensorflow.CostGraphDef.Node.device_temp_memory_size)
+  return device_temp_memory_size_;
+}
+void CostGraphDef_Node::set_device_temp_memory_size(::google::protobuf::int64 value) {
+  
+  device_temp_memory_size_ = value;
+  // @@protoc_insertion_point(field_set:tensorflow.CostGraphDef.Node.device_temp_memory_size)
+}
+
+// int64 host_persistent_memory_size = 12;
+void CostGraphDef_Node::clear_host_persistent_memory_size() {
+  host_persistent_memory_size_ = GOOGLE_LONGLONG(0);
+}
+::google::protobuf::int64 CostGraphDef_Node::host_persistent_memory_size() const {
+  // @@protoc_insertion_point(field_get:tensorflow.CostGraphDef.Node.host_persistent_memory_size)
+  return host_persistent_memory_size_;
+}
+void CostGraphDef_Node::set_host_persistent_memory_size(::google::protobuf::int64 value) {
+  
+  host_persistent_memory_size_ = value;
+  // @@protoc_insertion_point(field_set:tensorflow.CostGraphDef.Node.host_persistent_memory_size)
+}
+
+// int64 device_persistent_memory_size = 16;
+void CostGraphDef_Node::clear_device_persistent_memory_size() {
+  device_persistent_memory_size_ = GOOGLE_LONGLONG(0);
+}
+::google::protobuf::int64 CostGraphDef_Node::device_persistent_memory_size() const {
+  // @@protoc_insertion_point(field_get:tensorflow.CostGraphDef.Node.device_persistent_memory_size)
+  return device_persistent_memory_size_;
+}
+void CostGraphDef_Node::set_device_persistent_memory_size(::google::protobuf::int64 value) {
+  
+  device_persistent_memory_size_ = value;
+  // @@protoc_insertion_point(field_set:tensorflow.CostGraphDef.Node.device_persistent_memory_size)
+}
+
+// int64 compute_cost = 9;
+void CostGraphDef_Node::clear_compute_cost() {
+  compute_cost_ = GOOGLE_LONGLONG(0);
+}
+::google::protobuf::int64 CostGraphDef_Node::compute_cost() const {
+  // @@protoc_insertion_point(field_get:tensorflow.CostGraphDef.Node.compute_cost)
+  return compute_cost_;
+}
+void CostGraphDef_Node::set_compute_cost(::google::protobuf::int64 value) {
+  
+  compute_cost_ = value;
+  // @@protoc_insertion_point(field_set:tensorflow.CostGraphDef.Node.compute_cost)
+}
+
+// int64 compute_time = 14;
+void CostGraphDef_Node::clear_compute_time() {
+  compute_time_ = GOOGLE_LONGLONG(0);
+}
+::google::protobuf::int64 CostGraphDef_Node::compute_time() const {
+  // @@protoc_insertion_point(field_get:tensorflow.CostGraphDef.Node.compute_time)
+  return compute_time_;
+}
+void CostGraphDef_Node::set_compute_time(::google::protobuf::int64 value) {
+  
+  compute_time_ = value;
+  // @@protoc_insertion_point(field_set:tensorflow.CostGraphDef.Node.compute_time)
+}
+
+// int64 memory_time = 15;
+void CostGraphDef_Node::clear_memory_time() {
+  memory_time_ = GOOGLE_LONGLONG(0);
+}
+::google::protobuf::int64 CostGraphDef_Node::memory_time() const {
+  // @@protoc_insertion_point(field_get:tensorflow.CostGraphDef.Node.memory_time)
+  return memory_time_;
+}
+void CostGraphDef_Node::set_memory_time(::google::protobuf::int64 value) {
+  
+  memory_time_ = value;
+  // @@protoc_insertion_point(field_set:tensorflow.CostGraphDef.Node.memory_time)
+}
+
+// bool is_final = 7;
 void CostGraphDef_Node::clear_is_final() {
   is_final_ = false;
 }
- bool CostGraphDef_Node::is_final() const {
+bool CostGraphDef_Node::is_final() const {
   // @@protoc_insertion_point(field_get:tensorflow.CostGraphDef.Node.is_final)
   return is_final_;
 }
- void CostGraphDef_Node::set_is_final(bool value) {
+void CostGraphDef_Node::set_is_final(bool value) {
   
   is_final_ = value;
   // @@protoc_insertion_point(field_set:tensorflow.CostGraphDef.Node.is_final)
@@ -1943,31 +2317,303 @@ int CostGraphDef_Node::control_input_size() const {
 void CostGraphDef_Node::clear_control_input() {
   control_input_.Clear();
 }
- ::google::protobuf::int32 CostGraphDef_Node::control_input(int index) const {
+::google::protobuf::int32 CostGraphDef_Node::control_input(int index) const {
   // @@protoc_insertion_point(field_get:tensorflow.CostGraphDef.Node.control_input)
   return control_input_.Get(index);
 }
- void CostGraphDef_Node::set_control_input(int index, ::google::protobuf::int32 value) {
+void CostGraphDef_Node::set_control_input(int index, ::google::protobuf::int32 value) {
   control_input_.Set(index, value);
   // @@protoc_insertion_point(field_set:tensorflow.CostGraphDef.Node.control_input)
 }
- void CostGraphDef_Node::add_control_input(::google::protobuf::int32 value) {
+void CostGraphDef_Node::add_control_input(::google::protobuf::int32 value) {
   control_input_.Add(value);
   // @@protoc_insertion_point(field_add:tensorflow.CostGraphDef.Node.control_input)
 }
- const ::google::protobuf::RepeatedField< ::google::protobuf::int32 >&
+const ::google::protobuf::RepeatedField< ::google::protobuf::int32 >&
 CostGraphDef_Node::control_input() const {
   // @@protoc_insertion_point(field_list:tensorflow.CostGraphDef.Node.control_input)
   return control_input_;
 }
- ::google::protobuf::RepeatedField< ::google::protobuf::int32 >*
+::google::protobuf::RepeatedField< ::google::protobuf::int32 >*
 CostGraphDef_Node::mutable_control_input() {
   // @@protoc_insertion_point(field_mutable_list:tensorflow.CostGraphDef.Node.control_input)
   return &control_input_;
 }
 
-// -------------------------------------------------------------------
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int CostGraphDef::kNodeFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+CostGraphDef::CostGraphDef()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:tensorflow.CostGraphDef)
+}
+CostGraphDef::CostGraphDef(::google::protobuf::Arena* arena)
+  : ::google::protobuf::Message(),
+  _internal_metadata_(arena),
+  node_(arena) {
+  protobuf_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto::InitDefaults();
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:tensorflow.CostGraphDef)
+}
+CostGraphDef::CostGraphDef(const CostGraphDef& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      node_(from.node_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:tensorflow.CostGraphDef)
+}
+
+void CostGraphDef::SharedCtor() {
+  _cached_size_ = 0;
+}
+
+CostGraphDef::~CostGraphDef() {
+  // @@protoc_insertion_point(destructor:tensorflow.CostGraphDef)
+  SharedDtor();
+}
+
+void CostGraphDef::SharedDtor() {
+  ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  GOOGLE_DCHECK(arena == NULL);
+  if (arena != NULL) {
+    return;
+  }
+
+}
+
+void CostGraphDef::ArenaDtor(void* object) {
+  CostGraphDef* _this = reinterpret_cast< CostGraphDef* >(object);
+  (void)_this;
+}
+void CostGraphDef::RegisterArenaDtor(::google::protobuf::Arena* arena) {
+}
+void CostGraphDef::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* CostGraphDef::descriptor() {
+  protobuf_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const CostGraphDef& CostGraphDef::default_instance() {
+  protobuf_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+CostGraphDef* CostGraphDef::New(::google::protobuf::Arena* arena) const {
+  return ::google::protobuf::Arena::CreateMessage<CostGraphDef>(arena);
+}
+
+void CostGraphDef::Clear() {
+// @@protoc_insertion_point(message_clear_start:tensorflow.CostGraphDef)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  node_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool CostGraphDef::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:tensorflow.CostGraphDef)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // repeated .tensorflow.CostGraphDef.Node node = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+                input, add_node()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:tensorflow.CostGraphDef)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:tensorflow.CostGraphDef)
+  return false;
+#undef DO_
+}
+
+void CostGraphDef::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:tensorflow.CostGraphDef)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .tensorflow.CostGraphDef.Node node = 1;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->node_size()); i < n; i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, this->node(static_cast<int>(i)), output);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
+  // @@protoc_insertion_point(serialize_end:tensorflow.CostGraphDef)
+}
+
+::google::protobuf::uint8* CostGraphDef::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:tensorflow.CostGraphDef)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .tensorflow.CostGraphDef.Node node = 1;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->node_size()); i < n; i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageNoVirtualToArray(
+        1, this->node(static_cast<int>(i)), deterministic, target);
+  }
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:tensorflow.CostGraphDef)
+  return target;
+}
+
+size_t CostGraphDef::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:tensorflow.CostGraphDef)
+  size_t total_size = 0;
+
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
+  // repeated .tensorflow.CostGraphDef.Node node = 1;
+  {
+    unsigned int count = static_cast<unsigned int>(this->node_size());
+    total_size += 1UL * count;
+    for (unsigned int i = 0; i < count; i++) {
+      total_size +=
+        ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+          this->node(static_cast<int>(i)));
+    }
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void CostGraphDef::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:tensorflow.CostGraphDef)
+  GOOGLE_DCHECK_NE(&from, this);
+  const CostGraphDef* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const CostGraphDef>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:tensorflow.CostGraphDef)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:tensorflow.CostGraphDef)
+    MergeFrom(*source);
+  }
+}
+
+void CostGraphDef::MergeFrom(const CostGraphDef& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:tensorflow.CostGraphDef)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  node_.MergeFrom(from.node_);
+}
+
+void CostGraphDef::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:tensorflow.CostGraphDef)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void CostGraphDef::CopyFrom(const CostGraphDef& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:tensorflow.CostGraphDef)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool CostGraphDef::IsInitialized() const {
+  return true;
+}
+
+void CostGraphDef::Swap(CostGraphDef* other) {
+  if (other == this) return;
+  if (GetArenaNoVirtual() == other->GetArenaNoVirtual()) {
+    InternalSwap(other);
+  } else {
+    CostGraphDef* temp = New(GetArenaNoVirtual());
+    temp->MergeFrom(*other);
+    other->CopyFrom(*this);
+    InternalSwap(temp);
+    if (GetArenaNoVirtual() == NULL) {
+      delete temp;
+    }
+  }
+}
+void CostGraphDef::UnsafeArenaSwap(CostGraphDef* other) {
+  if (other == this) return;
+  GOOGLE_DCHECK(GetArenaNoVirtual() == other->GetArenaNoVirtual());
+  InternalSwap(other);
+}
+void CostGraphDef::InternalSwap(CostGraphDef* other) {
+  using std::swap;
+  node_.InternalSwap(&other->node_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata CostGraphDef::GetMetadata() const {
+  protobuf_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_tensorflow_2fcore_2fframework_2fcost_5fgraph_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
 // CostGraphDef
 
 // repeated .tensorflow.CostGraphDef.Node node = 1;

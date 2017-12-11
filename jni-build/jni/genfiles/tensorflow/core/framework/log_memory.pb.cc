@@ -18,247 +18,232 @@
 // @@protoc_insertion_point(includes)
 
 namespace tensorflow {
+class MemoryLogStepDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<MemoryLogStep>
+     _instance;
+} _MemoryLogStep_default_instance_;
+class MemoryLogTensorAllocationDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<MemoryLogTensorAllocation>
+     _instance;
+} _MemoryLogTensorAllocation_default_instance_;
+class MemoryLogTensorDeallocationDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<MemoryLogTensorDeallocation>
+     _instance;
+} _MemoryLogTensorDeallocation_default_instance_;
+class MemoryLogTensorOutputDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<MemoryLogTensorOutput>
+     _instance;
+} _MemoryLogTensorOutput_default_instance_;
+class MemoryLogRawAllocationDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<MemoryLogRawAllocation>
+     _instance;
+} _MemoryLogRawAllocation_default_instance_;
+class MemoryLogRawDeallocationDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<MemoryLogRawDeallocation>
+     _instance;
+} _MemoryLogRawDeallocation_default_instance_;
+
+namespace protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto {
+
 
 namespace {
 
-const ::google::protobuf::Descriptor* MemoryLogStep_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  MemoryLogStep_reflection_ = NULL;
-const ::google::protobuf::Descriptor* MemoryLogTensorAllocation_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  MemoryLogTensorAllocation_reflection_ = NULL;
-const ::google::protobuf::Descriptor* MemoryLogTensorDeallocation_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  MemoryLogTensorDeallocation_reflection_ = NULL;
-const ::google::protobuf::Descriptor* MemoryLogTensorOutput_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  MemoryLogTensorOutput_reflection_ = NULL;
-const ::google::protobuf::Descriptor* MemoryLogRawAllocation_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  MemoryLogRawAllocation_reflection_ = NULL;
-const ::google::protobuf::Descriptor* MemoryLogRawDeallocation_descriptor_ = NULL;
-const ::google::protobuf::internal::GeneratedMessageReflection*
-  MemoryLogRawDeallocation_reflection_ = NULL;
+::google::protobuf::Metadata file_level_metadata[6];
 
 }  // namespace
 
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTableField
+    const TableStruct::entries[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  {0, 0, 0, ::google::protobuf::internal::kInvalidMask, 0, 0},
+};
 
-void protobuf_AssignDesc_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto() {
-  protobuf_AddDesc_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto();
-  const ::google::protobuf::FileDescriptor* file =
-    ::google::protobuf::DescriptorPool::generated_pool()->FindFileByName(
-      "tensorflow/core/framework/log_memory.proto");
-  GOOGLE_CHECK(file != NULL);
-  MemoryLogStep_descriptor_ = file->message_type(0);
-  static const int MemoryLogStep_offsets_[2] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogStep, step_id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogStep, handle_),
-  };
-  MemoryLogStep_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      MemoryLogStep_descriptor_,
-      MemoryLogStep::default_instance_,
-      MemoryLogStep_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(MemoryLogStep),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogStep, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogStep, _is_default_instance_));
-  MemoryLogTensorAllocation_descriptor_ = file->message_type(1);
-  static const int MemoryLogTensorAllocation_offsets_[3] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogTensorAllocation, step_id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogTensorAllocation, kernel_name_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogTensorAllocation, tensor_),
-  };
-  MemoryLogTensorAllocation_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      MemoryLogTensorAllocation_descriptor_,
-      MemoryLogTensorAllocation::default_instance_,
-      MemoryLogTensorAllocation_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(MemoryLogTensorAllocation),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogTensorAllocation, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogTensorAllocation, _is_default_instance_));
-  MemoryLogTensorDeallocation_descriptor_ = file->message_type(2);
-  static const int MemoryLogTensorDeallocation_offsets_[2] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogTensorDeallocation, allocation_id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogTensorDeallocation, allocator_name_),
-  };
-  MemoryLogTensorDeallocation_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      MemoryLogTensorDeallocation_descriptor_,
-      MemoryLogTensorDeallocation::default_instance_,
-      MemoryLogTensorDeallocation_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(MemoryLogTensorDeallocation),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogTensorDeallocation, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogTensorDeallocation, _is_default_instance_));
-  MemoryLogTensorOutput_descriptor_ = file->message_type(3);
-  static const int MemoryLogTensorOutput_offsets_[4] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogTensorOutput, step_id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogTensorOutput, kernel_name_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogTensorOutput, index_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogTensorOutput, tensor_),
-  };
-  MemoryLogTensorOutput_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      MemoryLogTensorOutput_descriptor_,
-      MemoryLogTensorOutput::default_instance_,
-      MemoryLogTensorOutput_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(MemoryLogTensorOutput),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogTensorOutput, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogTensorOutput, _is_default_instance_));
-  MemoryLogRawAllocation_descriptor_ = file->message_type(4);
-  static const int MemoryLogRawAllocation_offsets_[6] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogRawAllocation, step_id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogRawAllocation, operation_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogRawAllocation, num_bytes_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogRawAllocation, ptr_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogRawAllocation, allocation_id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogRawAllocation, allocator_name_),
-  };
-  MemoryLogRawAllocation_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      MemoryLogRawAllocation_descriptor_,
-      MemoryLogRawAllocation::default_instance_,
-      MemoryLogRawAllocation_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(MemoryLogRawAllocation),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogRawAllocation, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogRawAllocation, _is_default_instance_));
-  MemoryLogRawDeallocation_descriptor_ = file->message_type(5);
-  static const int MemoryLogRawDeallocation_offsets_[5] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogRawDeallocation, step_id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogRawDeallocation, operation_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogRawDeallocation, allocation_id_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogRawDeallocation, allocator_name_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogRawDeallocation, deferred_),
-  };
-  MemoryLogRawDeallocation_reflection_ =
-    ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
-      MemoryLogRawDeallocation_descriptor_,
-      MemoryLogRawDeallocation::default_instance_,
-      MemoryLogRawDeallocation_offsets_,
-      -1,
-      -1,
-      -1,
-      sizeof(MemoryLogRawDeallocation),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogRawDeallocation, _internal_metadata_),
-      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogRawDeallocation, _is_default_instance_));
-}
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
+    const TableStruct::aux[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  ::google::protobuf::internal::AuxillaryParseTableField(),
+};
+PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
+    TableStruct::schema[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+};
+
+const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogStep, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogStep, step_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogStep, handle_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogTensorAllocation, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogTensorAllocation, step_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogTensorAllocation, kernel_name_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogTensorAllocation, tensor_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogTensorDeallocation, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogTensorDeallocation, allocation_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogTensorDeallocation, allocator_name_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogTensorOutput, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogTensorOutput, step_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogTensorOutput, kernel_name_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogTensorOutput, index_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogTensorOutput, tensor_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogRawAllocation, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogRawAllocation, step_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogRawAllocation, operation_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogRawAllocation, num_bytes_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogRawAllocation, ptr_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogRawAllocation, allocation_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogRawAllocation, allocator_name_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogRawDeallocation, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogRawDeallocation, step_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogRawDeallocation, operation_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogRawDeallocation, allocation_id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogRawDeallocation, allocator_name_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MemoryLogRawDeallocation, deferred_),
+};
+static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, sizeof(MemoryLogStep)},
+  { 7, -1, sizeof(MemoryLogTensorAllocation)},
+  { 15, -1, sizeof(MemoryLogTensorDeallocation)},
+  { 22, -1, sizeof(MemoryLogTensorOutput)},
+  { 31, -1, sizeof(MemoryLogRawAllocation)},
+  { 42, -1, sizeof(MemoryLogRawDeallocation)},
+};
+
+static ::google::protobuf::Message const * const file_default_instances[] = {
+  reinterpret_cast<const ::google::protobuf::Message*>(&_MemoryLogStep_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_MemoryLogTensorAllocation_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_MemoryLogTensorDeallocation_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_MemoryLogTensorOutput_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_MemoryLogRawAllocation_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_MemoryLogRawDeallocation_default_instance_),
+};
 
 namespace {
 
-GOOGLE_PROTOBUF_DECLARE_ONCE(protobuf_AssignDescriptors_once_);
-inline void protobuf_AssignDescriptorsOnce() {
-  ::google::protobuf::GoogleOnceInit(&protobuf_AssignDescriptors_once_,
-                 &protobuf_AssignDesc_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto);
+void protobuf_AssignDescriptors() {
+  AddDescriptors();
+  ::google::protobuf::MessageFactory* factory = NULL;
+  AssignDescriptors(
+      "tensorflow/core/framework/log_memory.proto", schemas, file_default_instances, TableStruct::offsets, factory,
+      file_level_metadata, NULL, NULL);
 }
 
+GOOGLE_ATTRIBUTE_NOINLINE void protobuf_AssignDescriptorsOnce() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &protobuf_AssignDescriptors);
+}
+
+void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      MemoryLogStep_descriptor_, &MemoryLogStep::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      MemoryLogTensorAllocation_descriptor_, &MemoryLogTensorAllocation::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      MemoryLogTensorDeallocation_descriptor_, &MemoryLogTensorDeallocation::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      MemoryLogTensorOutput_descriptor_, &MemoryLogTensorOutput::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      MemoryLogRawAllocation_descriptor_, &MemoryLogRawAllocation::default_instance());
-  ::google::protobuf::MessageFactory::InternalRegisterGeneratedMessage(
-      MemoryLogRawDeallocation_descriptor_, &MemoryLogRawDeallocation::default_instance());
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 6);
 }
 
 }  // namespace
-
-void protobuf_ShutdownFile_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto() {
-  delete MemoryLogStep::default_instance_;
-  delete MemoryLogStep_reflection_;
-  delete MemoryLogTensorAllocation::default_instance_;
-  delete MemoryLogTensorAllocation_reflection_;
-  delete MemoryLogTensorDeallocation::default_instance_;
-  delete MemoryLogTensorDeallocation_reflection_;
-  delete MemoryLogTensorOutput::default_instance_;
-  delete MemoryLogTensorOutput_reflection_;
-  delete MemoryLogRawAllocation::default_instance_;
-  delete MemoryLogRawAllocation_reflection_;
-  delete MemoryLogRawDeallocation::default_instance_;
-  delete MemoryLogRawDeallocation_reflection_;
-}
-
-void protobuf_AddDesc_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto() {
-  static bool already_here = false;
-  if (already_here) return;
-  already_here = true;
+void TableStruct::InitDefaultsImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
-  ::tensorflow::protobuf_AddDesc_tensorflow_2fcore_2fframework_2ftensor_5fdescription_2eproto();
+  ::google::protobuf::internal::InitProtobufDefaults();
+  ::tensorflow::protobuf_tensorflow_2fcore_2fframework_2ftensor_5fdescription_2eproto::InitDefaults();
+  _MemoryLogStep_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_MemoryLogStep_default_instance_);_MemoryLogTensorAllocation_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_MemoryLogTensorAllocation_default_instance_);_MemoryLogTensorDeallocation_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_MemoryLogTensorDeallocation_default_instance_);_MemoryLogTensorOutput_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_MemoryLogTensorOutput_default_instance_);_MemoryLogRawAllocation_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_MemoryLogRawAllocation_default_instance_);_MemoryLogRawDeallocation_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_MemoryLogRawDeallocation_default_instance_);_MemoryLogTensorAllocation_default_instance_._instance.get_mutable()->tensor_ = const_cast< ::tensorflow::TensorDescription*>(
+      ::tensorflow::TensorDescription::internal_default_instance());
+  _MemoryLogTensorOutput_default_instance_._instance.get_mutable()->tensor_ = const_cast< ::tensorflow::TensorDescription*>(
+      ::tensorflow::TensorDescription::internal_default_instance());
+}
+
+GOOGLE_ATTRIBUTE_NOINLINE void InitDefaults() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &TableStruct::InitDefaultsImpl);
+}
+namespace {
+void AddDescriptorsImpl() {
+  InitDefaults();
+  static const char descriptor[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+      "\n*tensorflow/core/framework/log_memory.p"
+      "roto\022\ntensorflow\0322tensorflow/core/framew"
+      "ork/tensor_description.proto\"0\n\rMemoryLo"
+      "gStep\022\017\n\007step_id\030\001 \001(\003\022\016\n\006handle\030\002 \001(\t\"p"
+      "\n\031MemoryLogTensorAllocation\022\017\n\007step_id\030\001"
+      " \001(\003\022\023\n\013kernel_name\030\002 \001(\t\022-\n\006tensor\030\003 \001("
+      "\0132\035.tensorflow.TensorDescription\"L\n\033Memo"
+      "ryLogTensorDeallocation\022\025\n\rallocation_id"
+      "\030\001 \001(\003\022\026\n\016allocator_name\030\002 \001(\t\"{\n\025Memory"
+      "LogTensorOutput\022\017\n\007step_id\030\001 \001(\003\022\023\n\013kern"
+      "el_name\030\002 \001(\t\022\r\n\005index\030\003 \001(\005\022-\n\006tensor\030\004"
+      " \001(\0132\035.tensorflow.TensorDescription\"\213\001\n\026"
+      "MemoryLogRawAllocation\022\017\n\007step_id\030\001 \001(\003\022"
+      "\021\n\toperation\030\002 \001(\t\022\021\n\tnum_bytes\030\003 \001(\003\022\013\n"
+      "\003ptr\030\004 \001(\004\022\025\n\rallocation_id\030\005 \001(\003\022\026\n\016all"
+      "ocator_name\030\006 \001(\t\"\177\n\030MemoryLogRawDealloc"
+      "ation\022\017\n\007step_id\030\001 \001(\003\022\021\n\toperation\030\002 \001("
+      "\t\022\025\n\rallocation_id\030\003 \001(\003\022\026\n\016allocator_na"
+      "me\030\004 \001(\t\022\020\n\010deferred\030\005 \001(\010B0\n\030org.tensor"
+      "flow.frameworkB\017LogMemoryProtosP\001\370\001\001b\006pr"
+      "oto3"
+  };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-    "\n*tensorflow/core/framework/log_memory.p"
-    "roto\022\ntensorflow\0322tensorflow/core/framew"
-    "ork/tensor_description.proto\"0\n\rMemoryLo"
-    "gStep\022\017\n\007step_id\030\001 \001(\003\022\016\n\006handle\030\002 \001(\t\"p"
-    "\n\031MemoryLogTensorAllocation\022\017\n\007step_id\030\001"
-    " \001(\003\022\023\n\013kernel_name\030\002 \001(\t\022-\n\006tensor\030\003 \001("
-    "\0132\035.tensorflow.TensorDescription\"L\n\033Memo"
-    "ryLogTensorDeallocation\022\025\n\rallocation_id"
-    "\030\001 \001(\003\022\026\n\016allocator_name\030\002 \001(\t\"{\n\025Memory"
-    "LogTensorOutput\022\017\n\007step_id\030\001 \001(\003\022\023\n\013kern"
-    "el_name\030\002 \001(\t\022\r\n\005index\030\003 \001(\005\022-\n\006tensor\030\004"
-    " \001(\0132\035.tensorflow.TensorDescription\"\213\001\n\026"
-    "MemoryLogRawAllocation\022\017\n\007step_id\030\001 \001(\003\022"
-    "\021\n\toperation\030\002 \001(\t\022\021\n\tnum_bytes\030\003 \001(\003\022\013\n"
-    "\003ptr\030\004 \001(\004\022\025\n\rallocation_id\030\005 \001(\003\022\026\n\016all"
-    "ocator_name\030\006 \001(\t\"\177\n\030MemoryLogRawDealloc"
-    "ation\022\017\n\007step_id\030\001 \001(\003\022\021\n\toperation\030\002 \001("
-    "\t\022\025\n\rallocation_id\030\003 \001(\003\022\026\n\016allocator_na"
-    "me\030\004 \001(\t\022\020\n\010deferred\030\005 \001(\010B0\n\030org.tensor"
-    "flow.frameworkB\017LogMemoryProtosP\001\370\001\001b\006pr"
-    "oto3", 804);
+      descriptor, 804);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "tensorflow/core/framework/log_memory.proto", &protobuf_RegisterTypes);
-  MemoryLogStep::default_instance_ = new MemoryLogStep();
-  MemoryLogTensorAllocation::default_instance_ = new MemoryLogTensorAllocation();
-  MemoryLogTensorDeallocation::default_instance_ = new MemoryLogTensorDeallocation();
-  MemoryLogTensorOutput::default_instance_ = new MemoryLogTensorOutput();
-  MemoryLogRawAllocation::default_instance_ = new MemoryLogRawAllocation();
-  MemoryLogRawDeallocation::default_instance_ = new MemoryLogRawDeallocation();
-  MemoryLogStep::default_instance_->InitAsDefaultInstance();
-  MemoryLogTensorAllocation::default_instance_->InitAsDefaultInstance();
-  MemoryLogTensorDeallocation::default_instance_->InitAsDefaultInstance();
-  MemoryLogTensorOutput::default_instance_->InitAsDefaultInstance();
-  MemoryLogRawAllocation::default_instance_->InitAsDefaultInstance();
-  MemoryLogRawDeallocation::default_instance_->InitAsDefaultInstance();
-  ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto);
+  ::tensorflow::protobuf_tensorflow_2fcore_2fframework_2ftensor_5fdescription_2eproto::AddDescriptors();
 }
+} // anonymous namespace
 
-// Force AddDescriptors() to be called at static initialization time.
-struct StaticDescriptorInitializer_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto {
-  StaticDescriptorInitializer_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto() {
-    protobuf_AddDesc_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto();
+GOOGLE_ATTRIBUTE_NOINLINE void AddDescriptors() {
+  static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
+  ::google::protobuf::GoogleOnceInit(&once, &AddDescriptorsImpl);
+}
+// Force AddDescriptors() to be called at dynamic initialization time.
+struct StaticDescriptorInitializer {
+  StaticDescriptorInitializer() {
+    AddDescriptors();
   }
-} static_descriptor_initializer_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto_;
+} static_descriptor_initializer;
 
-namespace {
-
-static void MergeFromFail(int line) GOOGLE_ATTRIBUTE_COLD;
-static void MergeFromFail(int line) {
-  GOOGLE_CHECK(false) << __FILE__ << ":" << line;
-}
-
-}  // namespace
+}  // namespace protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto
 
 
 // ===================================================================
@@ -270,36 +255,38 @@ const int MemoryLogStep::kHandleFieldNumber;
 
 MemoryLogStep::MemoryLogStep()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:tensorflow.MemoryLogStep)
 }
-
 MemoryLogStep::MemoryLogStep(::google::protobuf::Arena* arena)
   : ::google::protobuf::Message(),
   _internal_metadata_(arena) {
+  protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::InitDefaults();
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:tensorflow.MemoryLogStep)
 }
-
-void MemoryLogStep::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-}
-
 MemoryLogStep::MemoryLogStep(const MemoryLogStep& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  MergeFrom(from);
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  handle_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.handle().size() > 0) {
+    handle_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.handle(),
+      GetArenaNoVirtual());
+  }
+  step_id_ = from.step_id_;
   // @@protoc_insertion_point(copy_constructor:tensorflow.MemoryLogStep)
 }
 
 void MemoryLogStep::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
-  step_id_ = GOOGLE_LONGLONG(0);
   handle_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  step_id_ = GOOGLE_LONGLONG(0);
+  _cached_size_ = 0;
 }
 
 MemoryLogStep::~MemoryLogStep() {
@@ -308,13 +295,13 @@ MemoryLogStep::~MemoryLogStep() {
 }
 
 void MemoryLogStep::SharedDtor() {
-  if (GetArenaNoVirtual() != NULL) {
+  ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  GOOGLE_DCHECK(arena == NULL);
+  if (arena != NULL) {
     return;
   }
 
-  handle_.Destroy(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
-  if (this != default_instance_) {
-  }
+  handle_.Destroy(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), arena);
 }
 
 void MemoryLogStep::ArenaDtor(void* object) {
@@ -329,16 +316,14 @@ void MemoryLogStep::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* MemoryLogStep::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return MemoryLogStep_descriptor_;
+  protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const MemoryLogStep& MemoryLogStep::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto();
-  return *default_instance_;
+  protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::InitDefaults();
+  return *internal_default_instance();
 }
-
-MemoryLogStep* MemoryLogStep::default_instance_ = NULL;
 
 MemoryLogStep* MemoryLogStep::New(::google::protobuf::Arena* arena) const {
   return ::google::protobuf::Arena::CreateMessage<MemoryLogStep>(arena);
@@ -346,8 +331,13 @@ MemoryLogStep* MemoryLogStep::New(::google::protobuf::Arena* arena) const {
 
 void MemoryLogStep::Clear() {
 // @@protoc_insertion_point(message_clear_start:tensorflow.MemoryLogStep)
-  step_id_ = GOOGLE_LONGLONG(0);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   handle_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+  step_id_ = GOOGLE_LONGLONG(0);
+  _internal_metadata_.Clear();
 }
 
 bool MemoryLogStep::MergePartialFromCodedStream(
@@ -356,49 +346,47 @@ bool MemoryLogStep::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:tensorflow.MemoryLogStep)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional int64 step_id = 1;
+      // int64 step_id = 1;
       case 1: {
-        if (tag == 8) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
                  input, &step_id_)));
-
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(18)) goto parse_handle;
         break;
       }
 
-      // optional string handle = 2;
+      // string handle = 2;
       case 2: {
-        if (tag == 18) {
-         parse_handle:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_handle()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->handle().data(), this->handle().length(),
+            this->handle().data(), static_cast<int>(this->handle().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
             "tensorflow.MemoryLogStep.handle"));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -415,36 +403,47 @@ failure:
 void MemoryLogStep::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:tensorflow.MemoryLogStep)
-  // optional int64 step_id = 1;
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int64 step_id = 1;
   if (this->step_id() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->step_id(), output);
   }
 
-  // optional string handle = 2;
+  // string handle = 2;
   if (this->handle().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->handle().data(), this->handle().length(),
+      this->handle().data(), static_cast<int>(this->handle().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "tensorflow.MemoryLogStep.handle");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->handle(), output);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
   // @@protoc_insertion_point(serialize_end:tensorflow.MemoryLogStep)
 }
 
-::google::protobuf::uint8* MemoryLogStep::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::google::protobuf::uint8* MemoryLogStep::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:tensorflow.MemoryLogStep)
-  // optional int64 step_id = 1;
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int64 step_id = 1;
   if (this->step_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->step_id(), target);
   }
 
-  // optional string handle = 2;
+  // string handle = 2;
   if (this->handle().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->handle().data(), this->handle().length(),
+      this->handle().data(), static_cast<int>(this->handle().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "tensorflow.MemoryLogStep.handle");
     target =
@@ -452,38 +451,48 @@ void MemoryLogStep::SerializeWithCachedSizes(
         2, this->handle(), target);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
   // @@protoc_insertion_point(serialize_to_array_end:tensorflow.MemoryLogStep)
   return target;
 }
 
-int MemoryLogStep::ByteSize() const {
+size_t MemoryLogStep::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:tensorflow.MemoryLogStep)
-  int total_size = 0;
+  size_t total_size = 0;
 
-  // optional int64 step_id = 1;
-  if (this->step_id() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int64Size(
-        this->step_id());
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-
-  // optional string handle = 2;
+  // string handle = 2;
   if (this->handle().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->handle());
   }
 
+  // int64 step_id = 1;
+  if (this->step_id() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int64Size(
+        this->step_id());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = total_size;
+  _cached_size_ = cached_size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
 void MemoryLogStep::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:tensorflow.MemoryLogStep)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
-  const MemoryLogStep* source = 
+  GOOGLE_DCHECK_NE(&from, this);
+  const MemoryLogStep* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const MemoryLogStep>(
           &from);
   if (source == NULL) {
@@ -497,12 +506,16 @@ void MemoryLogStep::MergeFrom(const ::google::protobuf::Message& from) {
 
 void MemoryLogStep::MergeFrom(const MemoryLogStep& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:tensorflow.MemoryLogStep)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
-  if (from.step_id() != 0) {
-    set_step_id(from.step_id());
-  }
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   if (from.handle().size() > 0) {
     set_handle(from.handle());
+  }
+  if (from.step_id() != 0) {
+    set_step_id(from.step_id());
   }
 }
 
@@ -521,7 +534,6 @@ void MemoryLogStep::CopyFrom(const MemoryLogStep& from) {
 }
 
 bool MemoryLogStep::IsInitialized() const {
-
   return true;
 }
 
@@ -530,10 +542,13 @@ void MemoryLogStep::Swap(MemoryLogStep* other) {
   if (GetArenaNoVirtual() == other->GetArenaNoVirtual()) {
     InternalSwap(other);
   } else {
-    MemoryLogStep temp;
-    temp.MergeFrom(*this);
-    CopyFrom(*other);
-    other->CopyFrom(temp);
+    MemoryLogStep* temp = New(GetArenaNoVirtual());
+    temp->MergeFrom(*other);
+    other->CopyFrom(*this);
+    InternalSwap(temp);
+    if (GetArenaNoVirtual() == NULL) {
+      delete temp;
+    }
   }
 }
 void MemoryLogStep::UnsafeArenaSwap(MemoryLogStep* other) {
@@ -542,81 +557,88 @@ void MemoryLogStep::UnsafeArenaSwap(MemoryLogStep* other) {
   InternalSwap(other);
 }
 void MemoryLogStep::InternalSwap(MemoryLogStep* other) {
-  std::swap(step_id_, other->step_id_);
+  using std::swap;
   handle_.Swap(&other->handle_);
+  swap(step_id_, other->step_id_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  std::swap(_cached_size_, other->_cached_size_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata MemoryLogStep::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = MemoryLogStep_descriptor_;
-  metadata.reflection = MemoryLogStep_reflection_;
-  return metadata;
+  protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // MemoryLogStep
 
-// optional int64 step_id = 1;
+// int64 step_id = 1;
 void MemoryLogStep::clear_step_id() {
   step_id_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 MemoryLogStep::step_id() const {
+::google::protobuf::int64 MemoryLogStep::step_id() const {
   // @@protoc_insertion_point(field_get:tensorflow.MemoryLogStep.step_id)
   return step_id_;
 }
- void MemoryLogStep::set_step_id(::google::protobuf::int64 value) {
+void MemoryLogStep::set_step_id(::google::protobuf::int64 value) {
   
   step_id_ = value;
   // @@protoc_insertion_point(field_set:tensorflow.MemoryLogStep.step_id)
 }
 
-// optional string handle = 2;
+// string handle = 2;
 void MemoryLogStep::clear_handle() {
   handle_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
- const ::std::string& MemoryLogStep::handle() const {
+const ::std::string& MemoryLogStep::handle() const {
   // @@protoc_insertion_point(field_get:tensorflow.MemoryLogStep.handle)
-  return handle_.Get(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return handle_.Get();
 }
- void MemoryLogStep::set_handle(const ::std::string& value) {
+void MemoryLogStep::set_handle(const ::std::string& value) {
   
   handle_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set:tensorflow.MemoryLogStep.handle)
 }
- void MemoryLogStep::set_handle(const char* value) {
+#if LANG_CXX11
+void MemoryLogStep::set_handle(::std::string&& value) {
+  
+  handle_.Set(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_set_rvalue:tensorflow.MemoryLogStep.handle)
+}
+#endif
+void MemoryLogStep::set_handle(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   handle_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_char:tensorflow.MemoryLogStep.handle)
 }
- void MemoryLogStep::set_handle(const char* value,
+void MemoryLogStep::set_handle(const char* value,
     size_t size) {
   
   handle_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_pointer:tensorflow.MemoryLogStep.handle)
 }
- ::std::string* MemoryLogStep::mutable_handle() {
+::std::string* MemoryLogStep::mutable_handle() {
   
   // @@protoc_insertion_point(field_mutable:tensorflow.MemoryLogStep.handle)
   return handle_.Mutable(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
- ::std::string* MemoryLogStep::release_handle() {
+::std::string* MemoryLogStep::release_handle() {
   // @@protoc_insertion_point(field_release:tensorflow.MemoryLogStep.handle)
   
   return handle_.Release(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
- ::std::string* MemoryLogStep::unsafe_arena_release_handle() {
+::std::string* MemoryLogStep::unsafe_arena_release_handle() {
   // @@protoc_insertion_point(field_unsafe_arena_release:tensorflow.MemoryLogStep.handle)
   GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
   
   return handle_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       GetArenaNoVirtual());
 }
- void MemoryLogStep::set_allocated_handle(::std::string* handle) {
+void MemoryLogStep::set_allocated_handle(::std::string* handle) {
   if (handle != NULL) {
     
   } else {
@@ -626,7 +648,7 @@ void MemoryLogStep::clear_handle() {
       GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_allocated:tensorflow.MemoryLogStep.handle)
 }
- void MemoryLogStep::unsafe_arena_set_allocated_handle(
+void MemoryLogStep::unsafe_arena_set_allocated_handle(
     ::std::string* handle) {
   GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
   if (handle != NULL) {
@@ -651,8 +673,7 @@ void MemoryLogTensorAllocation::_slow_mutable_tensor() {
   if (tensor_ == NULL) {
     return NULL;
   } else {
-    ::tensorflow::TensorDescription* temp = new ::tensorflow::TensorDescription;
-    temp->MergeFrom(*tensor_);
+    ::tensorflow::TensorDescription* temp = new ::tensorflow::TensorDescription(*tensor_);
     tensor_ = NULL;
     return temp;
   }
@@ -699,38 +720,45 @@ const int MemoryLogTensorAllocation::kTensorFieldNumber;
 
 MemoryLogTensorAllocation::MemoryLogTensorAllocation()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:tensorflow.MemoryLogTensorAllocation)
 }
-
 MemoryLogTensorAllocation::MemoryLogTensorAllocation(::google::protobuf::Arena* arena)
   : ::google::protobuf::Message(),
   _internal_metadata_(arena) {
+  protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::InitDefaults();
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:tensorflow.MemoryLogTensorAllocation)
 }
-
-void MemoryLogTensorAllocation::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  tensor_ = const_cast< ::tensorflow::TensorDescription*>(&::tensorflow::TensorDescription::default_instance());
-}
-
 MemoryLogTensorAllocation::MemoryLogTensorAllocation(const MemoryLogTensorAllocation& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  MergeFrom(from);
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  kernel_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.kernel_name().size() > 0) {
+    kernel_name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.kernel_name(),
+      GetArenaNoVirtual());
+  }
+  if (from.has_tensor()) {
+    tensor_ = new ::tensorflow::TensorDescription(*from.tensor_);
+  } else {
+    tensor_ = NULL;
+  }
+  step_id_ = from.step_id_;
   // @@protoc_insertion_point(copy_constructor:tensorflow.MemoryLogTensorAllocation)
 }
 
 void MemoryLogTensorAllocation::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
-  step_id_ = GOOGLE_LONGLONG(0);
   kernel_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  tensor_ = NULL;
+  ::memset(&tensor_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&step_id_) -
+      reinterpret_cast<char*>(&tensor_)) + sizeof(step_id_));
+  _cached_size_ = 0;
 }
 
 MemoryLogTensorAllocation::~MemoryLogTensorAllocation() {
@@ -739,14 +767,14 @@ MemoryLogTensorAllocation::~MemoryLogTensorAllocation() {
 }
 
 void MemoryLogTensorAllocation::SharedDtor() {
-  if (GetArenaNoVirtual() != NULL) {
+  ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  GOOGLE_DCHECK(arena == NULL);
+  if (arena != NULL) {
     return;
   }
 
-  kernel_name_.Destroy(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
-  if (this != default_instance_) {
-    delete tensor_;
-  }
+  kernel_name_.Destroy(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), arena);
+  if (this != internal_default_instance()) delete tensor_;
 }
 
 void MemoryLogTensorAllocation::ArenaDtor(void* object) {
@@ -761,16 +789,14 @@ void MemoryLogTensorAllocation::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* MemoryLogTensorAllocation::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return MemoryLogTensorAllocation_descriptor_;
+  protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const MemoryLogTensorAllocation& MemoryLogTensorAllocation::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto();
-  return *default_instance_;
+  protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::InitDefaults();
+  return *internal_default_instance();
 }
-
-MemoryLogTensorAllocation* MemoryLogTensorAllocation::default_instance_ = NULL;
 
 MemoryLogTensorAllocation* MemoryLogTensorAllocation::New(::google::protobuf::Arena* arena) const {
   return ::google::protobuf::Arena::CreateMessage<MemoryLogTensorAllocation>(arena);
@@ -778,10 +804,17 @@ MemoryLogTensorAllocation* MemoryLogTensorAllocation::New(::google::protobuf::Ar
 
 void MemoryLogTensorAllocation::Clear() {
 // @@protoc_insertion_point(message_clear_start:tensorflow.MemoryLogTensorAllocation)
-  step_id_ = GOOGLE_LONGLONG(0);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   kernel_name_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
-  if (GetArenaNoVirtual() == NULL && tensor_ != NULL) delete tensor_;
+  if (GetArenaNoVirtual() == NULL && tensor_ != NULL) {
+    delete tensor_;
+  }
   tensor_ = NULL;
+  step_id_ = GOOGLE_LONGLONG(0);
+  _internal_metadata_.Clear();
 }
 
 bool MemoryLogTensorAllocation::MergePartialFromCodedStream(
@@ -790,62 +823,59 @@ bool MemoryLogTensorAllocation::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:tensorflow.MemoryLogTensorAllocation)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional int64 step_id = 1;
+      // int64 step_id = 1;
       case 1: {
-        if (tag == 8) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
                  input, &step_id_)));
-
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(18)) goto parse_kernel_name;
         break;
       }
 
-      // optional string kernel_name = 2;
+      // string kernel_name = 2;
       case 2: {
-        if (tag == 18) {
-         parse_kernel_name:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_kernel_name()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->kernel_name().data(), this->kernel_name().length(),
+            this->kernel_name().data(), static_cast<int>(this->kernel_name().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
             "tensorflow.MemoryLogTensorAllocation.kernel_name"));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(26)) goto parse_tensor;
         break;
       }
 
-      // optional .tensorflow.TensorDescription tensor = 3;
+      // .tensorflow.TensorDescription tensor = 3;
       case 3: {
-        if (tag == 26) {
-         parse_tensor:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_tensor()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -862,42 +892,53 @@ failure:
 void MemoryLogTensorAllocation::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:tensorflow.MemoryLogTensorAllocation)
-  // optional int64 step_id = 1;
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int64 step_id = 1;
   if (this->step_id() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->step_id(), output);
   }
 
-  // optional string kernel_name = 2;
+  // string kernel_name = 2;
   if (this->kernel_name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->kernel_name().data(), this->kernel_name().length(),
+      this->kernel_name().data(), static_cast<int>(this->kernel_name().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "tensorflow.MemoryLogTensorAllocation.kernel_name");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->kernel_name(), output);
   }
 
-  // optional .tensorflow.TensorDescription tensor = 3;
+  // .tensorflow.TensorDescription tensor = 3;
   if (this->has_tensor()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       3, *this->tensor_, output);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
   // @@protoc_insertion_point(serialize_end:tensorflow.MemoryLogTensorAllocation)
 }
 
-::google::protobuf::uint8* MemoryLogTensorAllocation::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::google::protobuf::uint8* MemoryLogTensorAllocation::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:tensorflow.MemoryLogTensorAllocation)
-  // optional int64 step_id = 1;
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int64 step_id = 1;
   if (this->step_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->step_id(), target);
   }
 
-  // optional string kernel_name = 2;
+  // string kernel_name = 2;
   if (this->kernel_name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->kernel_name().data(), this->kernel_name().length(),
+      this->kernel_name().data(), static_cast<int>(this->kernel_name().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "tensorflow.MemoryLogTensorAllocation.kernel_name");
     target =
@@ -905,52 +946,62 @@ void MemoryLogTensorAllocation::SerializeWithCachedSizes(
         2, this->kernel_name(), target);
   }
 
-  // optional .tensorflow.TensorDescription tensor = 3;
+  // .tensorflow.TensorDescription tensor = 3;
   if (this->has_tensor()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      WriteMessageNoVirtualToArray(
-        3, *this->tensor_, target);
+      InternalWriteMessageNoVirtualToArray(
+        3, *this->tensor_, deterministic, target);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
   // @@protoc_insertion_point(serialize_to_array_end:tensorflow.MemoryLogTensorAllocation)
   return target;
 }
 
-int MemoryLogTensorAllocation::ByteSize() const {
+size_t MemoryLogTensorAllocation::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:tensorflow.MemoryLogTensorAllocation)
-  int total_size = 0;
+  size_t total_size = 0;
 
-  // optional int64 step_id = 1;
-  if (this->step_id() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int64Size(
-        this->step_id());
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-
-  // optional string kernel_name = 2;
+  // string kernel_name = 2;
   if (this->kernel_name().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->kernel_name());
   }
 
-  // optional .tensorflow.TensorDescription tensor = 3;
+  // .tensorflow.TensorDescription tensor = 3;
   if (this->has_tensor()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->tensor_);
   }
 
+  // int64 step_id = 1;
+  if (this->step_id() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int64Size(
+        this->step_id());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = total_size;
+  _cached_size_ = cached_size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
 void MemoryLogTensorAllocation::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:tensorflow.MemoryLogTensorAllocation)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
-  const MemoryLogTensorAllocation* source = 
+  GOOGLE_DCHECK_NE(&from, this);
+  const MemoryLogTensorAllocation* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const MemoryLogTensorAllocation>(
           &from);
   if (source == NULL) {
@@ -964,15 +1015,19 @@ void MemoryLogTensorAllocation::MergeFrom(const ::google::protobuf::Message& fro
 
 void MemoryLogTensorAllocation::MergeFrom(const MemoryLogTensorAllocation& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:tensorflow.MemoryLogTensorAllocation)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
-  if (from.step_id() != 0) {
-    set_step_id(from.step_id());
-  }
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   if (from.kernel_name().size() > 0) {
     set_kernel_name(from.kernel_name());
   }
   if (from.has_tensor()) {
     mutable_tensor()->::tensorflow::TensorDescription::MergeFrom(from.tensor());
+  }
+  if (from.step_id() != 0) {
+    set_step_id(from.step_id());
   }
 }
 
@@ -991,7 +1046,6 @@ void MemoryLogTensorAllocation::CopyFrom(const MemoryLogTensorAllocation& from) 
 }
 
 bool MemoryLogTensorAllocation::IsInitialized() const {
-
   return true;
 }
 
@@ -1000,10 +1054,13 @@ void MemoryLogTensorAllocation::Swap(MemoryLogTensorAllocation* other) {
   if (GetArenaNoVirtual() == other->GetArenaNoVirtual()) {
     InternalSwap(other);
   } else {
-    MemoryLogTensorAllocation temp;
-    temp.MergeFrom(*this);
-    CopyFrom(*other);
-    other->CopyFrom(temp);
+    MemoryLogTensorAllocation* temp = New(GetArenaNoVirtual());
+    temp->MergeFrom(*other);
+    other->CopyFrom(*this);
+    InternalSwap(temp);
+    if (GetArenaNoVirtual() == NULL) {
+      delete temp;
+    }
   }
 }
 void MemoryLogTensorAllocation::UnsafeArenaSwap(MemoryLogTensorAllocation* other) {
@@ -1012,82 +1069,89 @@ void MemoryLogTensorAllocation::UnsafeArenaSwap(MemoryLogTensorAllocation* other
   InternalSwap(other);
 }
 void MemoryLogTensorAllocation::InternalSwap(MemoryLogTensorAllocation* other) {
-  std::swap(step_id_, other->step_id_);
+  using std::swap;
   kernel_name_.Swap(&other->kernel_name_);
-  std::swap(tensor_, other->tensor_);
+  swap(tensor_, other->tensor_);
+  swap(step_id_, other->step_id_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  std::swap(_cached_size_, other->_cached_size_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata MemoryLogTensorAllocation::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = MemoryLogTensorAllocation_descriptor_;
-  metadata.reflection = MemoryLogTensorAllocation_reflection_;
-  return metadata;
+  protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // MemoryLogTensorAllocation
 
-// optional int64 step_id = 1;
+// int64 step_id = 1;
 void MemoryLogTensorAllocation::clear_step_id() {
   step_id_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 MemoryLogTensorAllocation::step_id() const {
+::google::protobuf::int64 MemoryLogTensorAllocation::step_id() const {
   // @@protoc_insertion_point(field_get:tensorflow.MemoryLogTensorAllocation.step_id)
   return step_id_;
 }
- void MemoryLogTensorAllocation::set_step_id(::google::protobuf::int64 value) {
+void MemoryLogTensorAllocation::set_step_id(::google::protobuf::int64 value) {
   
   step_id_ = value;
   // @@protoc_insertion_point(field_set:tensorflow.MemoryLogTensorAllocation.step_id)
 }
 
-// optional string kernel_name = 2;
+// string kernel_name = 2;
 void MemoryLogTensorAllocation::clear_kernel_name() {
   kernel_name_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
- const ::std::string& MemoryLogTensorAllocation::kernel_name() const {
+const ::std::string& MemoryLogTensorAllocation::kernel_name() const {
   // @@protoc_insertion_point(field_get:tensorflow.MemoryLogTensorAllocation.kernel_name)
-  return kernel_name_.Get(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return kernel_name_.Get();
 }
- void MemoryLogTensorAllocation::set_kernel_name(const ::std::string& value) {
+void MemoryLogTensorAllocation::set_kernel_name(const ::std::string& value) {
   
   kernel_name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set:tensorflow.MemoryLogTensorAllocation.kernel_name)
 }
- void MemoryLogTensorAllocation::set_kernel_name(const char* value) {
+#if LANG_CXX11
+void MemoryLogTensorAllocation::set_kernel_name(::std::string&& value) {
+  
+  kernel_name_.Set(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_set_rvalue:tensorflow.MemoryLogTensorAllocation.kernel_name)
+}
+#endif
+void MemoryLogTensorAllocation::set_kernel_name(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   kernel_name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_char:tensorflow.MemoryLogTensorAllocation.kernel_name)
 }
- void MemoryLogTensorAllocation::set_kernel_name(const char* value,
+void MemoryLogTensorAllocation::set_kernel_name(const char* value,
     size_t size) {
   
   kernel_name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_pointer:tensorflow.MemoryLogTensorAllocation.kernel_name)
 }
- ::std::string* MemoryLogTensorAllocation::mutable_kernel_name() {
+::std::string* MemoryLogTensorAllocation::mutable_kernel_name() {
   
   // @@protoc_insertion_point(field_mutable:tensorflow.MemoryLogTensorAllocation.kernel_name)
   return kernel_name_.Mutable(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
- ::std::string* MemoryLogTensorAllocation::release_kernel_name() {
+::std::string* MemoryLogTensorAllocation::release_kernel_name() {
   // @@protoc_insertion_point(field_release:tensorflow.MemoryLogTensorAllocation.kernel_name)
   
   return kernel_name_.Release(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
- ::std::string* MemoryLogTensorAllocation::unsafe_arena_release_kernel_name() {
+::std::string* MemoryLogTensorAllocation::unsafe_arena_release_kernel_name() {
   // @@protoc_insertion_point(field_unsafe_arena_release:tensorflow.MemoryLogTensorAllocation.kernel_name)
   GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
   
   return kernel_name_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       GetArenaNoVirtual());
 }
- void MemoryLogTensorAllocation::set_allocated_kernel_name(::std::string* kernel_name) {
+void MemoryLogTensorAllocation::set_allocated_kernel_name(::std::string* kernel_name) {
   if (kernel_name != NULL) {
     
   } else {
@@ -1097,7 +1161,7 @@ void MemoryLogTensorAllocation::clear_kernel_name() {
       GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_allocated:tensorflow.MemoryLogTensorAllocation.kernel_name)
 }
- void MemoryLogTensorAllocation::unsafe_arena_set_allocated_kernel_name(
+void MemoryLogTensorAllocation::unsafe_arena_set_allocated_kernel_name(
     ::std::string* kernel_name) {
   GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
   if (kernel_name != NULL) {
@@ -1110,17 +1174,19 @@ void MemoryLogTensorAllocation::clear_kernel_name() {
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:tensorflow.MemoryLogTensorAllocation.kernel_name)
 }
 
-// optional .tensorflow.TensorDescription tensor = 3;
+// .tensorflow.TensorDescription tensor = 3;
 bool MemoryLogTensorAllocation::has_tensor() const {
-  return !_is_default_instance_ && tensor_ != NULL;
+  return this != internal_default_instance() && tensor_ != NULL;
 }
 void MemoryLogTensorAllocation::clear_tensor() {
   if (GetArenaNoVirtual() == NULL && tensor_ != NULL) delete tensor_;
   tensor_ = NULL;
 }
 const ::tensorflow::TensorDescription& MemoryLogTensorAllocation::tensor() const {
+  const ::tensorflow::TensorDescription* p = tensor_;
   // @@protoc_insertion_point(field_get:tensorflow.MemoryLogTensorAllocation.tensor)
-  return tensor_ != NULL ? *tensor_ : *default_instance_->tensor_;
+  return p != NULL ? *p : *reinterpret_cast<const ::tensorflow::TensorDescription*>(
+      &::tensorflow::_TensorDescription_default_instance_);
 }
 ::tensorflow::TensorDescription* MemoryLogTensorAllocation::mutable_tensor() {
   
@@ -1169,36 +1235,38 @@ const int MemoryLogTensorDeallocation::kAllocatorNameFieldNumber;
 
 MemoryLogTensorDeallocation::MemoryLogTensorDeallocation()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:tensorflow.MemoryLogTensorDeallocation)
 }
-
 MemoryLogTensorDeallocation::MemoryLogTensorDeallocation(::google::protobuf::Arena* arena)
   : ::google::protobuf::Message(),
   _internal_metadata_(arena) {
+  protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::InitDefaults();
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:tensorflow.MemoryLogTensorDeallocation)
 }
-
-void MemoryLogTensorDeallocation::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-}
-
 MemoryLogTensorDeallocation::MemoryLogTensorDeallocation(const MemoryLogTensorDeallocation& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  MergeFrom(from);
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  allocator_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.allocator_name().size() > 0) {
+    allocator_name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.allocator_name(),
+      GetArenaNoVirtual());
+  }
+  allocation_id_ = from.allocation_id_;
   // @@protoc_insertion_point(copy_constructor:tensorflow.MemoryLogTensorDeallocation)
 }
 
 void MemoryLogTensorDeallocation::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
-  allocation_id_ = GOOGLE_LONGLONG(0);
   allocator_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  allocation_id_ = GOOGLE_LONGLONG(0);
+  _cached_size_ = 0;
 }
 
 MemoryLogTensorDeallocation::~MemoryLogTensorDeallocation() {
@@ -1207,13 +1275,13 @@ MemoryLogTensorDeallocation::~MemoryLogTensorDeallocation() {
 }
 
 void MemoryLogTensorDeallocation::SharedDtor() {
-  if (GetArenaNoVirtual() != NULL) {
+  ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  GOOGLE_DCHECK(arena == NULL);
+  if (arena != NULL) {
     return;
   }
 
-  allocator_name_.Destroy(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
-  if (this != default_instance_) {
-  }
+  allocator_name_.Destroy(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), arena);
 }
 
 void MemoryLogTensorDeallocation::ArenaDtor(void* object) {
@@ -1228,16 +1296,14 @@ void MemoryLogTensorDeallocation::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* MemoryLogTensorDeallocation::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return MemoryLogTensorDeallocation_descriptor_;
+  protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const MemoryLogTensorDeallocation& MemoryLogTensorDeallocation::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto();
-  return *default_instance_;
+  protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::InitDefaults();
+  return *internal_default_instance();
 }
-
-MemoryLogTensorDeallocation* MemoryLogTensorDeallocation::default_instance_ = NULL;
 
 MemoryLogTensorDeallocation* MemoryLogTensorDeallocation::New(::google::protobuf::Arena* arena) const {
   return ::google::protobuf::Arena::CreateMessage<MemoryLogTensorDeallocation>(arena);
@@ -1245,8 +1311,13 @@ MemoryLogTensorDeallocation* MemoryLogTensorDeallocation::New(::google::protobuf
 
 void MemoryLogTensorDeallocation::Clear() {
 // @@protoc_insertion_point(message_clear_start:tensorflow.MemoryLogTensorDeallocation)
-  allocation_id_ = GOOGLE_LONGLONG(0);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   allocator_name_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+  allocation_id_ = GOOGLE_LONGLONG(0);
+  _internal_metadata_.Clear();
 }
 
 bool MemoryLogTensorDeallocation::MergePartialFromCodedStream(
@@ -1255,49 +1326,47 @@ bool MemoryLogTensorDeallocation::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:tensorflow.MemoryLogTensorDeallocation)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional int64 allocation_id = 1;
+      // int64 allocation_id = 1;
       case 1: {
-        if (tag == 8) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
                  input, &allocation_id_)));
-
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(18)) goto parse_allocator_name;
         break;
       }
 
-      // optional string allocator_name = 2;
+      // string allocator_name = 2;
       case 2: {
-        if (tag == 18) {
-         parse_allocator_name:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_allocator_name()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->allocator_name().data(), this->allocator_name().length(),
+            this->allocator_name().data(), static_cast<int>(this->allocator_name().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
             "tensorflow.MemoryLogTensorDeallocation.allocator_name"));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -1314,36 +1383,47 @@ failure:
 void MemoryLogTensorDeallocation::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:tensorflow.MemoryLogTensorDeallocation)
-  // optional int64 allocation_id = 1;
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int64 allocation_id = 1;
   if (this->allocation_id() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->allocation_id(), output);
   }
 
-  // optional string allocator_name = 2;
+  // string allocator_name = 2;
   if (this->allocator_name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->allocator_name().data(), this->allocator_name().length(),
+      this->allocator_name().data(), static_cast<int>(this->allocator_name().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "tensorflow.MemoryLogTensorDeallocation.allocator_name");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->allocator_name(), output);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
   // @@protoc_insertion_point(serialize_end:tensorflow.MemoryLogTensorDeallocation)
 }
 
-::google::protobuf::uint8* MemoryLogTensorDeallocation::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::google::protobuf::uint8* MemoryLogTensorDeallocation::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:tensorflow.MemoryLogTensorDeallocation)
-  // optional int64 allocation_id = 1;
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int64 allocation_id = 1;
   if (this->allocation_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->allocation_id(), target);
   }
 
-  // optional string allocator_name = 2;
+  // string allocator_name = 2;
   if (this->allocator_name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->allocator_name().data(), this->allocator_name().length(),
+      this->allocator_name().data(), static_cast<int>(this->allocator_name().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "tensorflow.MemoryLogTensorDeallocation.allocator_name");
     target =
@@ -1351,38 +1431,48 @@ void MemoryLogTensorDeallocation::SerializeWithCachedSizes(
         2, this->allocator_name(), target);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
   // @@protoc_insertion_point(serialize_to_array_end:tensorflow.MemoryLogTensorDeallocation)
   return target;
 }
 
-int MemoryLogTensorDeallocation::ByteSize() const {
+size_t MemoryLogTensorDeallocation::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:tensorflow.MemoryLogTensorDeallocation)
-  int total_size = 0;
+  size_t total_size = 0;
 
-  // optional int64 allocation_id = 1;
-  if (this->allocation_id() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int64Size(
-        this->allocation_id());
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-
-  // optional string allocator_name = 2;
+  // string allocator_name = 2;
   if (this->allocator_name().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->allocator_name());
   }
 
+  // int64 allocation_id = 1;
+  if (this->allocation_id() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int64Size(
+        this->allocation_id());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = total_size;
+  _cached_size_ = cached_size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
 void MemoryLogTensorDeallocation::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:tensorflow.MemoryLogTensorDeallocation)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
-  const MemoryLogTensorDeallocation* source = 
+  GOOGLE_DCHECK_NE(&from, this);
+  const MemoryLogTensorDeallocation* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const MemoryLogTensorDeallocation>(
           &from);
   if (source == NULL) {
@@ -1396,12 +1486,16 @@ void MemoryLogTensorDeallocation::MergeFrom(const ::google::protobuf::Message& f
 
 void MemoryLogTensorDeallocation::MergeFrom(const MemoryLogTensorDeallocation& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:tensorflow.MemoryLogTensorDeallocation)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
-  if (from.allocation_id() != 0) {
-    set_allocation_id(from.allocation_id());
-  }
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   if (from.allocator_name().size() > 0) {
     set_allocator_name(from.allocator_name());
+  }
+  if (from.allocation_id() != 0) {
+    set_allocation_id(from.allocation_id());
   }
 }
 
@@ -1420,7 +1514,6 @@ void MemoryLogTensorDeallocation::CopyFrom(const MemoryLogTensorDeallocation& fr
 }
 
 bool MemoryLogTensorDeallocation::IsInitialized() const {
-
   return true;
 }
 
@@ -1429,10 +1522,13 @@ void MemoryLogTensorDeallocation::Swap(MemoryLogTensorDeallocation* other) {
   if (GetArenaNoVirtual() == other->GetArenaNoVirtual()) {
     InternalSwap(other);
   } else {
-    MemoryLogTensorDeallocation temp;
-    temp.MergeFrom(*this);
-    CopyFrom(*other);
-    other->CopyFrom(temp);
+    MemoryLogTensorDeallocation* temp = New(GetArenaNoVirtual());
+    temp->MergeFrom(*other);
+    other->CopyFrom(*this);
+    InternalSwap(temp);
+    if (GetArenaNoVirtual() == NULL) {
+      delete temp;
+    }
   }
 }
 void MemoryLogTensorDeallocation::UnsafeArenaSwap(MemoryLogTensorDeallocation* other) {
@@ -1441,81 +1537,88 @@ void MemoryLogTensorDeallocation::UnsafeArenaSwap(MemoryLogTensorDeallocation* o
   InternalSwap(other);
 }
 void MemoryLogTensorDeallocation::InternalSwap(MemoryLogTensorDeallocation* other) {
-  std::swap(allocation_id_, other->allocation_id_);
+  using std::swap;
   allocator_name_.Swap(&other->allocator_name_);
+  swap(allocation_id_, other->allocation_id_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  std::swap(_cached_size_, other->_cached_size_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata MemoryLogTensorDeallocation::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = MemoryLogTensorDeallocation_descriptor_;
-  metadata.reflection = MemoryLogTensorDeallocation_reflection_;
-  return metadata;
+  protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // MemoryLogTensorDeallocation
 
-// optional int64 allocation_id = 1;
+// int64 allocation_id = 1;
 void MemoryLogTensorDeallocation::clear_allocation_id() {
   allocation_id_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 MemoryLogTensorDeallocation::allocation_id() const {
+::google::protobuf::int64 MemoryLogTensorDeallocation::allocation_id() const {
   // @@protoc_insertion_point(field_get:tensorflow.MemoryLogTensorDeallocation.allocation_id)
   return allocation_id_;
 }
- void MemoryLogTensorDeallocation::set_allocation_id(::google::protobuf::int64 value) {
+void MemoryLogTensorDeallocation::set_allocation_id(::google::protobuf::int64 value) {
   
   allocation_id_ = value;
   // @@protoc_insertion_point(field_set:tensorflow.MemoryLogTensorDeallocation.allocation_id)
 }
 
-// optional string allocator_name = 2;
+// string allocator_name = 2;
 void MemoryLogTensorDeallocation::clear_allocator_name() {
   allocator_name_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
- const ::std::string& MemoryLogTensorDeallocation::allocator_name() const {
+const ::std::string& MemoryLogTensorDeallocation::allocator_name() const {
   // @@protoc_insertion_point(field_get:tensorflow.MemoryLogTensorDeallocation.allocator_name)
-  return allocator_name_.Get(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return allocator_name_.Get();
 }
- void MemoryLogTensorDeallocation::set_allocator_name(const ::std::string& value) {
+void MemoryLogTensorDeallocation::set_allocator_name(const ::std::string& value) {
   
   allocator_name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set:tensorflow.MemoryLogTensorDeallocation.allocator_name)
 }
- void MemoryLogTensorDeallocation::set_allocator_name(const char* value) {
+#if LANG_CXX11
+void MemoryLogTensorDeallocation::set_allocator_name(::std::string&& value) {
+  
+  allocator_name_.Set(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_set_rvalue:tensorflow.MemoryLogTensorDeallocation.allocator_name)
+}
+#endif
+void MemoryLogTensorDeallocation::set_allocator_name(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   allocator_name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_char:tensorflow.MemoryLogTensorDeallocation.allocator_name)
 }
- void MemoryLogTensorDeallocation::set_allocator_name(const char* value,
+void MemoryLogTensorDeallocation::set_allocator_name(const char* value,
     size_t size) {
   
   allocator_name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_pointer:tensorflow.MemoryLogTensorDeallocation.allocator_name)
 }
- ::std::string* MemoryLogTensorDeallocation::mutable_allocator_name() {
+::std::string* MemoryLogTensorDeallocation::mutable_allocator_name() {
   
   // @@protoc_insertion_point(field_mutable:tensorflow.MemoryLogTensorDeallocation.allocator_name)
   return allocator_name_.Mutable(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
- ::std::string* MemoryLogTensorDeallocation::release_allocator_name() {
+::std::string* MemoryLogTensorDeallocation::release_allocator_name() {
   // @@protoc_insertion_point(field_release:tensorflow.MemoryLogTensorDeallocation.allocator_name)
   
   return allocator_name_.Release(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
- ::std::string* MemoryLogTensorDeallocation::unsafe_arena_release_allocator_name() {
+::std::string* MemoryLogTensorDeallocation::unsafe_arena_release_allocator_name() {
   // @@protoc_insertion_point(field_unsafe_arena_release:tensorflow.MemoryLogTensorDeallocation.allocator_name)
   GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
   
   return allocator_name_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       GetArenaNoVirtual());
 }
- void MemoryLogTensorDeallocation::set_allocated_allocator_name(::std::string* allocator_name) {
+void MemoryLogTensorDeallocation::set_allocated_allocator_name(::std::string* allocator_name) {
   if (allocator_name != NULL) {
     
   } else {
@@ -1525,7 +1628,7 @@ void MemoryLogTensorDeallocation::clear_allocator_name() {
       GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_allocated:tensorflow.MemoryLogTensorDeallocation.allocator_name)
 }
- void MemoryLogTensorDeallocation::unsafe_arena_set_allocated_allocator_name(
+void MemoryLogTensorDeallocation::unsafe_arena_set_allocated_allocator_name(
     ::std::string* allocator_name) {
   GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
   if (allocator_name != NULL) {
@@ -1550,8 +1653,7 @@ void MemoryLogTensorOutput::_slow_mutable_tensor() {
   if (tensor_ == NULL) {
     return NULL;
   } else {
-    ::tensorflow::TensorDescription* temp = new ::tensorflow::TensorDescription;
-    temp->MergeFrom(*tensor_);
+    ::tensorflow::TensorDescription* temp = new ::tensorflow::TensorDescription(*tensor_);
     tensor_ = NULL;
     return temp;
   }
@@ -1599,39 +1701,47 @@ const int MemoryLogTensorOutput::kTensorFieldNumber;
 
 MemoryLogTensorOutput::MemoryLogTensorOutput()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:tensorflow.MemoryLogTensorOutput)
 }
-
 MemoryLogTensorOutput::MemoryLogTensorOutput(::google::protobuf::Arena* arena)
   : ::google::protobuf::Message(),
   _internal_metadata_(arena) {
+  protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::InitDefaults();
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:tensorflow.MemoryLogTensorOutput)
 }
-
-void MemoryLogTensorOutput::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-  tensor_ = const_cast< ::tensorflow::TensorDescription*>(&::tensorflow::TensorDescription::default_instance());
-}
-
 MemoryLogTensorOutput::MemoryLogTensorOutput(const MemoryLogTensorOutput& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  MergeFrom(from);
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  kernel_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.kernel_name().size() > 0) {
+    kernel_name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.kernel_name(),
+      GetArenaNoVirtual());
+  }
+  if (from.has_tensor()) {
+    tensor_ = new ::tensorflow::TensorDescription(*from.tensor_);
+  } else {
+    tensor_ = NULL;
+  }
+  ::memcpy(&step_id_, &from.step_id_,
+    static_cast<size_t>(reinterpret_cast<char*>(&index_) -
+    reinterpret_cast<char*>(&step_id_)) + sizeof(index_));
   // @@protoc_insertion_point(copy_constructor:tensorflow.MemoryLogTensorOutput)
 }
 
 void MemoryLogTensorOutput::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
-  step_id_ = GOOGLE_LONGLONG(0);
   kernel_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  index_ = 0;
-  tensor_ = NULL;
+  ::memset(&tensor_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&index_) -
+      reinterpret_cast<char*>(&tensor_)) + sizeof(index_));
+  _cached_size_ = 0;
 }
 
 MemoryLogTensorOutput::~MemoryLogTensorOutput() {
@@ -1640,14 +1750,14 @@ MemoryLogTensorOutput::~MemoryLogTensorOutput() {
 }
 
 void MemoryLogTensorOutput::SharedDtor() {
-  if (GetArenaNoVirtual() != NULL) {
+  ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  GOOGLE_DCHECK(arena == NULL);
+  if (arena != NULL) {
     return;
   }
 
-  kernel_name_.Destroy(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
-  if (this != default_instance_) {
-    delete tensor_;
-  }
+  kernel_name_.Destroy(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), arena);
+  if (this != internal_default_instance()) delete tensor_;
 }
 
 void MemoryLogTensorOutput::ArenaDtor(void* object) {
@@ -1662,16 +1772,14 @@ void MemoryLogTensorOutput::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* MemoryLogTensorOutput::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return MemoryLogTensorOutput_descriptor_;
+  protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const MemoryLogTensorOutput& MemoryLogTensorOutput::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto();
-  return *default_instance_;
+  protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::InitDefaults();
+  return *internal_default_instance();
 }
-
-MemoryLogTensorOutput* MemoryLogTensorOutput::default_instance_ = NULL;
 
 MemoryLogTensorOutput* MemoryLogTensorOutput::New(::google::protobuf::Arena* arena) const {
   return ::google::protobuf::Arena::CreateMessage<MemoryLogTensorOutput>(arena);
@@ -1679,11 +1787,19 @@ MemoryLogTensorOutput* MemoryLogTensorOutput::New(::google::protobuf::Arena* are
 
 void MemoryLogTensorOutput::Clear() {
 // @@protoc_insertion_point(message_clear_start:tensorflow.MemoryLogTensorOutput)
-  step_id_ = GOOGLE_LONGLONG(0);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   kernel_name_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
-  index_ = 0;
-  if (GetArenaNoVirtual() == NULL && tensor_ != NULL) delete tensor_;
+  if (GetArenaNoVirtual() == NULL && tensor_ != NULL) {
+    delete tensor_;
+  }
   tensor_ = NULL;
+  ::memset(&step_id_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&index_) -
+      reinterpret_cast<char*>(&step_id_)) + sizeof(index_));
+  _internal_metadata_.Clear();
 }
 
 bool MemoryLogTensorOutput::MergePartialFromCodedStream(
@@ -1692,77 +1808,73 @@ bool MemoryLogTensorOutput::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:tensorflow.MemoryLogTensorOutput)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional int64 step_id = 1;
+      // int64 step_id = 1;
       case 1: {
-        if (tag == 8) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
                  input, &step_id_)));
-
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(18)) goto parse_kernel_name;
         break;
       }
 
-      // optional string kernel_name = 2;
+      // string kernel_name = 2;
       case 2: {
-        if (tag == 18) {
-         parse_kernel_name:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_kernel_name()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->kernel_name().data(), this->kernel_name().length(),
+            this->kernel_name().data(), static_cast<int>(this->kernel_name().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
             "tensorflow.MemoryLogTensorOutput.kernel_name"));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(24)) goto parse_index;
         break;
       }
 
-      // optional int32 index = 3;
+      // int32 index = 3;
       case 3: {
-        if (tag == 24) {
-         parse_index:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
+
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
                  input, &index_)));
-
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(34)) goto parse_tensor;
         break;
       }
 
-      // optional .tensorflow.TensorDescription tensor = 4;
+      // .tensorflow.TensorDescription tensor = 4;
       case 4: {
-        if (tag == 34) {
-         parse_tensor:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_tensor()));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -1779,47 +1891,58 @@ failure:
 void MemoryLogTensorOutput::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:tensorflow.MemoryLogTensorOutput)
-  // optional int64 step_id = 1;
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int64 step_id = 1;
   if (this->step_id() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->step_id(), output);
   }
 
-  // optional string kernel_name = 2;
+  // string kernel_name = 2;
   if (this->kernel_name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->kernel_name().data(), this->kernel_name().length(),
+      this->kernel_name().data(), static_cast<int>(this->kernel_name().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "tensorflow.MemoryLogTensorOutput.kernel_name");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->kernel_name(), output);
   }
 
-  // optional int32 index = 3;
+  // int32 index = 3;
   if (this->index() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt32(3, this->index(), output);
   }
 
-  // optional .tensorflow.TensorDescription tensor = 4;
+  // .tensorflow.TensorDescription tensor = 4;
   if (this->has_tensor()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       4, *this->tensor_, output);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
   // @@protoc_insertion_point(serialize_end:tensorflow.MemoryLogTensorOutput)
 }
 
-::google::protobuf::uint8* MemoryLogTensorOutput::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::google::protobuf::uint8* MemoryLogTensorOutput::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:tensorflow.MemoryLogTensorOutput)
-  // optional int64 step_id = 1;
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int64 step_id = 1;
   if (this->step_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->step_id(), target);
   }
 
-  // optional string kernel_name = 2;
+  // string kernel_name = 2;
   if (this->kernel_name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->kernel_name().data(), this->kernel_name().length(),
+      this->kernel_name().data(), static_cast<int>(this->kernel_name().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "tensorflow.MemoryLogTensorOutput.kernel_name");
     target =
@@ -1827,64 +1950,74 @@ void MemoryLogTensorOutput::SerializeWithCachedSizes(
         2, this->kernel_name(), target);
   }
 
-  // optional int32 index = 3;
+  // int32 index = 3;
   if (this->index() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(3, this->index(), target);
   }
 
-  // optional .tensorflow.TensorDescription tensor = 4;
+  // .tensorflow.TensorDescription tensor = 4;
   if (this->has_tensor()) {
     target = ::google::protobuf::internal::WireFormatLite::
-      WriteMessageNoVirtualToArray(
-        4, *this->tensor_, target);
+      InternalWriteMessageNoVirtualToArray(
+        4, *this->tensor_, deterministic, target);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
   // @@protoc_insertion_point(serialize_to_array_end:tensorflow.MemoryLogTensorOutput)
   return target;
 }
 
-int MemoryLogTensorOutput::ByteSize() const {
+size_t MemoryLogTensorOutput::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:tensorflow.MemoryLogTensorOutput)
-  int total_size = 0;
+  size_t total_size = 0;
 
-  // optional int64 step_id = 1;
-  if (this->step_id() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int64Size(
-        this->step_id());
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-
-  // optional string kernel_name = 2;
+  // string kernel_name = 2;
   if (this->kernel_name().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->kernel_name());
   }
 
-  // optional int32 index = 3;
-  if (this->index() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->index());
-  }
-
-  // optional .tensorflow.TensorDescription tensor = 4;
+  // .tensorflow.TensorDescription tensor = 4;
   if (this->has_tensor()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->tensor_);
   }
 
+  // int64 step_id = 1;
+  if (this->step_id() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int64Size(
+        this->step_id());
+  }
+
+  // int32 index = 3;
+  if (this->index() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->index());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = total_size;
+  _cached_size_ = cached_size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
 void MemoryLogTensorOutput::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:tensorflow.MemoryLogTensorOutput)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
-  const MemoryLogTensorOutput* source = 
+  GOOGLE_DCHECK_NE(&from, this);
+  const MemoryLogTensorOutput* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const MemoryLogTensorOutput>(
           &from);
   if (source == NULL) {
@@ -1898,18 +2031,22 @@ void MemoryLogTensorOutput::MergeFrom(const ::google::protobuf::Message& from) {
 
 void MemoryLogTensorOutput::MergeFrom(const MemoryLogTensorOutput& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:tensorflow.MemoryLogTensorOutput)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
-  if (from.step_id() != 0) {
-    set_step_id(from.step_id());
-  }
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   if (from.kernel_name().size() > 0) {
     set_kernel_name(from.kernel_name());
   }
-  if (from.index() != 0) {
-    set_index(from.index());
-  }
   if (from.has_tensor()) {
     mutable_tensor()->::tensorflow::TensorDescription::MergeFrom(from.tensor());
+  }
+  if (from.step_id() != 0) {
+    set_step_id(from.step_id());
+  }
+  if (from.index() != 0) {
+    set_index(from.index());
   }
 }
 
@@ -1928,7 +2065,6 @@ void MemoryLogTensorOutput::CopyFrom(const MemoryLogTensorOutput& from) {
 }
 
 bool MemoryLogTensorOutput::IsInitialized() const {
-
   return true;
 }
 
@@ -1937,10 +2073,13 @@ void MemoryLogTensorOutput::Swap(MemoryLogTensorOutput* other) {
   if (GetArenaNoVirtual() == other->GetArenaNoVirtual()) {
     InternalSwap(other);
   } else {
-    MemoryLogTensorOutput temp;
-    temp.MergeFrom(*this);
-    CopyFrom(*other);
-    other->CopyFrom(temp);
+    MemoryLogTensorOutput* temp = New(GetArenaNoVirtual());
+    temp->MergeFrom(*other);
+    other->CopyFrom(*this);
+    InternalSwap(temp);
+    if (GetArenaNoVirtual() == NULL) {
+      delete temp;
+    }
   }
 }
 void MemoryLogTensorOutput::UnsafeArenaSwap(MemoryLogTensorOutput* other) {
@@ -1949,83 +2088,90 @@ void MemoryLogTensorOutput::UnsafeArenaSwap(MemoryLogTensorOutput* other) {
   InternalSwap(other);
 }
 void MemoryLogTensorOutput::InternalSwap(MemoryLogTensorOutput* other) {
-  std::swap(step_id_, other->step_id_);
+  using std::swap;
   kernel_name_.Swap(&other->kernel_name_);
-  std::swap(index_, other->index_);
-  std::swap(tensor_, other->tensor_);
+  swap(tensor_, other->tensor_);
+  swap(step_id_, other->step_id_);
+  swap(index_, other->index_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  std::swap(_cached_size_, other->_cached_size_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata MemoryLogTensorOutput::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = MemoryLogTensorOutput_descriptor_;
-  metadata.reflection = MemoryLogTensorOutput_reflection_;
-  return metadata;
+  protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // MemoryLogTensorOutput
 
-// optional int64 step_id = 1;
+// int64 step_id = 1;
 void MemoryLogTensorOutput::clear_step_id() {
   step_id_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 MemoryLogTensorOutput::step_id() const {
+::google::protobuf::int64 MemoryLogTensorOutput::step_id() const {
   // @@protoc_insertion_point(field_get:tensorflow.MemoryLogTensorOutput.step_id)
   return step_id_;
 }
- void MemoryLogTensorOutput::set_step_id(::google::protobuf::int64 value) {
+void MemoryLogTensorOutput::set_step_id(::google::protobuf::int64 value) {
   
   step_id_ = value;
   // @@protoc_insertion_point(field_set:tensorflow.MemoryLogTensorOutput.step_id)
 }
 
-// optional string kernel_name = 2;
+// string kernel_name = 2;
 void MemoryLogTensorOutput::clear_kernel_name() {
   kernel_name_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
- const ::std::string& MemoryLogTensorOutput::kernel_name() const {
+const ::std::string& MemoryLogTensorOutput::kernel_name() const {
   // @@protoc_insertion_point(field_get:tensorflow.MemoryLogTensorOutput.kernel_name)
-  return kernel_name_.Get(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return kernel_name_.Get();
 }
- void MemoryLogTensorOutput::set_kernel_name(const ::std::string& value) {
+void MemoryLogTensorOutput::set_kernel_name(const ::std::string& value) {
   
   kernel_name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set:tensorflow.MemoryLogTensorOutput.kernel_name)
 }
- void MemoryLogTensorOutput::set_kernel_name(const char* value) {
+#if LANG_CXX11
+void MemoryLogTensorOutput::set_kernel_name(::std::string&& value) {
+  
+  kernel_name_.Set(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_set_rvalue:tensorflow.MemoryLogTensorOutput.kernel_name)
+}
+#endif
+void MemoryLogTensorOutput::set_kernel_name(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   kernel_name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_char:tensorflow.MemoryLogTensorOutput.kernel_name)
 }
- void MemoryLogTensorOutput::set_kernel_name(const char* value,
+void MemoryLogTensorOutput::set_kernel_name(const char* value,
     size_t size) {
   
   kernel_name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_pointer:tensorflow.MemoryLogTensorOutput.kernel_name)
 }
- ::std::string* MemoryLogTensorOutput::mutable_kernel_name() {
+::std::string* MemoryLogTensorOutput::mutable_kernel_name() {
   
   // @@protoc_insertion_point(field_mutable:tensorflow.MemoryLogTensorOutput.kernel_name)
   return kernel_name_.Mutable(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
- ::std::string* MemoryLogTensorOutput::release_kernel_name() {
+::std::string* MemoryLogTensorOutput::release_kernel_name() {
   // @@protoc_insertion_point(field_release:tensorflow.MemoryLogTensorOutput.kernel_name)
   
   return kernel_name_.Release(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
- ::std::string* MemoryLogTensorOutput::unsafe_arena_release_kernel_name() {
+::std::string* MemoryLogTensorOutput::unsafe_arena_release_kernel_name() {
   // @@protoc_insertion_point(field_unsafe_arena_release:tensorflow.MemoryLogTensorOutput.kernel_name)
   GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
   
   return kernel_name_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       GetArenaNoVirtual());
 }
- void MemoryLogTensorOutput::set_allocated_kernel_name(::std::string* kernel_name) {
+void MemoryLogTensorOutput::set_allocated_kernel_name(::std::string* kernel_name) {
   if (kernel_name != NULL) {
     
   } else {
@@ -2035,7 +2181,7 @@ void MemoryLogTensorOutput::clear_kernel_name() {
       GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_allocated:tensorflow.MemoryLogTensorOutput.kernel_name)
 }
- void MemoryLogTensorOutput::unsafe_arena_set_allocated_kernel_name(
+void MemoryLogTensorOutput::unsafe_arena_set_allocated_kernel_name(
     ::std::string* kernel_name) {
   GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
   if (kernel_name != NULL) {
@@ -2048,31 +2194,33 @@ void MemoryLogTensorOutput::clear_kernel_name() {
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:tensorflow.MemoryLogTensorOutput.kernel_name)
 }
 
-// optional int32 index = 3;
+// int32 index = 3;
 void MemoryLogTensorOutput::clear_index() {
   index_ = 0;
 }
- ::google::protobuf::int32 MemoryLogTensorOutput::index() const {
+::google::protobuf::int32 MemoryLogTensorOutput::index() const {
   // @@protoc_insertion_point(field_get:tensorflow.MemoryLogTensorOutput.index)
   return index_;
 }
- void MemoryLogTensorOutput::set_index(::google::protobuf::int32 value) {
+void MemoryLogTensorOutput::set_index(::google::protobuf::int32 value) {
   
   index_ = value;
   // @@protoc_insertion_point(field_set:tensorflow.MemoryLogTensorOutput.index)
 }
 
-// optional .tensorflow.TensorDescription tensor = 4;
+// .tensorflow.TensorDescription tensor = 4;
 bool MemoryLogTensorOutput::has_tensor() const {
-  return !_is_default_instance_ && tensor_ != NULL;
+  return this != internal_default_instance() && tensor_ != NULL;
 }
 void MemoryLogTensorOutput::clear_tensor() {
   if (GetArenaNoVirtual() == NULL && tensor_ != NULL) delete tensor_;
   tensor_ = NULL;
 }
 const ::tensorflow::TensorDescription& MemoryLogTensorOutput::tensor() const {
+  const ::tensorflow::TensorDescription* p = tensor_;
   // @@protoc_insertion_point(field_get:tensorflow.MemoryLogTensorOutput.tensor)
-  return tensor_ != NULL ? *tensor_ : *default_instance_->tensor_;
+  return p != NULL ? *p : *reinterpret_cast<const ::tensorflow::TensorDescription*>(
+      &::tensorflow::_TensorDescription_default_instance_);
 }
 ::tensorflow::TensorDescription* MemoryLogTensorOutput::mutable_tensor() {
   
@@ -2125,40 +2273,48 @@ const int MemoryLogRawAllocation::kAllocatorNameFieldNumber;
 
 MemoryLogRawAllocation::MemoryLogRawAllocation()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:tensorflow.MemoryLogRawAllocation)
 }
-
 MemoryLogRawAllocation::MemoryLogRawAllocation(::google::protobuf::Arena* arena)
   : ::google::protobuf::Message(),
   _internal_metadata_(arena) {
+  protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::InitDefaults();
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:tensorflow.MemoryLogRawAllocation)
 }
-
-void MemoryLogRawAllocation::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-}
-
 MemoryLogRawAllocation::MemoryLogRawAllocation(const MemoryLogRawAllocation& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  MergeFrom(from);
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  operation_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.operation().size() > 0) {
+    operation_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.operation(),
+      GetArenaNoVirtual());
+  }
+  allocator_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.allocator_name().size() > 0) {
+    allocator_name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.allocator_name(),
+      GetArenaNoVirtual());
+  }
+  ::memcpy(&step_id_, &from.step_id_,
+    static_cast<size_t>(reinterpret_cast<char*>(&allocation_id_) -
+    reinterpret_cast<char*>(&step_id_)) + sizeof(allocation_id_));
   // @@protoc_insertion_point(copy_constructor:tensorflow.MemoryLogRawAllocation)
 }
 
 void MemoryLogRawAllocation::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
-  step_id_ = GOOGLE_LONGLONG(0);
   operation_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  num_bytes_ = GOOGLE_LONGLONG(0);
-  ptr_ = GOOGLE_ULONGLONG(0);
-  allocation_id_ = GOOGLE_LONGLONG(0);
   allocator_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&step_id_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&allocation_id_) -
+      reinterpret_cast<char*>(&step_id_)) + sizeof(allocation_id_));
+  _cached_size_ = 0;
 }
 
 MemoryLogRawAllocation::~MemoryLogRawAllocation() {
@@ -2167,14 +2323,14 @@ MemoryLogRawAllocation::~MemoryLogRawAllocation() {
 }
 
 void MemoryLogRawAllocation::SharedDtor() {
-  if (GetArenaNoVirtual() != NULL) {
+  ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  GOOGLE_DCHECK(arena == NULL);
+  if (arena != NULL) {
     return;
   }
 
-  operation_.Destroy(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
-  allocator_name_.Destroy(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
-  if (this != default_instance_) {
-  }
+  operation_.Destroy(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), arena);
+  allocator_name_.Destroy(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), arena);
 }
 
 void MemoryLogRawAllocation::ArenaDtor(void* object) {
@@ -2189,16 +2345,14 @@ void MemoryLogRawAllocation::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* MemoryLogRawAllocation::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return MemoryLogRawAllocation_descriptor_;
+  protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const MemoryLogRawAllocation& MemoryLogRawAllocation::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto();
-  return *default_instance_;
+  protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::InitDefaults();
+  return *internal_default_instance();
 }
-
-MemoryLogRawAllocation* MemoryLogRawAllocation::default_instance_ = NULL;
 
 MemoryLogRawAllocation* MemoryLogRawAllocation::New(::google::protobuf::Arena* arena) const {
   return ::google::protobuf::Arena::CreateMessage<MemoryLogRawAllocation>(arena);
@@ -2206,30 +2360,16 @@ MemoryLogRawAllocation* MemoryLogRawAllocation::New(::google::protobuf::Arena* a
 
 void MemoryLogRawAllocation::Clear() {
 // @@protoc_insertion_point(message_clear_start:tensorflow.MemoryLogRawAllocation)
-#if defined(__clang__)
-#define ZR_HELPER_(f) \
-  _Pragma("clang diagnostic push") \
-  _Pragma("clang diagnostic ignored \"-Winvalid-offsetof\"") \
-  __builtin_offsetof(MemoryLogRawAllocation, f) \
-  _Pragma("clang diagnostic pop")
-#else
-#define ZR_HELPER_(f) reinterpret_cast<char*>(\
-  &reinterpret_cast<MemoryLogRawAllocation*>(16)->f)
-#endif
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
 
-#define ZR_(first, last) do {\
-  ::memset(&first, 0,\
-           ZR_HELPER_(last) - ZR_HELPER_(first) + sizeof(last));\
-} while (0)
-
-  ZR_(num_bytes_, allocation_id_);
-  step_id_ = GOOGLE_LONGLONG(0);
   operation_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
   allocator_name_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
-
-#undef ZR_HELPER_
-#undef ZR_
-
+  ::memset(&step_id_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&allocation_id_) -
+      reinterpret_cast<char*>(&step_id_)) + sizeof(allocation_id_));
+  _internal_metadata_.Clear();
 }
 
 bool MemoryLogRawAllocation::MergePartialFromCodedStream(
@@ -2238,111 +2378,105 @@ bool MemoryLogRawAllocation::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:tensorflow.MemoryLogRawAllocation)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional int64 step_id = 1;
+      // int64 step_id = 1;
       case 1: {
-        if (tag == 8) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
                  input, &step_id_)));
-
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(18)) goto parse_operation;
         break;
       }
 
-      // optional string operation = 2;
+      // string operation = 2;
       case 2: {
-        if (tag == 18) {
-         parse_operation:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_operation()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->operation().data(), this->operation().length(),
+            this->operation().data(), static_cast<int>(this->operation().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
             "tensorflow.MemoryLogRawAllocation.operation"));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(24)) goto parse_num_bytes;
         break;
       }
 
-      // optional int64 num_bytes = 3;
+      // int64 num_bytes = 3;
       case 3: {
-        if (tag == 24) {
-         parse_num_bytes:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
+
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
                  input, &num_bytes_)));
-
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(32)) goto parse_ptr;
         break;
       }
 
-      // optional uint64 ptr = 4;
+      // uint64 ptr = 4;
       case 4: {
-        if (tag == 32) {
-         parse_ptr:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(32u /* 32 & 0xFF */)) {
+
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
                  input, &ptr_)));
-
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(40)) goto parse_allocation_id;
         break;
       }
 
-      // optional int64 allocation_id = 5;
+      // int64 allocation_id = 5;
       case 5: {
-        if (tag == 40) {
-         parse_allocation_id:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(40u /* 40 & 0xFF */)) {
+
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
                  input, &allocation_id_)));
-
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(50)) goto parse_allocator_name;
         break;
       }
 
-      // optional string allocator_name = 6;
+      // string allocator_name = 6;
       case 6: {
-        if (tag == 50) {
-         parse_allocator_name:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(50u /* 50 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_allocator_name()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->allocator_name().data(), this->allocator_name().length(),
+            this->allocator_name().data(), static_cast<int>(this->allocator_name().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
             "tensorflow.MemoryLogRawAllocation.allocator_name"));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -2359,61 +2493,72 @@ failure:
 void MemoryLogRawAllocation::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:tensorflow.MemoryLogRawAllocation)
-  // optional int64 step_id = 1;
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int64 step_id = 1;
   if (this->step_id() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->step_id(), output);
   }
 
-  // optional string operation = 2;
+  // string operation = 2;
   if (this->operation().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->operation().data(), this->operation().length(),
+      this->operation().data(), static_cast<int>(this->operation().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "tensorflow.MemoryLogRawAllocation.operation");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->operation(), output);
   }
 
-  // optional int64 num_bytes = 3;
+  // int64 num_bytes = 3;
   if (this->num_bytes() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(3, this->num_bytes(), output);
   }
 
-  // optional uint64 ptr = 4;
+  // uint64 ptr = 4;
   if (this->ptr() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt64(4, this->ptr(), output);
   }
 
-  // optional int64 allocation_id = 5;
+  // int64 allocation_id = 5;
   if (this->allocation_id() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(5, this->allocation_id(), output);
   }
 
-  // optional string allocator_name = 6;
+  // string allocator_name = 6;
   if (this->allocator_name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->allocator_name().data(), this->allocator_name().length(),
+      this->allocator_name().data(), static_cast<int>(this->allocator_name().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "tensorflow.MemoryLogRawAllocation.allocator_name");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       6, this->allocator_name(), output);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
   // @@protoc_insertion_point(serialize_end:tensorflow.MemoryLogRawAllocation)
 }
 
-::google::protobuf::uint8* MemoryLogRawAllocation::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::google::protobuf::uint8* MemoryLogRawAllocation::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:tensorflow.MemoryLogRawAllocation)
-  // optional int64 step_id = 1;
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int64 step_id = 1;
   if (this->step_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->step_id(), target);
   }
 
-  // optional string operation = 2;
+  // string operation = 2;
   if (this->operation().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->operation().data(), this->operation().length(),
+      this->operation().data(), static_cast<int>(this->operation().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "tensorflow.MemoryLogRawAllocation.operation");
     target =
@@ -2421,25 +2566,25 @@ void MemoryLogRawAllocation::SerializeWithCachedSizes(
         2, this->operation(), target);
   }
 
-  // optional int64 num_bytes = 3;
+  // int64 num_bytes = 3;
   if (this->num_bytes() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(3, this->num_bytes(), target);
   }
 
-  // optional uint64 ptr = 4;
+  // uint64 ptr = 4;
   if (this->ptr() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(4, this->ptr(), target);
   }
 
-  // optional int64 allocation_id = 5;
+  // int64 allocation_id = 5;
   if (this->allocation_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(5, this->allocation_id(), target);
   }
 
-  // optional string allocator_name = 6;
+  // string allocator_name = 6;
   if (this->allocator_name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->allocator_name().data(), this->allocator_name().length(),
+      this->allocator_name().data(), static_cast<int>(this->allocator_name().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "tensorflow.MemoryLogRawAllocation.allocator_name");
     target =
@@ -2447,66 +2592,76 @@ void MemoryLogRawAllocation::SerializeWithCachedSizes(
         6, this->allocator_name(), target);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
   // @@protoc_insertion_point(serialize_to_array_end:tensorflow.MemoryLogRawAllocation)
   return target;
 }
 
-int MemoryLogRawAllocation::ByteSize() const {
+size_t MemoryLogRawAllocation::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:tensorflow.MemoryLogRawAllocation)
-  int total_size = 0;
+  size_t total_size = 0;
 
-  // optional int64 step_id = 1;
-  if (this->step_id() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int64Size(
-        this->step_id());
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-
-  // optional string operation = 2;
+  // string operation = 2;
   if (this->operation().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->operation());
   }
 
-  // optional int64 num_bytes = 3;
-  if (this->num_bytes() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int64Size(
-        this->num_bytes());
-  }
-
-  // optional uint64 ptr = 4;
-  if (this->ptr() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::UInt64Size(
-        this->ptr());
-  }
-
-  // optional int64 allocation_id = 5;
-  if (this->allocation_id() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int64Size(
-        this->allocation_id());
-  }
-
-  // optional string allocator_name = 6;
+  // string allocator_name = 6;
   if (this->allocator_name().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->allocator_name());
   }
 
+  // int64 step_id = 1;
+  if (this->step_id() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int64Size(
+        this->step_id());
+  }
+
+  // int64 num_bytes = 3;
+  if (this->num_bytes() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int64Size(
+        this->num_bytes());
+  }
+
+  // uint64 ptr = 4;
+  if (this->ptr() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt64Size(
+        this->ptr());
+  }
+
+  // int64 allocation_id = 5;
+  if (this->allocation_id() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int64Size(
+        this->allocation_id());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = total_size;
+  _cached_size_ = cached_size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
 void MemoryLogRawAllocation::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:tensorflow.MemoryLogRawAllocation)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
-  const MemoryLogRawAllocation* source = 
+  GOOGLE_DCHECK_NE(&from, this);
+  const MemoryLogRawAllocation* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const MemoryLogRawAllocation>(
           &from);
   if (source == NULL) {
@@ -2520,12 +2675,19 @@ void MemoryLogRawAllocation::MergeFrom(const ::google::protobuf::Message& from) 
 
 void MemoryLogRawAllocation::MergeFrom(const MemoryLogRawAllocation& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:tensorflow.MemoryLogRawAllocation)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
-  if (from.step_id() != 0) {
-    set_step_id(from.step_id());
-  }
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   if (from.operation().size() > 0) {
     set_operation(from.operation());
+  }
+  if (from.allocator_name().size() > 0) {
+    set_allocator_name(from.allocator_name());
+  }
+  if (from.step_id() != 0) {
+    set_step_id(from.step_id());
   }
   if (from.num_bytes() != 0) {
     set_num_bytes(from.num_bytes());
@@ -2535,9 +2697,6 @@ void MemoryLogRawAllocation::MergeFrom(const MemoryLogRawAllocation& from) {
   }
   if (from.allocation_id() != 0) {
     set_allocation_id(from.allocation_id());
-  }
-  if (from.allocator_name().size() > 0) {
-    set_allocator_name(from.allocator_name());
   }
 }
 
@@ -2556,7 +2715,6 @@ void MemoryLogRawAllocation::CopyFrom(const MemoryLogRawAllocation& from) {
 }
 
 bool MemoryLogRawAllocation::IsInitialized() const {
-
   return true;
 }
 
@@ -2565,10 +2723,13 @@ void MemoryLogRawAllocation::Swap(MemoryLogRawAllocation* other) {
   if (GetArenaNoVirtual() == other->GetArenaNoVirtual()) {
     InternalSwap(other);
   } else {
-    MemoryLogRawAllocation temp;
-    temp.MergeFrom(*this);
-    CopyFrom(*other);
-    other->CopyFrom(temp);
+    MemoryLogRawAllocation* temp = New(GetArenaNoVirtual());
+    temp->MergeFrom(*other);
+    other->CopyFrom(*this);
+    InternalSwap(temp);
+    if (GetArenaNoVirtual() == NULL) {
+      delete temp;
+    }
   }
 }
 void MemoryLogRawAllocation::UnsafeArenaSwap(MemoryLogRawAllocation* other) {
@@ -2577,85 +2738,92 @@ void MemoryLogRawAllocation::UnsafeArenaSwap(MemoryLogRawAllocation* other) {
   InternalSwap(other);
 }
 void MemoryLogRawAllocation::InternalSwap(MemoryLogRawAllocation* other) {
-  std::swap(step_id_, other->step_id_);
+  using std::swap;
   operation_.Swap(&other->operation_);
-  std::swap(num_bytes_, other->num_bytes_);
-  std::swap(ptr_, other->ptr_);
-  std::swap(allocation_id_, other->allocation_id_);
   allocator_name_.Swap(&other->allocator_name_);
+  swap(step_id_, other->step_id_);
+  swap(num_bytes_, other->num_bytes_);
+  swap(ptr_, other->ptr_);
+  swap(allocation_id_, other->allocation_id_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  std::swap(_cached_size_, other->_cached_size_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata MemoryLogRawAllocation::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = MemoryLogRawAllocation_descriptor_;
-  metadata.reflection = MemoryLogRawAllocation_reflection_;
-  return metadata;
+  protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // MemoryLogRawAllocation
 
-// optional int64 step_id = 1;
+// int64 step_id = 1;
 void MemoryLogRawAllocation::clear_step_id() {
   step_id_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 MemoryLogRawAllocation::step_id() const {
+::google::protobuf::int64 MemoryLogRawAllocation::step_id() const {
   // @@protoc_insertion_point(field_get:tensorflow.MemoryLogRawAllocation.step_id)
   return step_id_;
 }
- void MemoryLogRawAllocation::set_step_id(::google::protobuf::int64 value) {
+void MemoryLogRawAllocation::set_step_id(::google::protobuf::int64 value) {
   
   step_id_ = value;
   // @@protoc_insertion_point(field_set:tensorflow.MemoryLogRawAllocation.step_id)
 }
 
-// optional string operation = 2;
+// string operation = 2;
 void MemoryLogRawAllocation::clear_operation() {
   operation_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
- const ::std::string& MemoryLogRawAllocation::operation() const {
+const ::std::string& MemoryLogRawAllocation::operation() const {
   // @@protoc_insertion_point(field_get:tensorflow.MemoryLogRawAllocation.operation)
-  return operation_.Get(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return operation_.Get();
 }
- void MemoryLogRawAllocation::set_operation(const ::std::string& value) {
+void MemoryLogRawAllocation::set_operation(const ::std::string& value) {
   
   operation_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set:tensorflow.MemoryLogRawAllocation.operation)
 }
- void MemoryLogRawAllocation::set_operation(const char* value) {
+#if LANG_CXX11
+void MemoryLogRawAllocation::set_operation(::std::string&& value) {
+  
+  operation_.Set(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_set_rvalue:tensorflow.MemoryLogRawAllocation.operation)
+}
+#endif
+void MemoryLogRawAllocation::set_operation(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   operation_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_char:tensorflow.MemoryLogRawAllocation.operation)
 }
- void MemoryLogRawAllocation::set_operation(const char* value,
+void MemoryLogRawAllocation::set_operation(const char* value,
     size_t size) {
   
   operation_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_pointer:tensorflow.MemoryLogRawAllocation.operation)
 }
- ::std::string* MemoryLogRawAllocation::mutable_operation() {
+::std::string* MemoryLogRawAllocation::mutable_operation() {
   
   // @@protoc_insertion_point(field_mutable:tensorflow.MemoryLogRawAllocation.operation)
   return operation_.Mutable(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
- ::std::string* MemoryLogRawAllocation::release_operation() {
+::std::string* MemoryLogRawAllocation::release_operation() {
   // @@protoc_insertion_point(field_release:tensorflow.MemoryLogRawAllocation.operation)
   
   return operation_.Release(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
- ::std::string* MemoryLogRawAllocation::unsafe_arena_release_operation() {
+::std::string* MemoryLogRawAllocation::unsafe_arena_release_operation() {
   // @@protoc_insertion_point(field_unsafe_arena_release:tensorflow.MemoryLogRawAllocation.operation)
   GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
   
   return operation_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       GetArenaNoVirtual());
 }
- void MemoryLogRawAllocation::set_allocated_operation(::std::string* operation) {
+void MemoryLogRawAllocation::set_allocated_operation(::std::string* operation) {
   if (operation != NULL) {
     
   } else {
@@ -2665,7 +2833,7 @@ void MemoryLogRawAllocation::clear_operation() {
       GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_allocated:tensorflow.MemoryLogRawAllocation.operation)
 }
- void MemoryLogRawAllocation::unsafe_arena_set_allocated_operation(
+void MemoryLogRawAllocation::unsafe_arena_set_allocated_operation(
     ::std::string* operation) {
   GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
   if (operation != NULL) {
@@ -2678,92 +2846,101 @@ void MemoryLogRawAllocation::clear_operation() {
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:tensorflow.MemoryLogRawAllocation.operation)
 }
 
-// optional int64 num_bytes = 3;
+// int64 num_bytes = 3;
 void MemoryLogRawAllocation::clear_num_bytes() {
   num_bytes_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 MemoryLogRawAllocation::num_bytes() const {
+::google::protobuf::int64 MemoryLogRawAllocation::num_bytes() const {
   // @@protoc_insertion_point(field_get:tensorflow.MemoryLogRawAllocation.num_bytes)
   return num_bytes_;
 }
- void MemoryLogRawAllocation::set_num_bytes(::google::protobuf::int64 value) {
+void MemoryLogRawAllocation::set_num_bytes(::google::protobuf::int64 value) {
   
   num_bytes_ = value;
   // @@protoc_insertion_point(field_set:tensorflow.MemoryLogRawAllocation.num_bytes)
 }
 
-// optional uint64 ptr = 4;
+// uint64 ptr = 4;
 void MemoryLogRawAllocation::clear_ptr() {
   ptr_ = GOOGLE_ULONGLONG(0);
 }
- ::google::protobuf::uint64 MemoryLogRawAllocation::ptr() const {
+::google::protobuf::uint64 MemoryLogRawAllocation::ptr() const {
   // @@protoc_insertion_point(field_get:tensorflow.MemoryLogRawAllocation.ptr)
   return ptr_;
 }
- void MemoryLogRawAllocation::set_ptr(::google::protobuf::uint64 value) {
+void MemoryLogRawAllocation::set_ptr(::google::protobuf::uint64 value) {
   
   ptr_ = value;
   // @@protoc_insertion_point(field_set:tensorflow.MemoryLogRawAllocation.ptr)
 }
 
-// optional int64 allocation_id = 5;
+// int64 allocation_id = 5;
 void MemoryLogRawAllocation::clear_allocation_id() {
   allocation_id_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 MemoryLogRawAllocation::allocation_id() const {
+::google::protobuf::int64 MemoryLogRawAllocation::allocation_id() const {
   // @@protoc_insertion_point(field_get:tensorflow.MemoryLogRawAllocation.allocation_id)
   return allocation_id_;
 }
- void MemoryLogRawAllocation::set_allocation_id(::google::protobuf::int64 value) {
+void MemoryLogRawAllocation::set_allocation_id(::google::protobuf::int64 value) {
   
   allocation_id_ = value;
   // @@protoc_insertion_point(field_set:tensorflow.MemoryLogRawAllocation.allocation_id)
 }
 
-// optional string allocator_name = 6;
+// string allocator_name = 6;
 void MemoryLogRawAllocation::clear_allocator_name() {
   allocator_name_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
- const ::std::string& MemoryLogRawAllocation::allocator_name() const {
+const ::std::string& MemoryLogRawAllocation::allocator_name() const {
   // @@protoc_insertion_point(field_get:tensorflow.MemoryLogRawAllocation.allocator_name)
-  return allocator_name_.Get(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return allocator_name_.Get();
 }
- void MemoryLogRawAllocation::set_allocator_name(const ::std::string& value) {
+void MemoryLogRawAllocation::set_allocator_name(const ::std::string& value) {
   
   allocator_name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set:tensorflow.MemoryLogRawAllocation.allocator_name)
 }
- void MemoryLogRawAllocation::set_allocator_name(const char* value) {
+#if LANG_CXX11
+void MemoryLogRawAllocation::set_allocator_name(::std::string&& value) {
+  
+  allocator_name_.Set(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_set_rvalue:tensorflow.MemoryLogRawAllocation.allocator_name)
+}
+#endif
+void MemoryLogRawAllocation::set_allocator_name(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   allocator_name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_char:tensorflow.MemoryLogRawAllocation.allocator_name)
 }
- void MemoryLogRawAllocation::set_allocator_name(const char* value,
+void MemoryLogRawAllocation::set_allocator_name(const char* value,
     size_t size) {
   
   allocator_name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_pointer:tensorflow.MemoryLogRawAllocation.allocator_name)
 }
- ::std::string* MemoryLogRawAllocation::mutable_allocator_name() {
+::std::string* MemoryLogRawAllocation::mutable_allocator_name() {
   
   // @@protoc_insertion_point(field_mutable:tensorflow.MemoryLogRawAllocation.allocator_name)
   return allocator_name_.Mutable(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
- ::std::string* MemoryLogRawAllocation::release_allocator_name() {
+::std::string* MemoryLogRawAllocation::release_allocator_name() {
   // @@protoc_insertion_point(field_release:tensorflow.MemoryLogRawAllocation.allocator_name)
   
   return allocator_name_.Release(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
- ::std::string* MemoryLogRawAllocation::unsafe_arena_release_allocator_name() {
+::std::string* MemoryLogRawAllocation::unsafe_arena_release_allocator_name() {
   // @@protoc_insertion_point(field_unsafe_arena_release:tensorflow.MemoryLogRawAllocation.allocator_name)
   GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
   
   return allocator_name_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       GetArenaNoVirtual());
 }
- void MemoryLogRawAllocation::set_allocated_allocator_name(::std::string* allocator_name) {
+void MemoryLogRawAllocation::set_allocated_allocator_name(::std::string* allocator_name) {
   if (allocator_name != NULL) {
     
   } else {
@@ -2773,7 +2950,7 @@ void MemoryLogRawAllocation::clear_allocator_name() {
       GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_allocated:tensorflow.MemoryLogRawAllocation.allocator_name)
 }
- void MemoryLogRawAllocation::unsafe_arena_set_allocated_allocator_name(
+void MemoryLogRawAllocation::unsafe_arena_set_allocated_allocator_name(
     ::std::string* allocator_name) {
   GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
   if (allocator_name != NULL) {
@@ -2800,39 +2977,48 @@ const int MemoryLogRawDeallocation::kDeferredFieldNumber;
 
 MemoryLogRawDeallocation::MemoryLogRawDeallocation()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::InitDefaults();
+  }
   SharedCtor();
   // @@protoc_insertion_point(constructor:tensorflow.MemoryLogRawDeallocation)
 }
-
 MemoryLogRawDeallocation::MemoryLogRawDeallocation(::google::protobuf::Arena* arena)
   : ::google::protobuf::Message(),
   _internal_metadata_(arena) {
+  protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::InitDefaults();
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:tensorflow.MemoryLogRawDeallocation)
 }
-
-void MemoryLogRawDeallocation::InitAsDefaultInstance() {
-  _is_default_instance_ = true;
-}
-
 MemoryLogRawDeallocation::MemoryLogRawDeallocation(const MemoryLogRawDeallocation& from)
   : ::google::protobuf::Message(),
-    _internal_metadata_(NULL) {
-  SharedCtor();
-  MergeFrom(from);
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  operation_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.operation().size() > 0) {
+    operation_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.operation(),
+      GetArenaNoVirtual());
+  }
+  allocator_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.allocator_name().size() > 0) {
+    allocator_name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.allocator_name(),
+      GetArenaNoVirtual());
+  }
+  ::memcpy(&step_id_, &from.step_id_,
+    static_cast<size_t>(reinterpret_cast<char*>(&deferred_) -
+    reinterpret_cast<char*>(&step_id_)) + sizeof(deferred_));
   // @@protoc_insertion_point(copy_constructor:tensorflow.MemoryLogRawDeallocation)
 }
 
 void MemoryLogRawDeallocation::SharedCtor() {
-    _is_default_instance_ = false;
-  ::google::protobuf::internal::GetEmptyString();
-  _cached_size_ = 0;
-  step_id_ = GOOGLE_LONGLONG(0);
   operation_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  allocation_id_ = GOOGLE_LONGLONG(0);
   allocator_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  deferred_ = false;
+  ::memset(&step_id_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&deferred_) -
+      reinterpret_cast<char*>(&step_id_)) + sizeof(deferred_));
+  _cached_size_ = 0;
 }
 
 MemoryLogRawDeallocation::~MemoryLogRawDeallocation() {
@@ -2841,14 +3027,14 @@ MemoryLogRawDeallocation::~MemoryLogRawDeallocation() {
 }
 
 void MemoryLogRawDeallocation::SharedDtor() {
-  if (GetArenaNoVirtual() != NULL) {
+  ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  GOOGLE_DCHECK(arena == NULL);
+  if (arena != NULL) {
     return;
   }
 
-  operation_.Destroy(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
-  allocator_name_.Destroy(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
-  if (this != default_instance_) {
-  }
+  operation_.Destroy(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), arena);
+  allocator_name_.Destroy(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), arena);
 }
 
 void MemoryLogRawDeallocation::ArenaDtor(void* object) {
@@ -2863,16 +3049,14 @@ void MemoryLogRawDeallocation::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
 const ::google::protobuf::Descriptor* MemoryLogRawDeallocation::descriptor() {
-  protobuf_AssignDescriptorsOnce();
-  return MemoryLogRawDeallocation_descriptor_;
+  protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
 const MemoryLogRawDeallocation& MemoryLogRawDeallocation::default_instance() {
-  if (default_instance_ == NULL) protobuf_AddDesc_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto();
-  return *default_instance_;
+  protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::InitDefaults();
+  return *internal_default_instance();
 }
-
-MemoryLogRawDeallocation* MemoryLogRawDeallocation::default_instance_ = NULL;
 
 MemoryLogRawDeallocation* MemoryLogRawDeallocation::New(::google::protobuf::Arena* arena) const {
   return ::google::protobuf::Arena::CreateMessage<MemoryLogRawDeallocation>(arena);
@@ -2880,11 +3064,16 @@ MemoryLogRawDeallocation* MemoryLogRawDeallocation::New(::google::protobuf::Aren
 
 void MemoryLogRawDeallocation::Clear() {
 // @@protoc_insertion_point(message_clear_start:tensorflow.MemoryLogRawDeallocation)
-  step_id_ = GOOGLE_LONGLONG(0);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   operation_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
-  allocation_id_ = GOOGLE_LONGLONG(0);
   allocator_name_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
-  deferred_ = false;
+  ::memset(&step_id_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&deferred_) -
+      reinterpret_cast<char*>(&step_id_)) + sizeof(deferred_));
+  _internal_metadata_.Clear();
 }
 
 bool MemoryLogRawDeallocation::MergePartialFromCodedStream(
@@ -2893,96 +3082,91 @@ bool MemoryLogRawDeallocation::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:tensorflow.MemoryLogRawDeallocation)
   for (;;) {
-    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoff(127);
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional int64 step_id = 1;
+      // int64 step_id = 1;
       case 1: {
-        if (tag == 8) {
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
+
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
                  input, &step_id_)));
-
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(18)) goto parse_operation;
         break;
       }
 
-      // optional string operation = 2;
+      // string operation = 2;
       case 2: {
-        if (tag == 18) {
-         parse_operation:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_operation()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->operation().data(), this->operation().length(),
+            this->operation().data(), static_cast<int>(this->operation().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
             "tensorflow.MemoryLogRawDeallocation.operation"));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(24)) goto parse_allocation_id;
         break;
       }
 
-      // optional int64 allocation_id = 3;
+      // int64 allocation_id = 3;
       case 3: {
-        if (tag == 24) {
-         parse_allocation_id:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
+
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::int64, ::google::protobuf::internal::WireFormatLite::TYPE_INT64>(
                  input, &allocation_id_)));
-
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(34)) goto parse_allocator_name;
         break;
       }
 
-      // optional string allocator_name = 4;
+      // string allocator_name = 4;
       case 4: {
-        if (tag == 34) {
-         parse_allocator_name:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(34u /* 34 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_allocator_name()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->allocator_name().data(), this->allocator_name().length(),
+            this->allocator_name().data(), static_cast<int>(this->allocator_name().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
             "tensorflow.MemoryLogRawDeallocation.allocator_name"));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(40)) goto parse_deferred;
         break;
       }
 
-      // optional bool deferred = 5;
+      // bool deferred = 5;
       case 5: {
-        if (tag == 40) {
-         parse_deferred:
+        if (static_cast< ::google::protobuf::uint8>(tag) ==
+            static_cast< ::google::protobuf::uint8>(40u /* 40 & 0xFF */)) {
+
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
                  input, &deferred_)));
-
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectAtEnd()) goto success;
         break;
       }
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -2999,56 +3183,67 @@ failure:
 void MemoryLogRawDeallocation::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:tensorflow.MemoryLogRawDeallocation)
-  // optional int64 step_id = 1;
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int64 step_id = 1;
   if (this->step_id() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(1, this->step_id(), output);
   }
 
-  // optional string operation = 2;
+  // string operation = 2;
   if (this->operation().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->operation().data(), this->operation().length(),
+      this->operation().data(), static_cast<int>(this->operation().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "tensorflow.MemoryLogRawDeallocation.operation");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->operation(), output);
   }
 
-  // optional int64 allocation_id = 3;
+  // int64 allocation_id = 3;
   if (this->allocation_id() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteInt64(3, this->allocation_id(), output);
   }
 
-  // optional string allocator_name = 4;
+  // string allocator_name = 4;
   if (this->allocator_name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->allocator_name().data(), this->allocator_name().length(),
+      this->allocator_name().data(), static_cast<int>(this->allocator_name().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "tensorflow.MemoryLogRawDeallocation.allocator_name");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       4, this->allocator_name(), output);
   }
 
-  // optional bool deferred = 5;
+  // bool deferred = 5;
   if (this->deferred() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteBool(5, this->deferred(), output);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
   // @@protoc_insertion_point(serialize_end:tensorflow.MemoryLogRawDeallocation)
 }
 
-::google::protobuf::uint8* MemoryLogRawDeallocation::SerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::google::protobuf::uint8* MemoryLogRawDeallocation::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:tensorflow.MemoryLogRawDeallocation)
-  // optional int64 step_id = 1;
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // int64 step_id = 1;
   if (this->step_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(1, this->step_id(), target);
   }
 
-  // optional string operation = 2;
+  // string operation = 2;
   if (this->operation().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->operation().data(), this->operation().length(),
+      this->operation().data(), static_cast<int>(this->operation().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "tensorflow.MemoryLogRawDeallocation.operation");
     target =
@@ -3056,15 +3251,15 @@ void MemoryLogRawDeallocation::SerializeWithCachedSizes(
         2, this->operation(), target);
   }
 
-  // optional int64 allocation_id = 3;
+  // int64 allocation_id = 3;
   if (this->allocation_id() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(3, this->allocation_id(), target);
   }
 
-  // optional string allocator_name = 4;
+  // string allocator_name = 4;
   if (this->allocator_name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->allocator_name().data(), this->allocator_name().length(),
+      this->allocator_name().data(), static_cast<int>(this->allocator_name().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "tensorflow.MemoryLogRawDeallocation.allocator_name");
     target =
@@ -3072,62 +3267,72 @@ void MemoryLogRawDeallocation::SerializeWithCachedSizes(
         4, this->allocator_name(), target);
   }
 
-  // optional bool deferred = 5;
+  // bool deferred = 5;
   if (this->deferred() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(5, this->deferred(), target);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
   // @@protoc_insertion_point(serialize_to_array_end:tensorflow.MemoryLogRawDeallocation)
   return target;
 }
 
-int MemoryLogRawDeallocation::ByteSize() const {
+size_t MemoryLogRawDeallocation::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:tensorflow.MemoryLogRawDeallocation)
-  int total_size = 0;
+  size_t total_size = 0;
 
-  // optional int64 step_id = 1;
-  if (this->step_id() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int64Size(
-        this->step_id());
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
   }
-
-  // optional string operation = 2;
+  // string operation = 2;
   if (this->operation().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->operation());
   }
 
-  // optional int64 allocation_id = 3;
-  if (this->allocation_id() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int64Size(
-        this->allocation_id());
-  }
-
-  // optional string allocator_name = 4;
+  // string allocator_name = 4;
   if (this->allocator_name().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->allocator_name());
   }
 
-  // optional bool deferred = 5;
+  // int64 step_id = 1;
+  if (this->step_id() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int64Size(
+        this->step_id());
+  }
+
+  // int64 allocation_id = 3;
+  if (this->allocation_id() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int64Size(
+        this->allocation_id());
+  }
+
+  // bool deferred = 5;
   if (this->deferred() != 0) {
     total_size += 1 + 1;
   }
 
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
-  _cached_size_ = total_size;
+  _cached_size_ = cached_size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
   return total_size;
 }
 
 void MemoryLogRawDeallocation::MergeFrom(const ::google::protobuf::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:tensorflow.MemoryLogRawDeallocation)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
-  const MemoryLogRawDeallocation* source = 
+  GOOGLE_DCHECK_NE(&from, this);
+  const MemoryLogRawDeallocation* source =
       ::google::protobuf::internal::DynamicCastToGenerated<const MemoryLogRawDeallocation>(
           &from);
   if (source == NULL) {
@@ -3141,18 +3346,22 @@ void MemoryLogRawDeallocation::MergeFrom(const ::google::protobuf::Message& from
 
 void MemoryLogRawDeallocation::MergeFrom(const MemoryLogRawDeallocation& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:tensorflow.MemoryLogRawDeallocation)
-  if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
-  if (from.step_id() != 0) {
-    set_step_id(from.step_id());
-  }
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
   if (from.operation().size() > 0) {
     set_operation(from.operation());
   }
-  if (from.allocation_id() != 0) {
-    set_allocation_id(from.allocation_id());
-  }
   if (from.allocator_name().size() > 0) {
     set_allocator_name(from.allocator_name());
+  }
+  if (from.step_id() != 0) {
+    set_step_id(from.step_id());
+  }
+  if (from.allocation_id() != 0) {
+    set_allocation_id(from.allocation_id());
   }
   if (from.deferred() != 0) {
     set_deferred(from.deferred());
@@ -3174,7 +3383,6 @@ void MemoryLogRawDeallocation::CopyFrom(const MemoryLogRawDeallocation& from) {
 }
 
 bool MemoryLogRawDeallocation::IsInitialized() const {
-
   return true;
 }
 
@@ -3183,10 +3391,13 @@ void MemoryLogRawDeallocation::Swap(MemoryLogRawDeallocation* other) {
   if (GetArenaNoVirtual() == other->GetArenaNoVirtual()) {
     InternalSwap(other);
   } else {
-    MemoryLogRawDeallocation temp;
-    temp.MergeFrom(*this);
-    CopyFrom(*other);
-    other->CopyFrom(temp);
+    MemoryLogRawDeallocation* temp = New(GetArenaNoVirtual());
+    temp->MergeFrom(*other);
+    other->CopyFrom(*this);
+    InternalSwap(temp);
+    if (GetArenaNoVirtual() == NULL) {
+      delete temp;
+    }
   }
 }
 void MemoryLogRawDeallocation::UnsafeArenaSwap(MemoryLogRawDeallocation* other) {
@@ -3195,84 +3406,91 @@ void MemoryLogRawDeallocation::UnsafeArenaSwap(MemoryLogRawDeallocation* other) 
   InternalSwap(other);
 }
 void MemoryLogRawDeallocation::InternalSwap(MemoryLogRawDeallocation* other) {
-  std::swap(step_id_, other->step_id_);
+  using std::swap;
   operation_.Swap(&other->operation_);
-  std::swap(allocation_id_, other->allocation_id_);
   allocator_name_.Swap(&other->allocator_name_);
-  std::swap(deferred_, other->deferred_);
+  swap(step_id_, other->step_id_);
+  swap(allocation_id_, other->allocation_id_);
+  swap(deferred_, other->deferred_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  std::swap(_cached_size_, other->_cached_size_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata MemoryLogRawDeallocation::GetMetadata() const {
-  protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::Metadata metadata;
-  metadata.descriptor = MemoryLogRawDeallocation_descriptor_;
-  metadata.reflection = MemoryLogRawDeallocation_reflection_;
-  return metadata;
+  protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_tensorflow_2fcore_2fframework_2flog_5fmemory_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // MemoryLogRawDeallocation
 
-// optional int64 step_id = 1;
+// int64 step_id = 1;
 void MemoryLogRawDeallocation::clear_step_id() {
   step_id_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 MemoryLogRawDeallocation::step_id() const {
+::google::protobuf::int64 MemoryLogRawDeallocation::step_id() const {
   // @@protoc_insertion_point(field_get:tensorflow.MemoryLogRawDeallocation.step_id)
   return step_id_;
 }
- void MemoryLogRawDeallocation::set_step_id(::google::protobuf::int64 value) {
+void MemoryLogRawDeallocation::set_step_id(::google::protobuf::int64 value) {
   
   step_id_ = value;
   // @@protoc_insertion_point(field_set:tensorflow.MemoryLogRawDeallocation.step_id)
 }
 
-// optional string operation = 2;
+// string operation = 2;
 void MemoryLogRawDeallocation::clear_operation() {
   operation_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
- const ::std::string& MemoryLogRawDeallocation::operation() const {
+const ::std::string& MemoryLogRawDeallocation::operation() const {
   // @@protoc_insertion_point(field_get:tensorflow.MemoryLogRawDeallocation.operation)
-  return operation_.Get(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return operation_.Get();
 }
- void MemoryLogRawDeallocation::set_operation(const ::std::string& value) {
+void MemoryLogRawDeallocation::set_operation(const ::std::string& value) {
   
   operation_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set:tensorflow.MemoryLogRawDeallocation.operation)
 }
- void MemoryLogRawDeallocation::set_operation(const char* value) {
+#if LANG_CXX11
+void MemoryLogRawDeallocation::set_operation(::std::string&& value) {
+  
+  operation_.Set(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_set_rvalue:tensorflow.MemoryLogRawDeallocation.operation)
+}
+#endif
+void MemoryLogRawDeallocation::set_operation(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   operation_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_char:tensorflow.MemoryLogRawDeallocation.operation)
 }
- void MemoryLogRawDeallocation::set_operation(const char* value,
+void MemoryLogRawDeallocation::set_operation(const char* value,
     size_t size) {
   
   operation_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_pointer:tensorflow.MemoryLogRawDeallocation.operation)
 }
- ::std::string* MemoryLogRawDeallocation::mutable_operation() {
+::std::string* MemoryLogRawDeallocation::mutable_operation() {
   
   // @@protoc_insertion_point(field_mutable:tensorflow.MemoryLogRawDeallocation.operation)
   return operation_.Mutable(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
- ::std::string* MemoryLogRawDeallocation::release_operation() {
+::std::string* MemoryLogRawDeallocation::release_operation() {
   // @@protoc_insertion_point(field_release:tensorflow.MemoryLogRawDeallocation.operation)
   
   return operation_.Release(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
- ::std::string* MemoryLogRawDeallocation::unsafe_arena_release_operation() {
+::std::string* MemoryLogRawDeallocation::unsafe_arena_release_operation() {
   // @@protoc_insertion_point(field_unsafe_arena_release:tensorflow.MemoryLogRawDeallocation.operation)
   GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
   
   return operation_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       GetArenaNoVirtual());
 }
- void MemoryLogRawDeallocation::set_allocated_operation(::std::string* operation) {
+void MemoryLogRawDeallocation::set_allocated_operation(::std::string* operation) {
   if (operation != NULL) {
     
   } else {
@@ -3282,7 +3500,7 @@ void MemoryLogRawDeallocation::clear_operation() {
       GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_allocated:tensorflow.MemoryLogRawDeallocation.operation)
 }
- void MemoryLogRawDeallocation::unsafe_arena_set_allocated_operation(
+void MemoryLogRawDeallocation::unsafe_arena_set_allocated_operation(
     ::std::string* operation) {
   GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
   if (operation != NULL) {
@@ -3295,64 +3513,73 @@ void MemoryLogRawDeallocation::clear_operation() {
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:tensorflow.MemoryLogRawDeallocation.operation)
 }
 
-// optional int64 allocation_id = 3;
+// int64 allocation_id = 3;
 void MemoryLogRawDeallocation::clear_allocation_id() {
   allocation_id_ = GOOGLE_LONGLONG(0);
 }
- ::google::protobuf::int64 MemoryLogRawDeallocation::allocation_id() const {
+::google::protobuf::int64 MemoryLogRawDeallocation::allocation_id() const {
   // @@protoc_insertion_point(field_get:tensorflow.MemoryLogRawDeallocation.allocation_id)
   return allocation_id_;
 }
- void MemoryLogRawDeallocation::set_allocation_id(::google::protobuf::int64 value) {
+void MemoryLogRawDeallocation::set_allocation_id(::google::protobuf::int64 value) {
   
   allocation_id_ = value;
   // @@protoc_insertion_point(field_set:tensorflow.MemoryLogRawDeallocation.allocation_id)
 }
 
-// optional string allocator_name = 4;
+// string allocator_name = 4;
 void MemoryLogRawDeallocation::clear_allocator_name() {
   allocator_name_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
- const ::std::string& MemoryLogRawDeallocation::allocator_name() const {
+const ::std::string& MemoryLogRawDeallocation::allocator_name() const {
   // @@protoc_insertion_point(field_get:tensorflow.MemoryLogRawDeallocation.allocator_name)
-  return allocator_name_.Get(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return allocator_name_.Get();
 }
- void MemoryLogRawDeallocation::set_allocator_name(const ::std::string& value) {
+void MemoryLogRawDeallocation::set_allocator_name(const ::std::string& value) {
   
   allocator_name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set:tensorflow.MemoryLogRawDeallocation.allocator_name)
 }
- void MemoryLogRawDeallocation::set_allocator_name(const char* value) {
+#if LANG_CXX11
+void MemoryLogRawDeallocation::set_allocator_name(::std::string&& value) {
+  
+  allocator_name_.Set(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_set_rvalue:tensorflow.MemoryLogRawDeallocation.allocator_name)
+}
+#endif
+void MemoryLogRawDeallocation::set_allocator_name(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
   
   allocator_name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_char:tensorflow.MemoryLogRawDeallocation.allocator_name)
 }
- void MemoryLogRawDeallocation::set_allocator_name(const char* value,
+void MemoryLogRawDeallocation::set_allocator_name(const char* value,
     size_t size) {
   
   allocator_name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_pointer:tensorflow.MemoryLogRawDeallocation.allocator_name)
 }
- ::std::string* MemoryLogRawDeallocation::mutable_allocator_name() {
+::std::string* MemoryLogRawDeallocation::mutable_allocator_name() {
   
   // @@protoc_insertion_point(field_mutable:tensorflow.MemoryLogRawDeallocation.allocator_name)
   return allocator_name_.Mutable(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
- ::std::string* MemoryLogRawDeallocation::release_allocator_name() {
+::std::string* MemoryLogRawDeallocation::release_allocator_name() {
   // @@protoc_insertion_point(field_release:tensorflow.MemoryLogRawDeallocation.allocator_name)
   
   return allocator_name_.Release(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
- ::std::string* MemoryLogRawDeallocation::unsafe_arena_release_allocator_name() {
+::std::string* MemoryLogRawDeallocation::unsafe_arena_release_allocator_name() {
   // @@protoc_insertion_point(field_unsafe_arena_release:tensorflow.MemoryLogRawDeallocation.allocator_name)
   GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
   
   return allocator_name_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       GetArenaNoVirtual());
 }
- void MemoryLogRawDeallocation::set_allocated_allocator_name(::std::string* allocator_name) {
+void MemoryLogRawDeallocation::set_allocated_allocator_name(::std::string* allocator_name) {
   if (allocator_name != NULL) {
     
   } else {
@@ -3362,7 +3589,7 @@ void MemoryLogRawDeallocation::clear_allocator_name() {
       GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_allocated:tensorflow.MemoryLogRawDeallocation.allocator_name)
 }
- void MemoryLogRawDeallocation::unsafe_arena_set_allocated_allocator_name(
+void MemoryLogRawDeallocation::unsafe_arena_set_allocated_allocator_name(
     ::std::string* allocator_name) {
   GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
   if (allocator_name != NULL) {
@@ -3375,15 +3602,15 @@ void MemoryLogRawDeallocation::clear_allocator_name() {
   // @@protoc_insertion_point(field_unsafe_arena_set_allocated:tensorflow.MemoryLogRawDeallocation.allocator_name)
 }
 
-// optional bool deferred = 5;
+// bool deferred = 5;
 void MemoryLogRawDeallocation::clear_deferred() {
   deferred_ = false;
 }
- bool MemoryLogRawDeallocation::deferred() const {
+bool MemoryLogRawDeallocation::deferred() const {
   // @@protoc_insertion_point(field_get:tensorflow.MemoryLogRawDeallocation.deferred)
   return deferred_;
 }
- void MemoryLogRawDeallocation::set_deferred(bool value) {
+void MemoryLogRawDeallocation::set_deferred(bool value) {
   
   deferred_ = value;
   // @@protoc_insertion_point(field_set:tensorflow.MemoryLogRawDeallocation.deferred)
